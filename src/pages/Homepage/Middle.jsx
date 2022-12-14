@@ -8,7 +8,7 @@ const Middle = () => {
             <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_106,q_auto:eco,dpr_2,f_auto,fl_progressive//image/test/brand-logo/cult-pass.svg" alt="" />
             <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_107,q_auto:eco,dpr_2,f_auto,fl_progressive//image/test/brand-logo/cult-pass-elite-partial.png" alt="" />
         </div>
-        <p>Unlimited access to all PRO gyms and at-home workouts</p>
+        <p className="font123">Unlimited access to group classes,all gyms and at home workouts</p>
 
     </div>
     <div>
@@ -16,7 +16,7 @@ const Middle = () => {
             <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_106,q_auto:eco,dpr_2,f_auto,fl_progressive//image/test/brand-logo/cult-pass.svg" alt="" />
             <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_78,q_auto:eco,dpr_2,f_auto,fl_progressive//image/test/brand-logo/cult-pass-pro-partial.png" alt="" />
         </div>
-        <p>Unlimited access to all PRO gyms and at-home workouts</p>
+        <p className='font123'>Unlimited access to all PRO gyms and at-home workouts</p>
         
 
     </div>
@@ -26,7 +26,7 @@ const Middle = () => {
             <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_112,q_auto:eco,dpr_2,f_auto,fl_progressive//image/test/brand-logo/cult-pass-home-partial-1.svg" alt="" />
             
         </div>
-        <p>Unlimited access to group classes, all gyms and at-home workouts</p>
+        <p className='font123'>Unlimited access to  at-home workouts with calorie tracking</p>
 
     </div>
     </div>
