@@ -4,17 +4,25 @@
 
 
 import React from 'react'
-import "../Styles/care.css"  
-import data from "../db.json"
-import FAQ from '../components/CarePageComponent/FAQ/FAQ'
-import Quote from '../components/CarePageComponent/Quotes/Quote'
-import Information from '../components/CarePageComponent/Information/Information'
+import { useSearchParams,Link } from "react-router-dom";
+import "../../Styles/care.css" 
+import data from "../../db.json"
+import FAQ from '../../components/CarePageComponent/FAQ/FAQ'
+import Quote from '../../components/CarePageComponent/Quotes/Quote'
+import Information from '../../components/CarePageComponent/Information/Information'
 
 
 
 
 const Care = () => {
     let {Lab_Test_Card}=data
+
+    let [searchParams, setSearchParams] = useSearchParams();
+
+    const HandleClick =(id)=>{
+      console.log(id)
+      setSearchParams(id)
+    }
   
     
   return (
@@ -34,7 +42,9 @@ const Care = () => {
             <div className='card_container'>
              {
                 Lab_Test_Card.map((card)=>(
-                    <div className='test_card'>
+                  <Link >
+                  
+                  <div className='test_card' key={card.id} onClick={()=>HandleClick(card.id)}>
                        <img   src={card.image} alt="image" />
                       
                        <div  className='price_tag'>
@@ -51,6 +61,8 @@ const Care = () => {
                       
                        
                     </div>
+                  </Link>
+                    
                 ))
              }
             </div>
