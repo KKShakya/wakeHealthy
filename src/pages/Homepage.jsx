@@ -3,7 +3,7 @@ import './Homepage.css'
 import Middle from './Homepage/Middle'
 import Middle2 from './Homepage/Middle2'
 import Middle3 from './Homepage/Middle3'
-
+import Middle4 from './Homepage/Middle4'
 
 
 const Homepage = () => {
@@ -19,7 +19,7 @@ const Homepage = () => {
        <Middle></Middle>
        <Middle2/>
        <Middle3/>
-       
+       <Middle4/>
     </div>
   )
 }

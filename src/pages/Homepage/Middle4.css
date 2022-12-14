@@ -1,0 +1,12 @@
+
+.middle4{
+    display: flex;
+    gap: 4%;
+    width: 80%;
+    justify-content: space-around;
+  
+}
+.middle4_parent{
+    display: flex;
+    justify-content: center;
+}

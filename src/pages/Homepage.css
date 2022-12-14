@@ -1,13 +1,25 @@
 .content>img{
     width:23% ;
 }
+.main119{
+    position: relative;
+}
+video{
+    object-fit: cover;
+}
+
+
 .content{
     position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
+    /* width: 100%;
+    height: 100%; */
+    width: 80%;
+   top: 33%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     display: flex;
-    justify-content: end;
+    justify-content: baseline;
+   
     flex-direction: column;
     align-items: center;
 }
