@@ -9,9 +9,9 @@ function App() {
   AOS.init();
   return (
     <div className="App">
-       <Navbar />
+      <Navbar />
       <AllRoutes />
-      <Footer /> 
+      <Footer/>
     </div>
   );
 }
