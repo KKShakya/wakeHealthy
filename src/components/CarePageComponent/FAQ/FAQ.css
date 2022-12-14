@@ -1,0 +1,20 @@
+.faq_div{
+    width: 100%;
+    height: auto;
+    padding: 40px 0;
+    margin-top: 40px;
+    background: #171A26;
+}
+.Faq_heading{
+    width: 80%;
+    margin: auto;
+    text-align: left;
+    color: white;
+    font-size:35px ;
+}
+
+.Accordion{
+    width: 80%;
+    margin: auto;
+    color: white;
+}

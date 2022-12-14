@@ -1,0 +1,186 @@
+{
+    "Lab_Test_Card":[
+        {
+        "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/bundle/FitCheck_Magazine-02.png",
+        "Price" :1990,
+        "Offer_price":990
+        
+        },
+        {
+            "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/bundle/mp/diag_pack_Vitamin_Profile_clp.jpg",
+            "Price" :1990,
+            "Offer_price":890
+            
+        }
+        ,
+        {
+            "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/bundle/mp/diag_pack_Thyroid_Screening_clp.jpg",
+            "Price" :590,
+            "Offer_price":450
+            
+        },
+        {
+            "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/diagnostics/screening-packs/WorkoutWellness_men_magazine_web2.png",
+            "Price" :2990,
+            "Offer_price":1990
+            
+        },
+        {
+            "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/diagnostics/screening-packs/WorkoutWellness_women_magazine_web2.png",
+            "Price" :2990,
+            "Offer_price":1990
+            
+        },
+        {
+            "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/diagnostics/screening-packs/sr_citizen_adv_m_mag.png",
+            "Price" :5990,
+            "Offer_price":2990
+            
+        },
+        {
+            "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/diagnostics/screening-packs/sr_citizen_adv_f_mag.png",
+            "Price" :5990,
+            "Offer_price":2990
+            
+        },
+        {
+            "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/bundle/IronScreeningClp122020.png",
+            "Price" :990,
+            "Offer_price":690
+            
+        },
+        {
+            "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/bundle/WomensHealthScreening_Magazine.png",
+            "Price" :3490,
+            "Offer_price":1690
+            
+        },
+        {
+            "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/diagnostics/screening-packs/PCODMagazineWeb.png",
+            "Price" :2490,
+            "Offer_price":1990
+            
+        },
+        {
+            "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/bundle/FitCheck_Magazine-02.png",
+            "Price" :1990,
+            "Offer_price":990
+            
+        },
+        {
+            "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/bundle/mp/diag_pack_Diabetes_Screening_clp.jpg",
+            "Price" :590,
+            "Offer_price":490
+            
+        },
+        {
+            "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/bundle/LipidScreening_Magazine.png",
+            "Price" :690,
+            "Offer_price":390
+            
+        },
+        {
+            "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/bundle/ImmunityCcreening_Magazine.png",
+            "Price" :2990,
+            "Offer_price":1390
+            
+        },
+        {
+            "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/bundle/CF01032_hero_2.png",
+            "Price" :990,
+            "Offer_price":490
+            
+        },
+        {
+            "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/bundle/PregnancyScreening_Magazine.png",
+            "Price" :790,
+            "Offer_price":590
+            
+        },
+        {
+            "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/bundle/mp/diag_pack_Kidney_Screening_clp.jpg",
+            "Price" :490,
+            "Offer_price":390
+            
+        },
+        {
+            "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/bundle/HairFallScreeningClp122019.png",
+            "Price" :2990,
+            "Offer_price":1290
+            
+        },
+        {
+            "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/bundle/BoneHealthScreening_Magazine.png",
+            "Price" :1490,
+            "Offer_price":990
+            
+        },
+        {
+            "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/bundle/mp/diag_pack_Liver_Screening_clp.jpg",
+            "Price" :690,
+            "Offer_price":390
+            
+        },
+        {
+            "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/bundle/FeverPanel_Magazine.jpg",
+            "Price" :1990,
+            "Offer_price":990
+            
+        },
+        {
+            "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/bundle/Alcohol_magazine.png",
+            "Price" :2990,
+            "Offer_price":1490
+            
+        },
+        {
+            "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/diagnostics/screening-packs/Anemia_Magazine_Web_new.png",
+            "Price" :1990,
+            "Offer_price":1490
+            
+        }
+        ,
+        {
+            "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/bundle/Obesity_Risk_Magazine.jpg",
+            "Price" :2990,
+            "Offer_price":1390
+            
+        }
+            
+    ],
+
+
+
+
+  "FAQ_DATA":[
+    {
+      "que":"How does home sample collection work?",
+      "ans":"Once you have chosen a convenient time slot for your booking, and placed an order, our WHO certified health professionals will arrive at your chosen address and collect blood and/or urine samples.  Once samples are collected, they will be processed at one of our partner labs closest to you and the test report will be available on your app and email."
+    },
+    {
+        "que":"Can I reschedule/cancel my diagnostic test appointment?",
+        "ans":"The appointment can be rescheduled or cancelled 2 hours before your chosen slot. "
+    },
+    {
+        "que":"How can I receive my reports on email again ?",
+        "ans":"You can email your test reports by going to Profile> Activity &Records> Medical Records> Diagnostic Tests and selecting the email reports button. "
+    },
+    {
+        "que":"I did not get my reports on email",
+        "ans":"Sometimes, mail providers mistakenly mark the reports email as Spam. Please check the spam folder (or) trigger the reports email again on the app   You would have received an SMS after your sample collection indicating the time it would take for results to be available  In case the communicated time has elapsed and you have not received your report on email, please reach out to us at hello@cure.fit ."
+    },
+    {
+        "que":"What instructions should I follow for my tests?",
+        "ans":"All instructions that have to be followed for your tests will be communicated to you at the time of booking a slot. You will also receive an email covering the instructions.."
+    },
+    {
+        "que":"How can I get a refund for my Full body Health Check /Diagnostic Screening pack ?",
+        "ans":"Only if you have not completed your Full Body health check up/ Diagnostic Screening within 1 year from the purchase date, please write to hello@curefit.com  e.g: If heath check is purchased on 1/10/2019, you can write to us till 1/10/2020. We do not refund any amount for health check ups with a purchase date older than a year."
+    },
+    {
+        "que":"Can I club two or more sample collection slots",
+        "ans":"We are currently working on enabling multiple orders from the same address (for the same person or different).  Till then, you can request the phlebotomist who comes for the sample collection for the first order, to add on the rest of the tests (for the same person or different).  You can directly pay him via card / UPI / cash for the additional tests purchased. "
+    }
+
+  ]
+}
