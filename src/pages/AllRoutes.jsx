@@ -1,6 +1,8 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Care from "./Care";
+import Care from "./Care/Care";
+import CareBooking from "./Care/CareBooking";
+
 import Homepage from "./Homepage";
 import Products from "./shop/Products";
 import SingleProduct from "./shop/shop.components/SingleProduct";
@@ -19,6 +21,12 @@ const AllRoutes = () => {
         path="/store/products/:categeory/:product_id"
         element={<SingleProduct />}
       />
+
+     <Route
+        path="/care/:Booking_id"
+        element={<CareBooking />}
+      />
+     
 
     </Routes>
   );

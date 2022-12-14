@@ -24,7 +24,7 @@ const FAQ = () => {
                     <Accordion allowToggle>
                         {
                             FAQ_DATA.map((item)=>(
-                              <Accordion_Item  item={item}/>
+                              <Accordion_Item  item={item} key={Math.random()*100000}/>
                             ))
                         }
                        
