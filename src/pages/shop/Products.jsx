@@ -87,3 +87,5 @@ export default function Products() {
     </>
   );
 }
+
+// json-server --watch shop.json --port 8080

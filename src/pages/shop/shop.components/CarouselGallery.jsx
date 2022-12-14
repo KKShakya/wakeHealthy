@@ -22,7 +22,7 @@ export default function ShopCarouselGallery() {
     },
     mobile: {
       breakpoint: { max: 519, min: 0 },
-      items: 1.2,
+      items: 1.5,
     },
   };
 

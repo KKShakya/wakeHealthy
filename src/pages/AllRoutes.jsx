@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import Homepage from "./Homepage";
 import Products from "./shop/Products";
 import SingleProduct from "./shop/shop.components/SingleProduct";
-import ShopHome from "./shop/shop.home";
+import ShopHome from "./shop/ShopHome";
 
 const AllRoutes = () => {
   return (

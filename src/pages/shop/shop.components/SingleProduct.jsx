@@ -3,6 +3,7 @@ import {
   Box,
   Button,
   Flex,
+  FormControl,
   Grid,
   Heading,
   HStack,
@@ -15,7 +16,10 @@ import {
 } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import CartDrower from "../CartDrower";
 import Loading from "./Loading";
+import { useDispatch } from "react-redux";
+import { add_to_cart } from "../../../store/Cart/cart.action";
 
 function getById({ categeory, product_id }) {
   return fetch(`http://localhost:8080/${categeory}/${product_id}`).then((res) =>
@@ -27,6 +31,9 @@ export default function SingleProduct() {
   const params = useParams();
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [selectdSize, setSize] = useState("S");
+
+  let dispatch = useDispatch();
 
   useEffect(() => {
     getById(params)
@@ -39,6 +46,11 @@ export default function SingleProduct() {
         console.log(err);
       });
   }, []);
+
+  let handleAdd = (product) => {
+    let selected = { ...product, size: selectdSize, quantity: 1 };
+    dispatch(add_to_cart(selected));
+  };
 
   return (
     <>
@@ -89,21 +101,38 @@ export default function SingleProduct() {
               </Text>
             </Stack>
 
-            {/* <Button key={el} variant={"outline"} borderRadius="full">
-                      {el}
-                    </Button> */}
-
             <Stack gap={"5px"}>
               <Text>Choose Size</Text>
               <HStack justify="space-evenly">
-                {console.log(product.size[0])}
+                {product.size.map((el) => (
+                  <Button
+                    key={el}
+                    variant={"outline"}
+                    borderRadius="full"
+                    isActive={el == selectdSize}
+                    onClick={() => setSize(el)}
+                  >
+                    {el}
+                  </Button>
+                ))}
               </HStack>
               <HStack justify="center">
-                <Button colorScheme={"red"} borderRadius="full" w={"150px"}>
+                <Button
+                  colorScheme={"red"}
+                  borderRadius="full"
+                  w={"150px"}
+                  onClick={() => handleAdd(product)}
+                >
                   Add To Cart
                 </Button>
-                <Button colorScheme={"red"} borderRadius="full" w={"150px"}>
-                  Buy Now
+
+                <Button
+                  colorScheme={"red"}
+                  borderRadius="full"
+                  w={"150px"}
+                  // onClick={() => handleAdd(product)}
+                >
+                  <CartDrower />
                 </Button>
               </HStack>
             </Stack>

@@ -1,4 +1,30 @@
 {
+  "Cart": [
+    {
+      "id": 2,
+      "image": "https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/gyEKit98fH6VGSZ2jv1fFkSm",
+      "brand": "cultsport",
+      "title": "Solid Active Tshirt with Logo",
+      "price": "459",
+      "strike": "899",
+      "discount": "50",
+      "size": "S",
+      "rating": "4.3",
+      "quantity": 1
+    },
+    {
+      "id": 3,
+      "image": "https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/MbwMLHyajasEhEuQSzoEoKWV",
+      "brand": "cultsport",
+      "title": "Solid Active Tshirt with Logo",
+      "price": "759",
+      "strike": "899",
+      "discount": "20",
+      "size": "S",
+      "rating": "4.3",
+      "quantity": 1
+    }
+  ],
   "Tshirts": [
     {
       "id": 1,
@@ -8,7 +34,14 @@
       "price": "359",
       "strike": "899",
       "discount": "60",
-      "size": ["XS", "S", "M", "L", "XL", "XXL"],
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
       "rating": "4.3"
     },
     {
@@ -19,7 +52,14 @@
       "price": "459",
       "strike": "899",
       "discount": "50",
-      "size": ["XS", "S", "M", "L", "XL", "XXL"],
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
       "rating": "4.3"
     },
     {
@@ -30,7 +70,14 @@
       "price": "759",
       "strike": "899",
       "discount": "20",
-      "size": ["XS", "S", "M", "L", "XL", "XXL"],
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
       "rating": "4.3"
     },
     {
@@ -41,7 +88,14 @@
       "price": "329",
       "strike": "899",
       "discount": "60",
-      "size": ["XS", "S", "M", "L", "XL", "XXL"],
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
       "rating": "4.3"
     },
     {
@@ -52,7 +106,14 @@
       "price": "349",
       "strike": "899",
       "discount": "55",
-      "size": ["XS", "S", "M", "L", "XL", "XXL"],
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
       "rating": "4.3"
     },
     {
@@ -63,7 +124,14 @@
       "price": "359",
       "strike": "899",
       "discount": "60",
-      "size": ["XS", "S", "M", "L", "XL", "XXL"],
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
       "rating": "4.3"
     },
     {
@@ -74,7 +142,14 @@
       "price": "459",
       "strike": "899",
       "discount": "50",
-      "size": ["XS", "S", "M", "L", "XL", "XXL"],
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
       "rating": "4.3"
     },
     {
@@ -85,7 +160,14 @@
       "price": "759",
       "strike": "899",
       "discount": "20",
-      "size": ["XS", "S", "M", "L", "XL", "XXL"],
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
       "rating": "4.3"
     },
     {
@@ -96,7 +178,14 @@
       "price": "329",
       "strike": "899",
       "discount": "60",
-      "size": ["XS", "S", "M", "L", "XL", "XXL"],
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
       "rating": "4.3"
     },
     {
@@ -107,11 +196,17 @@
       "price": "349",
       "strike": "899",
       "discount": "55",
-      "size": ["XS", "S", "M", "L", "XL", "XXL"],
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
       "rating": "4.3"
     }
   ],
-
   "Cycles": [
     {
       "id": 1,
@@ -121,9 +216,9 @@
       "price": "11359",
       "strike": "11899",
       "discount": "60",
-      "size": ["ALL"],
-      "rating": "4.3",
-      "size": ["ALL"],
+      "size": [
+        "ALL"
+      ],
       "rating": "4.3"
     },
     {
@@ -134,7 +229,9 @@
       "price": "13459",
       "strike": "15899",
       "discount": "50",
-      "size": ["ALL"],
+      "size": [
+        "ALL"
+      ],
       "rating": "4.3"
     },
     {
@@ -145,7 +242,9 @@
       "price": "17759",
       "strike": "18999",
       "discount": "20",
-      "size": ["ALL"],
+      "size": [
+        "ALL"
+      ],
       "rating": "4.3"
     },
     {
@@ -156,7 +255,9 @@
       "price": "18329",
       "strike": "19899",
       "discount": "60",
-      "size": ["ALL"],
+      "size": [
+        "ALL"
+      ],
       "rating": "4.3"
     },
     {
@@ -167,7 +268,9 @@
       "price": "11359",
       "strike": "11899",
       "discount": "60",
-      "size": ["ALL"],
+      "size": [
+        "ALL"
+      ],
       "rating": "4.3"
     },
     {
@@ -178,7 +281,9 @@
       "price": "13459",
       "strike": "15899",
       "discount": "50",
-      "size": ["ALL"],
+      "size": [
+        "ALL"
+      ],
       "rating": "4.3"
     },
     {
@@ -189,7 +294,9 @@
       "price": "17759",
       "strike": "18999",
       "discount": "20",
-      "size": ["ALL"],
+      "size": [
+        "ALL"
+      ],
       "rating": "4.3"
     },
     {
@@ -200,7 +307,9 @@
       "price": "18329",
       "strike": "19899",
       "discount": "60",
-      "size": ["ALL"],
+      "size": [
+        "ALL"
+      ],
       "rating": "4.3"
     },
     {
@@ -211,7 +320,9 @@
       "price": "11359",
       "strike": "11899",
       "discount": "60",
-      "size": ["ALL"],
+      "size": [
+        "ALL"
+      ],
       "rating": "4.3"
     },
     {
@@ -222,7 +333,9 @@
       "price": "13459",
       "strike": "15899",
       "discount": "50",
-      "size": ["ALL"],
+      "size": [
+        "ALL"
+      ],
       "rating": "4.3"
     }
   ]
