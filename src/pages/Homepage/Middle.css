@@ -1,0 +1,29 @@
+.section1{
+    background-color: #1A202C;
+
+}
+.section1{
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+}
+.logo1>img{
+    
+    width: 50%;
+    margin-left: 20%;
+    display: flex;
+    gap: 100%;
+    flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+}
+.section1>:nth-child(1){
+    width: 12%;
+}
+.section1>:nth-child(2){
+    width: 12%;
+}
+.section1>:nth-child(3){
+   width: 12%;
+}
