@@ -10,7 +10,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { NavLink, useParams } from "react-router-dom";
-import Loading from "./shop.components/Loading";
+import Loading from "../../components/Loading";
 
 function getByCategeory({ categeory }) {
   return fetch(`http://localhost:8080/${categeory}`).then((res) => res.json());
@@ -73,9 +73,9 @@ export default function Products() {
                   <Text fontWeight={"bold"}>{el.title}</Text>
                   <HStack>
                     <Text fontWeight={"bold"}>₹ {el.price}</Text>
-                    <strike>{el.strike}</strike>
+                    <strike>{el.maxPrice}</strike>
                     <Text fontWeight={"bold"} color="pink.400">
-                      {el.discount}% off
+                      {(el.maxPrice - el.price)/10}% off
                     </Text>
                   </HStack>
                 </Stack>

@@ -1,8 +1,7 @@
 import React from "react";
-import { Box, Heading, Image } from "@chakra-ui/react";
-import ShopCarousel from "./shop.components/ShopCarousel";
-import ShopCarouselGallery from "./shop.components/CarouselGallery";
-import CartDrower from "./CartDrower";
+import { Box } from "@chakra-ui/react";
+import ShopCarousel from "./ShopComponents/ShopCarousel";
+import ShopCarouselGallery from "./ShopComponents/CarouselGallery";
 
 export default function ShopHome() {
   return (

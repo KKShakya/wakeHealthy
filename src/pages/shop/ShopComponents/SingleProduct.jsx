@@ -3,7 +3,6 @@ import {
   Box,
   Button,
   Flex,
-  FormControl,
   Grid,
   Heading,
   HStack,
@@ -15,9 +14,9 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import CartDrower from "../CartDrower";
-import Loading from "./Loading";
+import Loading from "../../../components/Loading";
 import { useDispatch } from "react-redux";
 import { add_to_cart } from "../../../store/Cart/cart.action";
 
@@ -84,7 +83,7 @@ export default function SingleProduct() {
                 <Text fontWeight={"bold"} color="pink.400">
                   ₹ {product.price}
                 </Text>
-                <strike>₹ {product.strike}</strike>
+                <strike>₹ {product.maxPrice}</strike>
                 <Badge
                   fontWeight={"bold"}
                   bg="orange"
@@ -92,7 +91,7 @@ export default function SingleProduct() {
                   p="1"
                   fontSize="18px"
                 >
-                  {product.discount}% off
+                  {(product.maxPrice - product.price) / 10}% off
                 </Badge>
               </HStack>
               <Text>
