@@ -25,14 +25,14 @@ function getById({ categeory, product_id }) {
 
 export default function SingleProduct() {
   const params = useParams();
-  const [el, setData] = useState(null);
+  const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     getById(params)
       .then((res) => {
         setLoading(false);
-        setData(res);
+        setProduct(res);
       })
       .catch((err) => {
         setLoading(false);
@@ -58,21 +58,21 @@ export default function SingleProduct() {
             w={{ base: "100%", sm: "60%" }}
             gridTemplateColumns={{ base: "repeat(1,1fr)", md: "repeat(2,1fr)" }}
           >
-            <Image src={el.image} alt="t-shirts" />
-            <Image src={el.image} alt="t-shirts" />
-            <Image src={el.image} alt="t-shirts" />
-            <Image src={el.image} alt="t-shirts" />
+            <Image src={product.image} alt="t-shirts" />
+            <Image src={product.image} alt="t-shirts" />
+            <Image src={product.image} alt="t-shirts" />
+            <Image src={product.image} alt="t-shirts" />
           </Grid>
 
           <Stack w={{ base: "100%", sm: "40%" }} gap={"30px"}>
             <Stack gap={"5px"}>
-              <Text>{el.brand}</Text>
-              <Heading>{el.title}</Heading>
+              <Text>{product.brand}</Text>
+              <Heading>{product.title}</Heading>
               <HStack fontSize="22px">
                 <Text fontWeight={"bold"} color="pink.400">
-                  ₹ {el.price}
+                  ₹ {product.price}
                 </Text>
-                <strike>₹ {el.strike}</strike>
+                <strike>₹ {product.strike}</strike>
                 <Badge
                   fontWeight={"bold"}
                   bg="orange"
@@ -80,7 +80,7 @@ export default function SingleProduct() {
                   p="1"
                   fontSize="18px"
                 >
-                  {el.discount}% off
+                  {product.discount}% off
                 </Badge>
               </HStack>
               <Text>
@@ -89,24 +89,14 @@ export default function SingleProduct() {
               </Text>
             </Stack>
 
+            {/* <Button key={el} variant={"outline"} borderRadius="full">
+                      {el}
+                    </Button> */}
+
             <Stack gap={"5px"}>
               <Text>Choose Size</Text>
               <HStack justify="space-evenly">
-                <Button variant={"outline"} borderRadius="full">
-                  S
-                </Button>
-                <Button variant={"outline"} borderRadius="full">
-                  M
-                </Button>
-                <Button variant={"outline"} borderRadius="full">
-                  L
-                </Button>
-                <Button variant={"outline"} borderRadius="full">
-                  XL
-                </Button>
-                <Button variant={"outline"} borderRadius="full">
-                  XXL
-                </Button>
+                {console.log(product.size[0])}
               </HStack>
               <HStack justify="center">
                 <Button colorScheme={"red"} borderRadius="full" w={"150px"}>
