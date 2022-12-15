@@ -1,0 +1,8 @@
+.animation-flex{
+    display: flex;
+    justify-content:space-around;
+    background-color:  #1A202C; ;
+}
+.animation-flex img{
+    width: 40%;
+}
