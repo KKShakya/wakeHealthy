@@ -14,8 +14,11 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
-import Loading from "./Loading";
+import { useParams } from "react-router-dom";
+import CartDrower from "../CartDrower";
+import Loading from "../../../components/Loading";
+import { useDispatch } from "react-redux";
+import { add_to_cart } from "../../../store/Cart/cart.action";
 
 function getById({ categeory, product_id }) {
   return fetch(`http://localhost:8080/${categeory}/${product_id}`).then((res) =>
@@ -25,20 +28,28 @@ function getById({ categeory, product_id }) {
 
 export default function SingleProduct() {
   const params = useParams();
-  const [el, setData] = useState(null);
+  const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [selectdSize, setSize] = useState("S");
+
+  let dispatch = useDispatch();
 
   useEffect(() => {
     getById(params)
       .then((res) => {
         setLoading(false);
-        setData(res);
+        setProduct(res);
       })
       .catch((err) => {
         setLoading(false);
         console.log(err);
       });
   }, []);
+
+  let handleAdd = (product) => {
+    let selected = { ...product, size: selectdSize, quantity: 1 };
+    dispatch(add_to_cart(selected));
+  };
 
   return (
     <>
@@ -58,21 +69,21 @@ export default function SingleProduct() {
             w={{ base: "100%", sm: "60%" }}
             gridTemplateColumns={{ base: "repeat(1,1fr)", md: "repeat(2,1fr)" }}
           >
-            <Image src={el.image} alt="t-shirts" />
-            <Image src={el.image} alt="t-shirts" />
-            <Image src={el.image} alt="t-shirts" />
-            <Image src={el.image} alt="t-shirts" />
+            <Image src={product.image} alt="t-shirts" />
+            <Image src={product.image} alt="t-shirts" />
+            <Image src={product.image} alt="t-shirts" />
+            <Image src={product.image} alt="t-shirts" />
           </Grid>
 
           <Stack w={{ base: "100%", sm: "40%" }} gap={"30px"}>
             <Stack gap={"5px"}>
-              <Text>{el.brand}</Text>
-              <Heading>{el.title}</Heading>
+              <Text>{product.brand}</Text>
+              <Heading>{product.title}</Heading>
               <HStack fontSize="22px">
                 <Text fontWeight={"bold"} color="pink.400">
-                  ₹ {el.price}
+                  ₹ {product.price}
                 </Text>
-                <strike>₹ {el.strike}</strike>
+                <strike>₹ {product.maxPrice}</strike>
                 <Badge
                   fontWeight={"bold"}
                   bg="orange"
@@ -80,7 +91,7 @@ export default function SingleProduct() {
                   p="1"
                   fontSize="18px"
                 >
-                  {el.discount}% off
+                  {(product.maxPrice - product.price) / 10}% off
                 </Badge>
               </HStack>
               <Text>
@@ -92,28 +103,35 @@ export default function SingleProduct() {
             <Stack gap={"5px"}>
               <Text>Choose Size</Text>
               <HStack justify="space-evenly">
-                <Button variant={"outline"} borderRadius="full">
-                  S
-                </Button>
-                <Button variant={"outline"} borderRadius="full">
-                  M
-                </Button>
-                <Button variant={"outline"} borderRadius="full">
-                  L
-                </Button>
-                <Button variant={"outline"} borderRadius="full">
-                  XL
-                </Button>
-                <Button variant={"outline"} borderRadius="full">
-                  XXL
-                </Button>
+                {product.size.map((el) => (
+                  <Button
+                    key={el}
+                    variant={"outline"}
+                    borderRadius="full"
+                    isActive={el == selectdSize}
+                    onClick={() => setSize(el)}
+                  >
+                    {el}
+                  </Button>
+                ))}
               </HStack>
               <HStack justify="center">
-                <Button colorScheme={"red"} borderRadius="full" w={"150px"}>
+                <Button
+                  colorScheme={"red"}
+                  borderRadius="full"
+                  w={"150px"}
+                  onClick={() => handleAdd(product)}
+                >
                   Add To Cart
                 </Button>
-                <Button colorScheme={"red"} borderRadius="full" w={"150px"}>
-                  Buy Now
+
+                <Button
+                  colorScheme={"red"}
+                  borderRadius="full"
+                  w={"150px"}
+                  // onClick={() => handleAdd(product)}
+                >
+                  <CartDrower />
                 </Button>
               </HStack>
             </Stack>

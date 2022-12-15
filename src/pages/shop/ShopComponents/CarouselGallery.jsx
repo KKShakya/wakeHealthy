@@ -3,7 +3,15 @@ import "react-multi-carousel/lib/styles.css";
 import { NavLink } from "react-router-dom";
 
 import React from "react";
-import { Box, Heading, HStack, Image, Stack, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  Heading,
+  HStack,
+  Image,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
 import DATA from "../shop.json";
 
 export default function ShopCarouselGallery() {
@@ -22,20 +30,20 @@ export default function ShopCarouselGallery() {
     },
     mobile: {
       breakpoint: { max: 519, min: 0 },
-      items: 1.2,
+      items: 1.5,
     },
   };
 
   return (
-    <Stack>
+    <Stack gap={"20px"}>
       <Box>
-        <br />
         <HStack align="baseline">
           <Heading
             fontSize={"30px"}
             fontStyle="italic"
             textAlign={"left"}
             ml={"15px"}
+            mt="30px"
           >
             T-SHIRTS
           </Heading>
@@ -45,17 +53,18 @@ export default function ShopCarouselGallery() {
         </HStack>
 
         <Carousel responsive={responsive}>
-          {DATA.Tshirts.map((el) => (
-            <NavLink to={`products/Tshirts/${el.id}`} key={el.image}>
+          {DATA.Tshirts.map((product) => (
+            <NavLink to={`products/Tshirts/${product.id}`} key={product.image}>
               <Stack m={"15px"} fontSize="18px" textAlign="left">
-                <Image src={el.image} alt="t-shirts" />
-                <Text>{el.brand}</Text>
-                <Text fontWeight={"bold"}>{el.title}</Text>
+                <Image src={product.image} alt="t-shirts" />
+                <Text>{product.brand}</Text>
+                <Text fontWeight={"bold"}>{product.title}</Text>
                 <HStack>
-                  <Text fontWeight={"bold"}>₹ {el.price}</Text>
-                  <strike>{el.strike}</strike>
+                  <Text fontWeight={"bold"}>₹ {product.price}</Text>
+                  <strike>{product.maxPrice}</strike>
                   <Text fontWeight={"bold"} color="pink.400">
-                    {el.discount}% off
+                    {Math.floor(((product.maxPrice - product.price) / product.maxPrice) * 100)}
+                    % off
                   </Text>
                 </HStack>
               </Stack>
@@ -72,24 +81,25 @@ export default function ShopCarouselGallery() {
             textAlign={"left"}
             ml={"15px"}
           >
-            Cycles
+            CYCLES
           </Heading>
           <NavLink to="products/Cycles" style={{ color: "#ed64a6" }}>
             VIEW ALL
           </NavLink>
         </HStack>
         <Carousel responsive={responsive}>
-          {DATA.Cycles.map((el) => (
-            <NavLink to={`products/Cycles/${el.id}`} key={el.image}>
+          {DATA.Cycles.map((product) => (
+            <NavLink to={`products/Cycles/${product.id}`} key={product.image}>
               <Stack m={"15px"} fontSize="18px" textAlign="left">
-                <Image src={el.image} alt="t-shirts" />
-                <Text>{el.brand}</Text>
-                <Text fontWeight={"bold"}>{el.title}</Text>
+                <Image src={product.image} alt="t-shirts" />
+                <Text>{product.brand}</Text>
+                <Text fontWeight={"bold"}>{product.title}</Text>
                 <HStack>
-                  <Text fontWeight={"bold"}>₹ {el.price}</Text>
-                  <strike>{el.strike}</strike>
+                  <Text fontWeight={"bold"}>₹ {product.price}</Text>
+                  <strike>{product.maxPrice}</strike>
                   <Text fontWeight={"bold"} color="pink.400">
-                    {el.discount}% off
+                    {Math.floor(((product.maxPrice - product.price) / product.maxPrice) * 100)}
+                    % off
                   </Text>
                 </HStack>
               </Stack>
@@ -97,9 +107,19 @@ export default function ShopCarouselGallery() {
           ))}
         </Carousel>
       </Box>
-
-      <Box p={"50px"}>
-        <Image src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_1312,ar_1312:560/dpr_2/image/vm/12349520-7d24-4470-911c-d8b9c78f23f8.png" />
+      <Box>
+        <Heading
+          fontSize={"30px"}
+          fontStyle="italic"
+          textAlign={"left"}
+          ml={"15px"}
+        >
+          GREAT FITNESS SALE
+        </Heading>
+        <Image
+          p={"15px"}
+          src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_1440,ar_2880:596/dpr_2/image/vm/6d837cde-ea60-4923-8714-a6aeb4ed44b3.png"
+        />
       </Box>
     </Stack>
   );
