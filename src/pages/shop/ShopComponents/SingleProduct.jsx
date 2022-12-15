@@ -2,6 +2,7 @@ import {
   Badge,
   Box,
   Button,
+  Container,
   Flex,
   Grid,
   Heading,
@@ -14,11 +15,12 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import CartDrower from "../CartDrower";
 import Loading from "../../../components/Loading";
 import { useDispatch } from "react-redux";
 import { add_to_cart } from "../../../store/Cart/cart.action";
+import ShopNavbar from "./ShopNavbar";
 
 function getById({ categeory, product_id }) {
   return fetch(`http://localhost:8080/${categeory}/${product_id}`).then((res) =>
@@ -56,109 +58,119 @@ export default function SingleProduct() {
       {loading ? (
         <Loading />
       ) : (
-        <Flex
-          direction={{ base: "column", sm: "row" }}
-          align={"top"}
-          fontSize="18px"
-          textAlign="left"
-          gap="20px"
-          p={"20px"}
-        >
-          <Grid
+        <Box>
+          <ShopNavbar />
+          <Flex
+            direction={{ base: "column", sm: "row" }}
+            align={"top"}
+            fontSize="18px"
+            textAlign="left"
             gap="20px"
-            w={{ base: "100%", sm: "60%" }}
-            gridTemplateColumns={{ base: "repeat(1,1fr)", md: "repeat(2,1fr)" }}
+            p={"20px"}
           >
-            <Image src={product.image} alt="t-shirts" />
-            <Image src={product.image} alt="t-shirts" />
-            <Image src={product.image} alt="t-shirts" />
-            <Image src={product.image} alt="t-shirts" />
-          </Grid>
+            <Grid
+              gap="20px"
+              w={{ base: "100%", sm: "60%" }}
+              gridTemplateColumns={{
+                base: "repeat(1,1fr)",
+                md: "repeat(2,1fr)",
+              }}
+            >
+              <Image src={product.image} alt="t-shirts" />
+              <Image src={product.image} alt="t-shirts" />
+              <Image src={product.image} alt="t-shirts" />
+              <Image src={product.image} alt="t-shirts" />
+            </Grid>
 
-          <Stack w={{ base: "100%", sm: "40%" }} gap={"30px"}>
-            <Stack gap={"5px"}>
-              <Text>{product.brand}</Text>
-              <Heading>{product.title}</Heading>
-              <HStack fontSize="22px">
-                <Text fontWeight={"bold"} color="pink.400">
-                  ₹ {product.price}
-                </Text>
-                <strike>₹ {product.maxPrice}</strike>
-                <Badge
-                  fontWeight={"bold"}
-                  bg="orange"
-                  color={"white"}
-                  p="1"
-                  fontSize="18px"
-                >
-                  {(product.maxPrice - product.price) / 10}% off
-                </Badge>
-              </HStack>
-              <Text>
-                Make Your Move with the Signature Branding Logo Play Tshirt. Add
-                the extra groovy vibe your Dance workout wardrobe.
-              </Text>
-            </Stack>
-
-            <Stack gap={"5px"}>
-              <Text>Choose Size</Text>
-              <HStack justify="space-evenly">
-                {product.size.map((el) => (
-                  <Button
-                    key={el}
-                    variant={"outline"}
-                    borderRadius="full"
-                    isActive={el == selectdSize}
-                    onClick={() => setSize(el)}
+            <Stack w={{ base: "100%", sm: "40%" }} gap={"30px"}>
+              <Stack gap={"5px"}>
+                <Text>{product.brand}</Text>
+                <Heading>{product.title}</Heading>
+                <HStack fontSize="22px">
+                  <Text fontWeight={"bold"} color="pink.400">
+                    ₹ {product.price}
+                  </Text>
+                  <strike>₹ {product.maxPrice}</strike>
+                  <Badge
+                    fontWeight={"bold"}
+                    bg="orange"
+                    color={"white"}
+                    p="1"
+                    fontSize="18px"
                   >
-                    {el}
+                    {(product.maxPrice - product.price) / 10}% off
+                  </Badge>
+                </HStack>
+                <Text>
+                  Make Your Move with the Signature Branding Logo Play Tshirt.
+                  Add the extra groovy vibe your Dance workout wardrobe.
+                </Text>
+              </Stack>
+
+              <Stack gap={"5px"}>
+                <Text>Choose Size</Text>
+                <HStack justify="space-evenly">
+                  {product.size.map((el) => (
+                    <Button
+                      key={el}
+                      variant={"outline"}
+                      borderRadius="full"
+                      isActive={el == selectdSize}
+                      onClick={() => setSize(el)}
+                    >
+                      {el}
+                    </Button>
+                  ))}
+                </HStack>
+                <HStack justify="center">
+                  <Button
+                    colorScheme={"red"}
+                    borderRadius="full"
+                    w={"150px"}
+                    onClick={() => handleAdd(product)}
+                  >
+                    Add To Cart
                   </Button>
-                ))}
-              </HStack>
-              <HStack justify="center">
-                <Button
-                  colorScheme={"red"}
-                  borderRadius="full"
-                  w={"150px"}
-                  onClick={() => handleAdd(product)}
+
+                  <Button
+                    colorScheme={"red"}
+                    borderRadius="full"
+                    w={"150px"}
+                    // onClick={() => handleAdd(product)}
+                  >
+                    <CartDrower title={"View Cart"} />
+                  </Button>
+                </HStack>
+              </Stack>
+
+              <Stack>
+                <Text fontWeight={"bold"}>PRODUCT DETAILS</Text>
+                <Box>
+                  <li>Colour: Grey</li>
+                  <li>Fabric: 100% Polyester</li>
+                  <li>Breathable fabric</li>
+                  <li>Supersoft, Light weight</li>
+                  <li>Flydry, Moisture Wicking</li>
+                  <li>Medium to Light intensity activities</li>
+                </Box>
+              </Stack>
+
+              <InputGroup size={"lg"}>
+                <Input
+                  placeholder="Enter your pincode"
+                  focusBorderColor="black"
+                />
+                <InputRightElement
+                  width="4.5rem"
+                  color={"red"}
+                  fontWeight="bold"
                 >
-                  Add To Cart
-                </Button>
-
-                <Button
-                  colorScheme={"red"}
-                  borderRadius="full"
-                  w={"150px"}
-                  // onClick={() => handleAdd(product)}
-                >
-                  <CartDrower />
-                </Button>
-              </HStack>
+                  CHECK
+                </InputRightElement>
+              </InputGroup>
             </Stack>
-
-            <Stack>
-              <Text fontWeight={"bold"}>PRODUCT DETAILS</Text>
-              <Box>
-                <li>Colour: Grey</li>
-                <li>Fabric: 100% Polyester</li>
-                <li>Breathable fabric</li>
-                <li>Supersoft, Light weight</li>
-                <li>Flydry, Moisture Wicking</li>
-                <li>Medium to Light intensity activities</li>
-              </Box>
-            </Stack>
-
-            <InputGroup size={"lg"}>
-              <Input
-                placeholder="Enter your pincode"
-                focusBorderColor="black"
-              />
-              <InputRightElement width="4.5rem" color={"red"} fontWeight="bold">
-                CHECK
-              </InputRightElement>
-            </InputGroup>
-          </Stack>
-        </Flex>
+          </Flex>
+        </Box>
       )}
     </>
   );

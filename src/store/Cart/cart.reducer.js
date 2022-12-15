@@ -9,7 +9,6 @@ import {
 
 const initialState = {
   CART: [],
-  TOTAL: 0,
 };
 
 export const reducer = (state = initialState, { type, payload }) => {
@@ -24,7 +23,6 @@ export const reducer = (state = initialState, { type, payload }) => {
       return {
         ...state,
         CART: [...state.CART, payload],
-        TOTAL: +payload.price,
       };
     }
     case UPDATE_CART: {

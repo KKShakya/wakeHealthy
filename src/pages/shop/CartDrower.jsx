@@ -18,6 +18,7 @@ import {
   Box,
   ButtonGroup,
   Select,
+  Link,
 } from "@chakra-ui/react";
 import { SmallCloseIcon, DeleteIcon } from "@chakra-ui/icons";
 import { useDispatch, useSelector } from "react-redux";
@@ -30,21 +31,17 @@ import {
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 
-export default function CartDrower() {
+export default function CartDrower({title}) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
   const dispatch = useDispatch();
-  const { CART, TOTAL } = useSelector((store) => store.cart);
-  const [cartTotal, setCartTotal] = useState(0);
+  const { CART } = useSelector((store) => store.cart);
 
   useEffect(() => {
     dispatch(get_cart());
   }, []);
 
-  useEffect(() => {
-    setCartTotal((prev)=>prev+TOTAL)
-    console.log(TOTAL);
-  }, [TOTAL]);
+  let cartTotal = CART.reduce((acc, el) => acc + +el.price * el.quantity, 0);
 
   const handleQuantity = (e, product) => {
     let quantity = e.target.value;
@@ -56,7 +53,9 @@ export default function CartDrower() {
 
   return (
     <>
-      <Text onClick={onOpen}>View Cart</Text>
+      <Text onClick={onOpen} w={"100%"} p="10px">
+        {title}
+      </Text>
       <Drawer
         isOpen={isOpen}
         placement="right"
@@ -106,8 +105,9 @@ export default function CartDrower() {
               ))}
             </VStack>
           </DrawerBody>
-          <DrawerFooter>
-            <Button colorScheme={"red"} w={"100%"} onClick={handleTotal}>
+          <DrawerFooter justifyContent={"space-between"}>
+            <Button>Cart Total : ₹ {cartTotal}</Button>
+            <Button colorScheme={"red"} onClick={handleTotal}>
               Buy Now ( {CART.length} items )
             </Button>
           </DrawerFooter>
