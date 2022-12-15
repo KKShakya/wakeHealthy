@@ -1,18 +1,6 @@
 {
   "Cart": [
     {
-      "id": 3,
-      "image": "https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/MbwMLHyajasEhEuQSzoEoKWV",
-      "brand": "cultsport",
-      "title": "Solid Active Tshirt with Logo",
-      "price": "759",
-      "maxPrice": "899",
-      "discount": "20",
-      "size": "XL",
-      "rating": "3.3",
-      "quantity": "1"
-    },
-    {
       "id": 4,
       "image": "https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/uVqDCnrhWdZvkYV8oG5SpdW1",
       "brand": "cultsport",
@@ -20,20 +8,8 @@
       "price": "329",
       "maxPrice": "899",
       "discount": "60",
-      "size": "S",
-      "rating": "4.3",
-      "quantity": "1"
-    },
-    {
-      "id": 13,
-      "image": "https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/9Lfs1QsnEAApo4epJb1A27Y4",
-      "brand": "cultsport",
-      "title": "Shimano Geared Mountain Cycle",
-      "price": "17759",
-      "maxPrice": "18999",
-      "discount": "20",
-      "size": "S",
-      "rating": "4.3",
+      "size": "XXL",
+      "rating": "4.2",
       "quantity": 1
     }
   ],

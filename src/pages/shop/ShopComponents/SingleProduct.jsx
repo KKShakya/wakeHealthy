@@ -13,12 +13,13 @@ import {
   InputRightElement,
   Stack,
   Text,
+  useToast,
 } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { NavLink, useParams } from "react-router-dom";
 import CartDrower from "../CartDrower";
 import Loading from "../../../components/Loading";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { add_to_cart } from "../../../store/Cart/cart.action";
 import ShopNavbar from "./ShopNavbar";
 
@@ -33,8 +34,9 @@ export default function SingleProduct() {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [selectdSize, setSize] = useState("S");
-
+  const toast = useToast();
   let dispatch = useDispatch();
+  const { item_exist } = useSelector((store) => store.cart);
 
   useEffect(() => {
     getById(params)
@@ -48,9 +50,16 @@ export default function SingleProduct() {
       });
   }, []);
 
-  let handleAdd = (product) => {
+  let handleAdd = async(product) => {
     let selected = { ...product, size: selectdSize, quantity: 1 };
-    dispatch(add_to_cart(selected));
+    await dispatch(add_to_cart(selected));
+    toast({
+      title: item_exist ? "item exist" : "added to cart",
+      status: item_exist ? "warning" : "success",
+      duration: 3000,
+      isClosable: true,
+      position:"top-right"
+    });
   };
 
   return (

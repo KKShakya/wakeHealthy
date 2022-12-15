@@ -19,6 +19,7 @@ import {
   ButtonGroup,
   Select,
   Link,
+  useToast,
 } from "@chakra-ui/react";
 import { SmallCloseIcon, DeleteIcon } from "@chakra-ui/icons";
 import { useDispatch, useSelector } from "react-redux";
@@ -30,12 +31,14 @@ import {
 } from "../../store/Cart/cart.action";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
+import CheckoutModal from "./ShopComponents/CheckoutModal";
 
-export default function CartDrower({title}) {
+export default function CartDrower({ title }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
   const dispatch = useDispatch();
-  const { CART } = useSelector((store) => store.cart);
+  const { CART, item_deleted } = useSelector((store) => store.cart);
+  const toast = useToast();
 
   useEffect(() => {
     dispatch(get_cart());
@@ -49,7 +52,12 @@ export default function CartDrower({title}) {
     dispatch(update_cart(updated));
   };
 
-  const handleTotal = () => {};
+  // toast({
+  //   title: item_deleted ? "item exist" : "added to cart",
+  //   status: item_deleted ? "warning" : "success",
+  //   duration: 3000,
+  //   isClosable: true,
+  // });
 
   return (
     <>
@@ -80,7 +88,9 @@ export default function CartDrower({title}) {
                         <DeleteIcon
                           cursor={"pointer"}
                           color="gray"
-                          onClick={() => dispatch(delete_from_cart(product.id))}
+                          onClick={() => {
+                            dispatch(delete_from_cart(product.id));
+                          }}
                         />
                       </HStack>
                       <Text fontSize="20px">{product.title}</Text>
@@ -107,9 +117,7 @@ export default function CartDrower({title}) {
           </DrawerBody>
           <DrawerFooter justifyContent={"space-between"}>
             <Button>Cart Total : ₹ {cartTotal}</Button>
-            <Button colorScheme={"red"} onClick={handleTotal}>
-              Buy Now ( {CART.length} items )
-            </Button>
+            <CheckoutModal cartTotal={cartTotal} />
           </DrawerFooter>
         </DrawerContent>
       </Drawer>
