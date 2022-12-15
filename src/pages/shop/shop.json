@@ -1,41 +1,342 @@
 {
-  "Tshirts":[
-    {"id":1,"image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/xSqZe6eiLM6R2YmMmeYNk8wm","brand":"cultsport","title":"Solid Active Tshirt with Logo","price":"359","strike":"899","discount":"60"},
-    {"id":2,"image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/gyEKit98fH6VGSZ2jv1fFkSm","brand":"cultsport","title":"Solid Active Tshirt with Logo","price":"459","strike":"899","discount":"50"},
-    {"id":3,"image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/MbwMLHyajasEhEuQSzoEoKWV","brand":"cultsport","title":"Solid Active Tshirt with Logo","price":"759","strike":"899","discount":"20"},
-    {"id":4,"image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/uVqDCnrhWdZvkYV8oG5SpdW1","brand":"cultsport","title":"Solid Active Tshirt with Logo","price":"329","strike":"899","discount":"60"},
-    {"id":5,"image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/6BNADeqJxiu1CPNdg9k7wdbA","brand":"cultsport","title":"Solid Active Tshirt with Logo","price":"349","strike":"899","discount":"55"},
-    {"id":6,"image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/xSqZe6eiLM6R2YmMmeYNk8wm","brand":"cultsport","title":"Solid Active Tshirt with Logo","price":"359","strike":"899","discount":"60"},
-    {"id":7,"image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/gyEKit98fH6VGSZ2jv1fFkSm","brand":"cultsport","title":"Solid Active Tshirt with Logo","price":"459","strike":"899","discount":"50"},
-    {"id":8,"image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/MbwMLHyajasEhEuQSzoEoKWV","brand":"cultsport","title":"Solid Active Tshirt with Logo","price":"759","strike":"899","discount":"20"},
-    {"id":9,"image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/uVqDCnrhWdZvkYV8oG5SpdW1","brand":"cultsport","title":"Solid Active Tshirt with Logo","price":"329","strike":"899","discount":"60"},
-    {"id":10,"image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/6BNADeqJxiu1CPNdg9k7wdbA","brand":"cultsport","title":"Solid Active Tshirt with Logo","price":"349","strike":"899","discount":"55"}
+  "Cart": [
+    {
+      "id": 12,
+      "image": "https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/omGT5x3nxUZ1QFbt9xpgx54T",
+      "brand": "cultsport",
+      "title": "Shimano Geared Mountain Cycle",
+      "price": "13459",
+      "maxPrice": "15899",
+      "discount": "50",
+      "size": "S",
+      "rating": "4.3",
+      "quantity": "3"
+    },
+    {
+      "id": 14,
+      "image": "https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/gAyN3PLJRUsVNUmEjYDscTDA",
+      "brand": "cultsport",
+      "title": "Shimano Geared Mountain Cycle",
+      "price": "18329",
+      "maxPrice": "19899",
+      "discount": "60",
+      "size": "S",
+      "rating": "4.3",
+      "quantity": "3"
+    }
   ],
-
-  "Cycles":[
-    {"id":1,"image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/q1S4DwudvD6D86TUcuSikyUZ","brand":"cultsport","title":"Solid Active Tshirt with Logo","price":"11359","strike":"11899","discount":"60"},
-    {"id":2,"image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/omGT5x3nxUZ1QFbt9xpgx54T","brand":"cultsport","title":"Solid Active Tshirt with Logo","price":"13459","strike":"15899","discount":"50"},
-    {"id":3,"image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/9Lfs1QsnEAApo4epJb1A27Y4","brand":"cultsport","title":"Solid Active Tshirt with Logo","price":"17759","strike":"18999","discount":"20"},
-    {"id":4,"image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/gAyN3PLJRUsVNUmEjYDscTDA","brand":"cultsport","title":"Solid Active Tshirt with Logo","price":"18329","strike":"19899","discount":"60"},
-    {"id":5,"image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/ZJBYsrvTZKUc9QzYK6fh4f8n","brand":"cultsport","title":"Solid Active Tshirt with Logo","price":"11359","strike":"11899","discount":"60"},
-    {"id":6,"image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/omGT5x3nxUZ1QFbt9xpgx54T","brand":"cultsport","title":"Solid Active Tshirt with Logo","price":"13459","strike":"15899","discount":"50"},
-    {"id":7,"image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/9Lfs1QsnEAApo4epJb1A27Y4","brand":"cultsport","title":"Solid Active Tshirt with Logo","price":"17759","strike":"18999","discount":"20"},
-    {"id":8,"image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/nwziy12UVSHqbS8LGR5cnzqc","brand":"cultsport","title":"Solid Active Tshirt with Logo","price":"18329","strike":"19899","discount":"60"},
-    {"id":9,"image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/ZJBYsrvTZKUc9QzYK6fh4f8n","brand":"cultsport","title":"Solid Active Tshirt with Logo","price":"11359","strike":"11899","discount":"60"},
-    {"id":10,"image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/omGT5x3nxUZ1QFbt9xpgx54T","brand":"cultsport","title":"Solid Active Tshirt with Logo","price":"13459","strike":"15899","discount":"50"}  
+  "Tshirts": [
+    {
+      "id": 1,
+      "image": "https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/xSqZe6eiLM6R2YmMmeYNk8wm",
+      "brand": "cultsport",
+      "title": "Solid Active Tshirt with Logo",
+      "price": "359",
+      "maxPrice": "899",
+      "discount": "60",
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "rating": "4.3"
+    },
+    {
+      "id": 2,
+      "image": "https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/gyEKit98fH6VGSZ2jv1fFkSm",
+      "brand": "cultsport",
+      "title": "Solid Active Tshirt with Logo",
+      "price": "459",
+      "maxPrice": "899",
+      "discount": "50",
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "rating": "4.3"
+    },
+    {
+      "id": 3,
+      "image": "https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/MbwMLHyajasEhEuQSzoEoKWV",
+      "brand": "cultsport",
+      "title": "Solid Active Tshirt with Logo",
+      "price": "759",
+      "maxPrice": "899",
+      "discount": "20",
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "rating": "4.3"
+    },
+    {
+      "id": 4,
+      "image": "https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/uVqDCnrhWdZvkYV8oG5SpdW1",
+      "brand": "cultsport",
+      "title": "Solid Active Tshirt with Logo",
+      "price": "329",
+      "maxPrice": "899",
+      "discount": "60",
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "rating": "4.3"
+    },
+    {
+      "id": 5,
+      "image": "https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/6BNADeqJxiu1CPNdg9k7wdbA",
+      "brand": "cultsport",
+      "title": "Solid Active Tshirt with Logo",
+      "price": "349",
+      "maxPrice": "899",
+      "discount": "55",
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "rating": "4.3"
+    },
+    {
+      "id": 6,
+      "image": "https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/xSqZe6eiLM6R2YmMmeYNk8wm",
+      "brand": "cultsport",
+      "title": "Solid Active Tshirt with Logo",
+      "price": "359",
+      "maxPrice": "899",
+      "discount": "60",
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "rating": "4.3"
+    },
+    {
+      "id": 7,
+      "image": "https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/gyEKit98fH6VGSZ2jv1fFkSm",
+      "brand": "cultsport",
+      "title": "Solid Active Tshirt with Logo",
+      "price": "459",
+      "maxPrice": "899",
+      "discount": "50",
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "rating": "4.3"
+    },
+    {
+      "id": 8,
+      "image": "https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/MbwMLHyajasEhEuQSzoEoKWV",
+      "brand": "cultsport",
+      "title": "Solid Active Tshirt with Logo",
+      "price": "759",
+      "maxPrice": "899",
+      "discount": "20",
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "rating": "4.3"
+    },
+    {
+      "id": 9,
+      "image": "https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/uVqDCnrhWdZvkYV8oG5SpdW1",
+      "brand": "cultsport",
+      "title": "Solid Active Tshirt with Logo",
+      "price": "329",
+      "maxPrice": "899",
+      "discount": "60",
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "rating": "4.3"
+    },
+    {
+      "id": 10,
+      "image": "https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/6BNADeqJxiu1CPNdg9k7wdbA",
+      "brand": "cultsport",
+      "title": "Solid Active Tshirt with Logo",
+      "price": "349",
+      "maxPrice": "899",
+      "discount": "55",
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "rating": "4.3"
+    }
   ],
-
-  "Accessories":[
-    {"id":1,"image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/xSqZe6eiLM6R2YmMmeYNk8wm","brand":"cultsport","title":"Solid Active Tshirt with Logo","price":"359","strike":"899","discount":"60"},
-    {"id":2,"image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/gyEKit98fH6VGSZ2jv1fFkSm","brand":"cultsport","title":"Solid Active Tshirt with Logo","price":"459","strike":"899","discount":"50"},
-    {"id":3,"image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/MbwMLHyajasEhEuQSzoEoKWV","brand":"cultsport","title":"Solid Active Tshirt with Logo","price":"759","strike":"899","discount":"20"},
-    {"id":4,"image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/uVqDCnrhWdZvkYV8oG5SpdW1","brand":"cultsport","title":"Solid Active Tshirt with Logo","price":"329","strike":"899","discount":"60"},
-    {"id":5,"image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/6BNADeqJxiu1CPNdg9k7wdbA","brand":"cultsport","title":"Solid Active Tshirt with Logo","price":"349","strike":"899","discount":"55"},
-    {"id":6,"image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/xSqZe6eiLM6R2YmMmeYNk8wm","brand":"cultsport","title":"Solid Active Tshirt with Logo","price":"359","strike":"899","discount":"60"},
-    {"id":7,"image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/gyEKit98fH6VGSZ2jv1fFkSm","brand":"cultsport","title":"Solid Active Tshirt with Logo","price":"459","strike":"899","discount":"50"},
-    {"id":8,"image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/MbwMLHyajasEhEuQSzoEoKWV","brand":"cultsport","title":"Solid Active Tshirt with Logo","price":"759","strike":"899","discount":"20"},
-    {"id":9,"image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/uVqDCnrhWdZvkYV8oG5SpdW1","brand":"cultsport","title":"Solid Active Tshirt with Logo","price":"329","strike":"899","discount":"60"},
-    {"id":10,"image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/6BNADeqJxiu1CPNdg9k7wdbA","brand":"cultsport","title":"Solid Active Tshirt with Logo","price":"349","strike":"899","discount":"55"}
+  "Cycles": [
+    {
+      "id": 11,
+      "image": "https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/q1S4DwudvD6D86TUcuSikyUZ",
+      "brand": "cultsport",
+      "title": "Shimano Geared Mountain Cycle",
+      "price": "11359",
+      "maxPrice": "11899",
+      "discount": "60",
+      "size": [
+        "ALL"
+      ],
+      "rating": "4.3"
+    },
+    {
+      "id": 12,
+      "image": "https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/omGT5x3nxUZ1QFbt9xpgx54T",
+      "brand": "cultsport",
+      "title": "Shimano Geared Mountain Cycle",
+      "price": "13459",
+      "maxPrice": "15899",
+      "discount": "50",
+      "size": [
+        "ALL"
+      ],
+      "rating": "4.3"
+    },
+    {
+      "id": 13,
+      "image": "https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/9Lfs1QsnEAApo4epJb1A27Y4",
+      "brand": "cultsport",
+      "title": "Shimano Geared Mountain Cycle",
+      "price": "17759",
+      "maxPrice": "18999",
+      "discount": "20",
+      "size": [
+        "ALL"
+      ],
+      "rating": "4.3"
+    },
+    {
+      "id": 14,
+      "image": "https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/gAyN3PLJRUsVNUmEjYDscTDA",
+      "brand": "cultsport",
+      "title": "Shimano Geared Mountain Cycle",
+      "price": "18329",
+      "maxPrice": "19899",
+      "discount": "60",
+      "size": [
+        "ALL"
+      ],
+      "rating": "4.3"
+    },
+    {
+      "id": 15,
+      "image": "https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/ZJBYsrvTZKUc9QzYK6fh4f8n",
+      "brand": "cultsport",
+      "title": "Solid Active Tshirt with Logo",
+      "price": "11359",
+      "maxPrice": "11899",
+      "discount": "60",
+      "size": [
+        "ALL"
+      ],
+      "rating": "4.3"
+    },
+    {
+      "id": 16,
+      "image": "https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/omGT5x3nxUZ1QFbt9xpgx54T",
+      "brand": "cultsport",
+      "title": "Shimano Geared Mountain Cycle",
+      "price": "13459",
+      "maxPrice": "15899",
+      "discount": "50",
+      "size": [
+        "ALL"
+      ],
+      "rating": "4.3"
+    },
+    {
+      "id": 17,
+      "image": "https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/9Lfs1QsnEAApo4epJb1A27Y4",
+      "brand": "cultsport",
+      "title": "Shimano Geared Mountain Cycle",
+      "price": "17759",
+      "maxPrice": "18999",
+      "discount": "20",
+      "size": [
+        "ALL"
+      ],
+      "rating": "4.3"
+    },
+    {
+      "id": 18,
+      "image": "https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/nwziy12UVSHqbS8LGR5cnzqc",
+      "brand": "cultsport",
+      "title": "Shimano Geared Mountain Cycle",
+      "price": "18329",
+      "maxPrice": "19899",
+      "discount": "60",
+      "size": [
+        "ALL"
+      ],
+      "rating": "4.3"
+    },
+    {
+      "id": 19,
+      "image": "https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/ZJBYsrvTZKUc9QzYK6fh4f8n",
+      "brand": "cultsport",
+      "title": "Shimano Geared Mountain Cycle",
+      "price": "11359",
+      "maxPrice": "11899",
+      "discount": "60",
+      "size": [
+        "ALL"
+      ],
+      "rating": "4.3"
+    },
+    {
+      "id": 20,
+      "image": "https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/omGT5x3nxUZ1QFbt9xpgx54T",
+      "brand": "cultsport",
+      "title": "Solid Active Tshirt with Logo",
+      "price": "13459",
+      "maxPrice": "15899",
+      "discount": "50",
+      "size": [
+        "ALL"
+      ],
+      "rating": "4.3"
+    }
   ]
-  
 }
