@@ -3,7 +3,7 @@ import * as types from "./auth.actionTypes";
 const initialState = {
   isLoading: false,
   isError: false,
-  data: [],
+  currentUser:"",
 };
 
 export const reducer = (state = initialState, { type, payload }) => {

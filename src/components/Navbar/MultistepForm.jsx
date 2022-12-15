@@ -18,15 +18,27 @@ import {
   FormHelperText,
   Image,
   Text,
+  Center,
 } from "@chakra-ui/react";
 import logo from "../../Images/Logo.png";
 import { useToast } from "@chakra-ui/react";
-import { MdKeyboardArrowDown,MdOutlineMailOutline } from "react-icons/md";
-import { BsGoogle,BsFacebook } from "react-icons/bs";
+import { MdKeyboardArrowDown, MdOutlineMailOutline } from "react-icons/md";
+import { BsGoogle, BsFacebook, BsArrowLeftShort } from "react-icons/bs";
+import { Link, Navigate } from "react-router-dom";
+import OtpVerification from "./OtpVerification";
 
-const Form1 = () => {
+const Form1 = ({ handleNext }) => {
   const [show, setShow] = React.useState(false);
-  const handleClick = () => setShow(!show);
+  const handleClick = (e) => {
+    e.preventDefault();
+    handleNext(2);
+  };
+
+  const handleClick2 = (e) => {
+    e.preventDefault();
+    handleNext(3);
+  };
+
   return (
     <Flex flexDirection={"column"} mt="10%" color="#fff">
       {/* Image logo */}
@@ -58,249 +70,163 @@ const Form1 = () => {
         p="8px"
         borderRadius={"5px"}
       >
-        <Box as="button" color="black">
+        <Box as="button" color="black" onClick={handleClick}>
           CONTINUE
         </Box>
       </Flex>
 
       {/* next step */}
-      <Flex as="button"
+      <Flex
+        as="button"
         justify={"space-between"}
         align="center"
         bg="#1a1a1a"
         mt="10%"
         p="8px 10px"
         borderRadius={"5px"}
+        to="/otp"
+        onClick={handleClick2}
       >
-        <Box  color="#fff">
-          or connect with 
-        </Box>
+        <Box color="#fff">or connect with</Box>
         <Flex gap="10px">
-        <Box  color="#fff">
-         <BsGoogle/>
-        </Box>
-        <Box  color="#fff">
-         <BsFacebook/>
-          
-        </Box>
-        <Box  color="#fff">
-          <MdOutlineMailOutline />
-        </Box>
+          <Box color="#fff">
+            <BsGoogle />
+          </Box>
+          <Box color="#fff">
+            <BsFacebook />
+          </Box>
+          <Box color="#fff">
+            <MdOutlineMailOutline />
+          </Box>
         </Flex>
       </Flex>
 
       {/* disclaimer */}
-      <Box color="#8d8d8d" fontSize='12px' mt="10%" align='center'>* By Continuing you agree to the Terms of Services and Privacy policy.</Box>
+      <Box color="#8d8d8d" fontSize="12px" mt="10%" align="center">
+        * By Continuing you agree to the Terms of Services and Privacy policy.
+      </Box>
     </Flex>
   );
 };
 
-const Form2 = () => {
+const Form2 = ({ handleNext }) => {
+  const handleEmailSignin = (e) => {
+    e.preventDefault();
+    handleNext(4);
+  };
   return (
-    <>
-      <Heading w="100%" textAlign={"center"} fontWeight="normal" mb="2%">
-        User Details
-      </Heading>
-      <FormControl as={GridItem} colSpan={[6, 3]}>
-        <FormLabel
-          htmlFor="country"
-          fontSize="sm"
-          fontWeight="md"
-          color="gray.700"
-          _dark={{
-            color: "gray.50",
-          }}
-        >
-          Country / Region
-        </FormLabel>
-        <Select
-          id="country"
-          name="country"
-          autoComplete="country"
-          placeholder="Select option"
-          focusBorderColor="brand.400"
-          shadow="sm"
-          size="sm"
-          w="full"
-          rounded="md"
-        >
-          <option>United States</option>
-          <option>Canada</option>
-          <option>Mexico</option>
-        </Select>
-      </FormControl>
+    <Flex flexDirection={"column"} mt="10%" color="#fff">
+      {/* Image logo */}
+      <Flex justify={"center"} w="30%" m="auto">
+        <Flex justify={"center"} align="center">
+          <Image src={logo} alt="" />
+        </Flex>
+      </Flex>
 
-      <FormControl as={GridItem} colSpan={6}>
-        <FormLabel
-          htmlFor="street_address"
-          fontSize="sm"
-          fontWeight="md"
-          color="gray.700"
-          _dark={{
-            color: "gray.50",
-          }}
-          mt="2%"
-        >
-          Street address
-        </FormLabel>
-        <Input
-          type="text"
-          name="street_address"
-          id="street_address"
-          autoComplete="street-address"
-          focusBorderColor="brand.400"
-          shadow="sm"
-          size="sm"
-          w="full"
-          rounded="md"
-        />
-      </FormControl>
+      {/* Clickable button */}
+      <Flex
+        justify={"center"}
+        align="center"
+        bg="#1a1a1a"
+        mt="10%"
+        p="8px 10px"
+        borderRadius={"5px"}
+        gap="10px"
+      >
+        <Box float="left">
+          {" "}
+          <BsGoogle />
+        </Box>
+        <Box as="button" color="#fff">
+          Sign in with Google
+        </Box>
+      </Flex>
 
-      <FormControl as={GridItem} colSpan={[6, 6, null, 2]}>
-        <FormLabel
-          htmlFor="city"
-          fontSize="sm"
-          fontWeight="md"
-          color="gray.700"
-          _dark={{
-            color: "gray.50",
-          }}
-          mt="2%"
-        >
-          City
-        </FormLabel>
-        <Input
-          type="text"
-          name="city"
-          id="city"
-          autoComplete="city"
-          focusBorderColor="brand.400"
-          shadow="sm"
-          size="sm"
-          w="full"
-          rounded="md"
-        />
-      </FormControl>
+      {/* next step */}
+      <Flex
+        justify={"center"}
+        align="center"
+        bg="#1a1a1a"
+        mt="6%"
+        p="8px 10px"
+        borderRadius={"5px"}
+        gap="10px"
+      >
+        <BsFacebook />
+        <Box color="#fff" as="button">
+          Sign in with Facebook
+        </Box>
+      </Flex>
 
-      <FormControl as={GridItem} colSpan={[6, 3, null, 2]}>
-        <FormLabel
-          htmlFor="state"
-          fontSize="sm"
-          fontWeight="md"
-          color="gray.700"
-          _dark={{
-            color: "gray.50",
-          }}
-          mt="2%"
-        >
-          State / Province
-        </FormLabel>
-        <Input
-          type="text"
-          name="state"
-          id="state"
-          autoComplete="state"
-          focusBorderColor="brand.400"
-          shadow="sm"
-          size="sm"
-          w="full"
-          rounded="md"
-        />
-      </FormControl>
+      {/* next step with email */}
+      <Flex
+        justify={"center"}
+        align="center"
+        bg="#1a1a1a"
+        mt="6%"
+        p="8px 10px"
+        borderRadius={"5px"}
+        gap="10px"
+      >
+        <MdOutlineMailOutline />
+        <Box color="#fff" as="button" onClick={handleEmailSignin}>
+          Sign in with Email
+        </Box>
+      </Flex>
 
-      <FormControl as={GridItem} colSpan={[6, 3, null, 2]}>
-        <FormLabel
-          htmlFor="postal_code"
-          fontSize="sm"
-          fontWeight="md"
-          color="gray.700"
-          _dark={{
-            color: "gray.50",
-          }}
-          mt="2%"
-        >
-          ZIP / Postal
-        </FormLabel>
-        <Input
-          type="text"
-          name="postal_code"
-          id="postal_code"
-          autoComplete="postal-code"
-          focusBorderColor="brand.400"
-          shadow="sm"
-          size="sm"
-          w="full"
-          rounded="md"
-        />
-      </FormControl>
-    </>
+      {/* disclaimer */}
+      <Box color="#8d8d8d" fontSize="12px" mt="10%" align="center">
+        * By Continuing you agree to the Terms of Services and Privacy policy.
+      </Box>
+    </Flex>
   );
 };
 
+// form for email and password signin
 const Form3 = () => {
   return (
-    <>
-      <Heading w="100%" textAlign={"center"} fontWeight="normal">
-        Social Handles
-      </Heading>
-      <SimpleGrid columns={1} spacing={6}>
-        <FormControl as={GridItem} colSpan={[3, 2]}>
-          <FormLabel
-            fontSize="sm"
-            fontWeight="md"
-            color="gray.700"
-            _dark={{
-              color: "gray.50",
-            }}
-          >
-            Website
-          </FormLabel>
-          <InputGroup size="sm">
-            <InputLeftAddon
-              bg="gray.50"
-              _dark={{
-                bg: "gray.800",
-              }}
-              color="gray.500"
-              rounded="md"
-            >
-              http://
-            </InputLeftAddon>
-            <Input
-              type="tel"
-              placeholder="www.example.com"
-              focusBorderColor="brand.400"
-              rounded="md"
-            />
-          </InputGroup>
-        </FormControl>
+    <Flex flexDirection={"column"} mt="10%" color="#fff">
+      {/* Image logo */}
+      <Flex justify={"center"} w="30%" m="auto">
+        <Flex justify={"center"} align="center">
+          <Image src={logo} alt="" />
+        </Flex>
+      </Flex>
 
-        <FormControl id="email" mt={1}>
-          <FormLabel
-            fontSize="sm"
-            fontWeight="md"
-            color="gray.700"
-            _dark={{
-              color: "gray.50",
-            }}
-          >
-            About
-          </FormLabel>
-          <Textarea
-            placeholder="you@example.com"
-            rows={3}
-            shadow="sm"
-            focusBorderColor="brand.400"
-            fontSize={{
-              sm: "sm",
-            }}
-          />
-          <FormHelperText>
-            Brief description for your profile. URLs are hyperlinked.
-          </FormHelperText>
-        </FormControl>
-      </SimpleGrid>
-    </>
+      <Center fontSize={"18px"} mt="10%">
+        Log In to Account
+      </Center>
+
+      {/* form starts from here */}
+
+      <Flex borderBottom={"2px solid #fff"} mt="10%" gap="10px">
+        <Input
+          type="email"
+          variant="unstyled"
+          placeholder="Email ID"
+          _focus={{ outline: "none" }}
+        />
+      </Flex>
+
+      {/* password */}
+      <Flex borderBottom={"2px solid #fff"} mt="10%" gap="10px">
+        <Input type="password" variant="unstyled" placeholder="password" />
+      </Flex>
+
+      {/* Clickable button */}
+      <Flex
+        justify={"center"}
+        align="center"
+        bg="#fff"
+        mt="10%"
+        p="8px"
+        borderRadius={"5px"}
+      >
+        <Box as="button" color="black" _hover={{ color: "red" }}>
+          CONTINUE
+        </Box>
+      </Flex>
+    </Flex>
   );
 };
 
@@ -308,6 +234,7 @@ export default function MultistepForm() {
   const toast = useToast();
   const [step, setStep] = useState(1);
   const [progress, setProgress] = useState(33.33);
+  const [number, setNumber]  = useState(0);
   return (
     <>
       <Box
@@ -319,64 +246,35 @@ export default function MultistepForm() {
         as="form"
         bg="black"
       >
-        {/* <Progress
-          hasStripe
-          value={progress}
-          mb="5%"
-          mx="5%"
-          isAnimated></Progress> */}
-        {step === 1 ? <Form1 /> : step === 2 ? <Form2 /> : <Form3 />}
+      
+        {step === 1 ? (
+          <Form1 handleNext={setStep} />
+        ) : step === 2 ? (
+          <OtpVerification />
+        ) : step === 3 ? (
+          <Form2 handleNext={setStep} />
+        ) : (
+          <Form3 />
+        )}
         <ButtonGroup mt="5%" w="100%">
           <Flex w="100%" justifyContent="space-between">
             <Flex>
               <Button
+                position="absolute"
+                top="8%"
+                left="2%"
                 onClick={() => {
                   setStep(step - 1);
                   setProgress(progress - 33.33);
                 }}
                 isDisabled={step === 1}
-                colorScheme="teal"
-                variant="solid"
+                variant="ghost"
                 w="7rem"
                 mr="5%"
               >
-                Back
-              </Button>
-              <Button
-                w="7rem"
-                isDisabled={step === 3}
-                onClick={() => {
-                  setStep(step + 1);
-                  if (step === 3) {
-                    setProgress(100);
-                  } else {
-                    setProgress(progress + 33.33);
-                  }
-                }}
-                colorScheme="teal"
-                variant="outline"
-              >
-                Next
+                <BsArrowLeftShort color="#fff" h="18px" />
               </Button>
             </Flex>
-            {step === 3 ? (
-              <Button
-                w="7rem"
-                colorScheme="red"
-                variant="solid"
-                onClick={() => {
-                  toast({
-                    title: "Account created.",
-                    description: "We've created your account for you.",
-                    status: "success",
-                    duration: 3000,
-                    isClosable: true,
-                  });
-                }}
-              >
-                Submit
-              </Button>
-            ) : null}
           </Flex>
         </ButtonGroup>
       </Box>

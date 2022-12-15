@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+import OtpVerification from "../components/Navbar/OtpVerification";
 import Care from "./Care/Care";
 import CareBooking from "./Care/CareBooking";
 
