@@ -1,0 +1,319 @@
+{
+  "Lab_Test_Card":[
+      {
+        "id":1 ,
+        "title":"Full Body Health Checkup",
+      "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/bundle/FitCheck_Magazine-02.png",
+      "Price" :1990,
+      "Offer_price":990,
+      "desp":"This test will help you understand the status of your key health indicators. It helps in early detection of common chronic & lifestyle health conditions related to thyroid, diabetes, liver, kidney, heart and blood.",
+      "Test":"73 Test",
+      "time":"Report Ready in 36 Hrs"
+
+              
+      },
+      {
+        "id":2,  
+        "title":"Vitamin Screening (VitB12,VitD)",
+         "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/bundle/mp/diag_pack_Vitamin_Profile_clp.jpg",
+          "Price" :1990,
+          "Offer_price":890,
+          "desp":"This pack checks for Vitamin B12 and vitamin D levels in your body. It is recommended for people showing symptoms of Vitamin B12 deficiency include low energy levels, muscle weakness or mouth ulcers, bone pain",
+          "Test":"2 Test",
+          "time":"Report Ready in 36 Hrs"
+
+          
+      }
+      ,
+      {
+        "id":3, 
+        "title":"Thyroid Screening (T3,T4,TSH)Full Body Health Checkup",
+          "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/bundle/mp/diag_pack_Thyroid_Screening_clp.jpg",
+          "Price" :590,
+          "Offer_price":450,
+          "desp":"Thyroid secretes hormones which influence the metabolic rate, protein synthesis and development of your body. This test checks the amount of the following critical hormones: T3, T4, TSH.",
+          "Test":"3 Test",
+          "time":"Report Ready in 36 Hrs"
+
+           
+      },
+      {
+        "id":4, 
+        "title":"Fitness Essentials - Men",
+          "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/diagnostics/screening-packs/WorkoutWellness_men_magazine_web2.png",
+          "Price" :2990,
+          "Offer_price":1990,
+          "desp":"Understand your fitness from the inside out. This pack will help you understand your vitals, hormones and vitamin levels, which will help you understand how to plan your workout journey accordingly.",
+          "Test":"80 Test",
+          "time":"Report Ready in 72 Hrs"
+          
+          
+      },
+      {
+        "id":5, 
+        "title":"Fitness Essentials - Women",
+          "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/diagnostics/screening-packs/WorkoutWellness_women_magazine_web2.png",
+          "Price" :2990,
+          "Offer_price":1990,
+          "desp":"Understand your fitness from the inside out. This pack will help you understand your vitals, hormones and vitamin levels, which will help you understand how to plan your workout journey accordingly..",
+          "Test":"81 Test",
+          "time":"Report Ready in 71 Hrs"
+          
+          
+      },
+      {
+        "id":6, 
+        "title":"Sr Citizen Advance Package - Male",
+          "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/diagnostics/screening-packs/sr_citizen_adv_m_mag.png",
+          "Price" :5990,
+          "Offer_price":2990,
+          "desp":"Get your elders' health checked today.",
+          "Test":"18 Test",
+          "time":"Report Ready in 72 Hrs"
+         
+          
+      },
+      {
+        "id":7, 
+        "title":"Sr Citizen Advance Package - Female",
+          "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/diagnostics/screening-packs/sr_citizen_adv_f_mag.png",
+          "Price" :5990,
+          "Offer_price":2990,
+          "desp":"Get your elders' health checked today.",
+          "Test":"18 Test",
+          "time":"Report Ready in 72 Hrs"
+          
+          
+      },
+      {
+        "id":8, 
+        "title":"Iron Screening (Ferritin,Iron,TIBC,PTS)",
+          "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/bundle/IronScreeningClp122020.png",
+          "Price" :990,
+          "Offer_price":690,
+          "desp":"Iron is an essential trace element and nutrient that is necessary to maintain life. It is an important part of haemoglobin, which carries oxygen throughout your body. Low iron levels can cause fatigue, shortness of breath, anxiety and head pain..",
+          "Test":"4 Test",
+          "time":"Report Ready in 18 Hrs"
+            
+      },
+      {
+        "id":9, 
+        "title":"Women's health",
+          "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/bundle/WomensHealthScreening_Magazine.png",
+          "Price" :3490,
+          "Offer_price":1690,
+          "desp":"This pack screens for common ailments like PCOS, anemia and thyroid. Anyone with symptoms like weight gain, increased facial hair, menstrual irregularities or fatigue should get themselves checked.",
+          "Test":"32 Test",
+          "time":"Report Ready in 36 Hrs"
+          
+          
+      },
+      {
+        "id":10, 
+        "title":"PCOD Profile",
+          "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/diagnostics/screening-packs/PCODMagazineWeb.png",
+          "Price" :2490,
+          "Offer_price":1990,
+          "desp":"This pack is for woman suspecting PCOD and showing symptoms of irregular periods, acne, hair fall, facial hair growth and weight gain. It can also be done for your annual PCOD evaluation..",
+          "Test":"30 Test",
+          "time":"Report Ready in 72 Hrs"
+       
+          
+      },
+      {
+        "id":11, 
+        "title":"Complete Haemogram (CBC+ESR)",
+          "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/bundle/FitCheck_Magazine-02.png",
+          "Price" :1990,
+          "Offer_price":990,
+          "desp":"A complete haemogram evaluates your overall health and detects a wide range of infections and potential diseases. It counts your Red Blood Cells, which carry oxygen, White Blood Cells, which fight off diseases, and Platelets, which help in clotting when you hurt yourself. ESR aids in detection of certain chronic infections and cancers.",
+          "Test":"25 Test",
+          "time":"Report Ready in 36 Hrs"
+            
+      },
+      {
+        "id":12, 
+        "title":"Diabetes Screening (FBS,HBA1C)",
+          "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/bundle/mp/diag_pack_Diabetes_Screening_clp.jpg",
+          "Price" :590,
+          "Offer_price":490,
+          "desp":"Diabetes is a long-term condition that causes high blood sugar levels, along with several other associated symptoms like frequent urination, intense thirst and hunger, weight gain, unusual weight loss and fatigue. This pack helps in monitoring blood glucose levels. It is recommended for people who are diabetic, pre-diabetic, or have a family history of diabetes, heart disease or obesity",
+          "Test":"3 Test",
+          "time":"Report Ready in 36 Hrs"
+
+          
+      },
+      {
+        "id":13, 
+        "title":"Lipid profile",
+          "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/bundle/LipidScreening_Magazine.png",
+          "Price" :690,
+          "Offer_price":390,
+          "desp":"Lipids aid in the production of hormones, Vitamin D, and substances that help you digest foods. This test measures the cholesterol and triglycerides (a type of fat) in your body. High cholesterol levels are associated with an increased risk of heart disease and stroke.",
+          "Test":"9 Test",
+          "time":"Report Ready in 36 Hrs"
+          
+      },
+      {
+        "id":14, 
+        "title":"Immunity Screening",
+          "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/bundle/ImmunityCcreening_Magazine.png",
+          "Price" :2990,
+          "Offer_price":1390,
+          "desp":"This pack evaluates various health parameters, which can have an impact on your immunity levels",
+          "Test":"43 Test",
+          "time":"Report Ready in 36 Hrs"
+         
+          
+      },
+      {
+        "id":15, 
+        "title":"Energy Screening",
+          "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/bundle/CF01032_hero_2.png",
+          "Price" :990,
+          "Offer_price":490,
+          "desp":"This pack evaluates various health parameters, which can have an impact on your immunity levels",
+          "Test":"23 Test",
+          "time":"Report Ready in 48 Hrs"
+           
+      },
+      {
+        "id":16, 
+        "title":"Pregnancy Test",
+          "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/bundle/PregnancyScreening_Magazine.png",
+          "Price" :790,
+          "Offer_price":590,
+          "desp":"Confirm your pregnancy with this blood test. Get this test done couple of days after your missed period.",
+          "Test":"1 Test",
+          "time":"Report Ready in 48 Hrs"
+         
+      },
+      {
+        "id":17, 
+        "title":"Kidney Function Test (KFT)",
+          "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/bundle/mp/diag_pack_Kidney_Screening_clp.jpg",
+          "Price" :490,
+          "Offer_price":390 ,
+          "desp":"Your kidneys filter out waste materials from the blood and control the levels of water and minerals in the body. In addition, they are critical to the production of Vitamin D, RBCs and hormones that regulate your blood pressure..",
+          "Test":"10 Test",
+          "time":"Report Ready in 36 Hrs"
+                      
+      },
+      {
+        "id":18, 
+        "title":"Hair Fall Screening (Ferritin,TSH,VitB12,VitD)",
+          "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/bundle/HairFallScreeningClp122019.png",
+          "Price" :2990,
+          "Offer_price":1290,
+          "desp":"This pack is recommended for both men and women with hair loss symptoms to identify any deficiencies. It checks for the vitamin, mineral and hormonal levels in your body. These reports help your trichologist to determine the course of your treatment",
+          "Test":"4 Test",
+          "time":"Report Ready in 36 Hrs"
+         
+          
+      },
+      {
+        "id":19, 
+        "title":"Bone Health Screening (ALP,Ca,P,TSH,Uric,VitD)",
+          "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/bundle/BoneHealthScreening_Magazine.png",
+          "Price" :1490,
+          "Offer_price":990 ,
+          "desp":"This pack is recommended for anyone experiencing bone pain, inactivity and stiffness. It screens for underlying medical conditions which can be reviewed by your Orthopaedic doctor",
+          "Test":"6 Test",
+          "time":"Report Ready in 36 Hrs"
+                  
+      },
+      {
+        "id":20, 
+        "title":"Liver Function Test (LFT)",
+          "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/bundle/mp/diag_pack_Liver_Screening_clp.jpg",
+          "Price" :690,
+          "Offer_price":390,
+          "desp":"The liver helps your body get rid of harmful toxins. Poor liver health can lead to chronic disease, unwanted weight gain and loss of energy. Here, we test the levels of various enzymes and proteins in your blood.",
+          "Test":"12 Test",
+          "time":"Report Ready in 36 Hrs"
+
+           
+      },
+      {
+        "id":21, 
+        "title":"Fever Panel",
+          "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/bundle/FeverPanel_Magazine.jpg",
+          "Price" :1990,
+          "Offer_price":990,
+          "desp":"This pack screens for Typhoid, Malaria, Dengue and other causes of fever. It is recommended for those experiencing fever, body pain, headache, loose motion or chills for more than 2 days.",
+          "Test":"45 Test",
+          "time":"Report Ready in 60 Hrs"           
+      },
+      {
+        "id":22, 
+        "title":"Alcohol Risk Assessment",
+          "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/bundle/Alcohol_magazine.png",
+          "Price" :2990,
+          "Offer_price":1490,
+          "desp":"Assess the status of your liver and pancreatic function due to your alcohol habits. This test can help your physician advise safe limits for your consumption.",
+          "Test":"50 Test",
+          "time":"Report Ready in 36 Hrs"  
+         
+          
+      },
+      {
+        "id":23, 
+        "title":"Anemia Profile",
+          "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/diagnostics/screening-packs/Anemia_Magazine_Web_new.png",
+          "Price" :1990,
+          "Offer_price":1490,
+          "desp":"This test helps in diagnosing haemoglobin deficiency or Anemia which can cause fatigue, weakness or lack of concentration. Common causes of these symptoms are nutritional deficiency, malnutrition or ongoing blood loss from the body.",
+          "Test":"31 Test",
+          "time":"Report Ready in 72 Hrs"  
+          
+      }
+      ,
+      {
+        "id":24, 
+        "title":"Obesity Risk Profile",
+          "image":"https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/bundle/Obesity_Risk_Magazine.jpg",
+          "Price" :2990,
+          "Offer_price":1390,
+          "desp":"This pack screens for underlying medical conditions associated with obesity. Anyone with recent weight gain, metabolic issues and high BMI are recommended to take this test and review with a physician",
+          "Test":"15 Test",
+          "time":"Report Ready in 60 Hrs"
+          
+      }
+          
+  ],
+
+
+
+
+"FAQ_DATA":[
+  {
+    "que":"How does home sample collection work?",
+    "ans":"Once you have chosen a convenient time slot for your booking, and placed an order, our WHO certified health professionals will arrive at your chosen address and collect blood and/or urine samples.  Once samples are collected, they will be processed at one of our partner labs closest to you and the test report will be available on your app and email."
+  },
+  {
+      "que":"Can I reschedule/cancel my diagnostic test appointment?",
+      "ans":"The appointment can be rescheduled or cancelled 2 hours before your chosen slot. "
+  },
+  {
+      "que":"How can I receive my reports on email again ?",
+      "ans":"You can email your test reports by going to Profile> Activity &Records> Medical Records> Diagnostic Tests and selecting the email reports button. "
+  },
+  {
+      "que":"I did not get my reports on email",
+      "ans":"Sometimes, mail providers mistakenly mark the reports email as Spam. Please check the spam folder (or) trigger the reports email again on the app   You would have received an SMS after your sample collection indicating the time it would take for results to be available  In case the communicated time has elapsed and you have not received your report on email, please reach out to us at hello@cure.fit ."
+  },
+  {
+      "que":"What instructions should I follow for my tests?",
+      "ans":"All instructions that have to be followed for your tests will be communicated to you at the time of booking a slot. You will also receive an email covering the instructions.."
+  },
+  {
+      "que":"How can I get a refund for my Full body Health Check /Diagnostic Screening pack ?",
+      "ans":"Only if you have not completed your Full Body health check up/ Diagnostic Screening within 1 year from the purchase date, please write to hello@curefit.com  e.g: If heath check is purchased on 1/10/2019, you can write to us till 1/10/2020. We do not refund any amount for health check ups with a purchase date older than a year."
+  },
+  {
+      "que":"Can I club two or more sample collection slots",
+      "ans":"We are currently working on enabling multiple orders from the same address (for the same person or different).  Till then, you can request the phlebotomist who comes for the sample collection for the first order, to add on the rest of the tests (for the same person or different).  You can directly pay him via card / UPI / cash for the additional tests purchased. "
+  }
+
+]
+}

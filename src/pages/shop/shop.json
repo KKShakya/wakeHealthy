@@ -1,28 +1,16 @@
 {
   "Cart": [
     {
-      "id": 12,
-      "image": "https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/omGT5x3nxUZ1QFbt9xpgx54T",
+      "id": 4,
+      "image": "https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/uVqDCnrhWdZvkYV8oG5SpdW1",
       "brand": "cultsport",
-      "title": "Shimano Geared Mountain Cycle",
-      "price": "13459",
-      "maxPrice": "15899",
-      "discount": "50",
-      "size": "S",
-      "rating": "4.3",
-      "quantity": "3"
-    },
-    {
-      "id": 14,
-      "image": "https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/gAyN3PLJRUsVNUmEjYDscTDA",
-      "brand": "cultsport",
-      "title": "Shimano Geared Mountain Cycle",
-      "price": "18329",
-      "maxPrice": "19899",
+      "title": "Solid Active Tshirt with Logo",
+      "price": "329",
+      "maxPrice": "899",
       "discount": "60",
-      "size": "S",
-      "rating": "4.3",
-      "quantity": "3"
+      "size": "XXL",
+      "rating": "4.2",
+      "quantity": 1
     }
   ],
   "Tshirts": [
@@ -42,7 +30,7 @@
         "XL",
         "XXL"
       ],
-      "rating": "4.3"
+      "rating": "2.3"
     },
     {
       "id": 2,
@@ -60,7 +48,7 @@
         "XL",
         "XXL"
       ],
-      "rating": "4.3"
+      "rating": "3.3"
     },
     {
       "id": 3,
@@ -96,7 +84,7 @@
         "XL",
         "XXL"
       ],
-      "rating": "4.3"
+      "rating": "4.2"
     },
     {
       "id": 5,
@@ -114,7 +102,7 @@
         "XL",
         "XXL"
       ],
-      "rating": "4.3"
+      "rating": "3.1"
     },
     {
       "id": 6,
@@ -219,7 +207,7 @@
       "size": [
         "ALL"
       ],
-      "rating": "4.3"
+      "rating": "5.0"
     },
     {
       "id": 12,
@@ -232,7 +220,7 @@
       "size": [
         "ALL"
       ],
-      "rating": "4.3"
+      "rating": "4.9"
     },
     {
       "id": 13,
@@ -271,7 +259,7 @@
       "size": [
         "ALL"
       ],
-      "rating": "4.3"
+      "rating": "2.3"
     },
     {
       "id": 16,
@@ -284,7 +272,7 @@
       "size": [
         "ALL"
       ],
-      "rating": "4.3"
+      "rating": "5.0"
     },
     {
       "id": 17,
@@ -297,7 +285,7 @@
       "size": [
         "ALL"
       ],
-      "rating": "4.3"
+      "rating": "2.3"
     },
     {
       "id": 18,
@@ -323,7 +311,7 @@
       "size": [
         "ALL"
       ],
-      "rating": "4.3"
+      "rating": "1.3"
     },
     {
       "id": 20,
@@ -336,7 +324,7 @@
       "size": [
         "ALL"
       ],
-      "rating": "4.3"
+      "rating": "3.3"
     }
   ]
 }

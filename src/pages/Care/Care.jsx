@@ -3,10 +3,11 @@
 
 
 
-import React from 'react'
+import React, { useState } from 'react'
 import { useSearchParams,Link } from "react-router-dom";
+import axios from 'axios'
 import "../../Styles/care.css" 
-import data from "../../db.json"
+
 import FAQ from '../../components/CarePageComponent/FAQ/FAQ'
 import Quote from '../../components/CarePageComponent/Quotes/Quote'
 import Information from '../../components/CarePageComponent/Information/Information'
@@ -15,14 +16,22 @@ import Information from '../../components/CarePageComponent/Information/Informat
 
 
 const Care = () => {
-    let {Lab_Test_Card}=data
+ 
+
+    const [TestCardData, setTestCardData]=useState([])
+
 
     let [searchParams, setSearchParams] = useSearchParams();
 
     const HandleClick =(id)=>{
-      console.log(id)
+      
       setSearchParams(id)
     }
+
+    React.useEffect(()=>{
+
+        axios.get(' http://localhost:8080/Lab_Test_Card').then((data)=>setTestCardData(data.data))
+    },[])
   
     
   return (
@@ -41,8 +50,8 @@ const Care = () => {
 
             <div className='card_container'>
              {
-                Lab_Test_Card.map((card)=>(
-                  <Link >
+                TestCardData.map((card)=>(
+                  <Link to={`/care/${card.id}`}>
                   
                   <div className='test_card' key={card.id} onClick={()=>HandleClick(card.id)}>
                        <img   src={card.image} alt="image" />
