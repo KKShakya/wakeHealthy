@@ -4,12 +4,14 @@ import {
   ADD_TO_CART,
   DELETE_FROM_CART,
   GET_CART,
+  ITEM_EXIST,
   UPDATE_CART,
 } from "./cart.types";
 
 const initialState = {
+  item_exist: false,
   CART: [],
-  TOTAL: 0,
+  item_deleted: false,
 };
 
 export const reducer = (state = initialState, { type, payload }) => {
@@ -24,7 +26,13 @@ export const reducer = (state = initialState, { type, payload }) => {
       return {
         ...state,
         CART: [...state.CART, payload],
-        TOTAL: +payload.price,
+        item_exist: false,
+      };
+    }
+    case ITEM_EXIST: {
+      return {
+        ...state,
+        item_exist: true,
       };
     }
     case UPDATE_CART: {
@@ -48,6 +56,7 @@ export const reducer = (state = initialState, { type, payload }) => {
       return {
         ...state,
         CART: updated,
+        item_deleted: true,
       };
     }
     default:

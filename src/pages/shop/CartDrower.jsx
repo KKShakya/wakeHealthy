@@ -18,6 +18,8 @@ import {
   Box,
   ButtonGroup,
   Select,
+  Link,
+  useToast,
 } from "@chakra-ui/react";
 import { SmallCloseIcon, DeleteIcon } from "@chakra-ui/icons";
 import { useDispatch, useSelector } from "react-redux";
@@ -29,22 +31,20 @@ import {
 } from "../../store/Cart/cart.action";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
+import CheckoutModal from "./ShopComponents/CheckoutModal";
 
-export default function CartDrower() {
+export default function CartDrower({ title }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
   const dispatch = useDispatch();
-  const { CART, TOTAL } = useSelector((store) => store.cart);
-  const [cartTotal, setCartTotal] = useState(0);
+  const { CART, item_deleted } = useSelector((store) => store.cart);
+  const toast = useToast();
 
   useEffect(() => {
     dispatch(get_cart());
   }, []);
 
-  useEffect(() => {
-    setCartTotal((prev)=>prev+TOTAL)
-    console.log(TOTAL);
-  }, [TOTAL]);
+  let cartTotal = CART.reduce((acc, el) => acc + +el.price * el.quantity, 0);
 
   const handleQuantity = (e, product) => {
     let quantity = e.target.value;
@@ -52,11 +52,18 @@ export default function CartDrower() {
     dispatch(update_cart(updated));
   };
 
-  const handleTotal = () => {};
+  // toast({
+  //   title: item_deleted ? "item exist" : "added to cart",
+  //   status: item_deleted ? "warning" : "success",
+  //   duration: 3000,
+  //   isClosable: true,
+  // });
 
   return (
     <>
-      <Text onClick={onOpen}>View Cart</Text>
+      <Text onClick={onOpen} w={"100%"} p="10px">
+        {title}
+      </Text>
       <Drawer
         isOpen={isOpen}
         placement="right"
@@ -81,7 +88,9 @@ export default function CartDrower() {
                         <DeleteIcon
                           cursor={"pointer"}
                           color="gray"
-                          onClick={() => dispatch(delete_from_cart(product.id))}
+                          onClick={() => {
+                            dispatch(delete_from_cart(product.id));
+                          }}
                         />
                       </HStack>
                       <Text fontSize="20px">{product.title}</Text>
@@ -106,10 +115,9 @@ export default function CartDrower() {
               ))}
             </VStack>
           </DrawerBody>
-          <DrawerFooter>
-            <Button colorScheme={"red"} w={"100%"} onClick={handleTotal}>
-              Buy Now ( {CART.length} items )
-            </Button>
+          <DrawerFooter justifyContent={"space-between"}>
+            <Button>Cart Total : ₹ {cartTotal}</Button>
+            <CheckoutModal cartTotal={cartTotal} />
           </DrawerFooter>
         </DrawerContent>
       </Drawer>
