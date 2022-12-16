@@ -4,7 +4,9 @@ import Middle from './Homepage/Middle'
 import Middle2 from './Homepage/Middle2'
 import Middle3 from './Homepage/Middle3'
 import Middle4 from './Homepage/Middle4'
-
+import Middle5 from './Homepage/Middle5'
+import Middle6 from './Homepage/Middle6'
+import Middle7 from './Homepage/Middle7'
 
 const Homepage = () => {
  
@@ -20,6 +22,9 @@ const Homepage = () => {
        <Middle2/>
        <Middle3/>
        <Middle4/>
+       <Middle5/>
+       <Middle6/>
+       <Middle7/>
     </div>
   )
 }

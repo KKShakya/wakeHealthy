@@ -5,9 +5,11 @@ import Care from "./Care/Care";
 import CareBooking from "./Care/CareBooking";
 
 import Homepage from "./Homepage";
+
 import Products from "./shop/Products";
 import SingleProduct from "./shop/ShopComponents/SingleProduct";
 import ShopHome from "./shop/ShopHome";
+
 
 const AllRoutes = () => {
   return (
@@ -16,12 +18,12 @@ const AllRoutes = () => {
 
       <Route path="/care" element={<Care />}></Route>
 
-      <Route path="/store" element={<ShopHome />} />
-      <Route path="/store/products/:categeory" element={<Products />} />
-      <Route
+      {/* <Route path="/store" element={<ShopHome />} /> */}
+      {/* <Route path="/store/products/:categeory" element={<Products />} /> */}
+      {/* <Route
         path="/store/products/:categeory/:product_id"
         element={<SingleProduct />}
-      />
+      /> */}
 
       <Route path="/care/:Booking_id" element={<CareBooking />} />
     </Routes>
