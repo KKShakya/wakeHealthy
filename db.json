@@ -270,6 +270,6 @@
       "que": "Can I club two or more sample collection slots",
       "ans": "We are currently working on enabling multiple orders from the same address (for the same person or different).  Till then, you can request the phlebotomist who comes for the sample collection for the first order, to add on the rest of the tests (for the same person or different).  You can directly pay him via card / UPI / cash for the additional tests purchased. "
     }
-  ],
-  "Lab_Test_Cart": []
+  ]
+
 }

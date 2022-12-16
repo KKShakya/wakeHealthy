@@ -1,5 +1,6 @@
 // krishna kumar shakya todo
 
+
 import React, { useState } from "react";
 import { Box,
           Flex, 
@@ -19,6 +20,10 @@ import { Box,
             TabPanel } 
             from "@chakra-ui/react";
 
+
+
+
+
 import { IoLocationOutline, IoCartOutline } from "react-icons/io5";
 import { AiOutlineUser } from "react-icons/ai";
 import CartItem from "./CarePageComponent/CartItem/CartItem";
@@ -34,8 +39,36 @@ import EmptyCart from "./EmptyCart/EmptyCart";
 import Login from "./Navbar/login";
 import { LocationMenu } from "./Navbar/Menu";
 
+
+
+
+import { useDispatch, useSelector } from "react-redux";
+import { signout } from "../store/Auth/auth.action";
+
+const LogoutUser = ()=>{
+  const {currentUser} = useSelector((store)=>store.auth)
+  const dispatch = useDispatch();
+
+  const handleSubmit = (e)=>{
+     e.preventDefault();
+     console.log("fhdsjkfgsdgfhdsjgfhs")
+     dispatch(signout());
+     console.log(currentUser);
+  }
+  return(
+    <>
+     <Button onClick={handleSubmit} borderRadius="50%">{currentUser[0]}</Button>
+    </>
+  )
+}
+
+
+
 const Navbar = () => {
 
+  const {currentUser} = useSelector((store)=>store.auth);
+  console.log(currentUser==="",currentUser[0])
+ 
   const [CartItems,SetCartItems]=useState([])
  
 
@@ -49,6 +82,8 @@ const Navbar = () => {
   useEffect(()=>{
         axios.get(` http://localhost:8080/Lab_Test_Cart`).then((response)=>SetCartItems(response.data))
   },[CartItems])
+
+
   return (
     <Box>
       <Flex
@@ -111,7 +146,7 @@ const Navbar = () => {
           </Flex>
           <Flex justify={"center"} alignItems="center">
             
-            <Login/>
+            {currentUser===""?<Login/>:<LogoutUser />}
           </Flex>
           <Flex justify={"center"} alignItems="center">
             <IoCartOutline color="#fff" onClick={OpenCartDrawer}/>
