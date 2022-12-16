@@ -1,9 +1,10 @@
-import * as types from "./auth.actionTypes";
+import * as types from "./shop.actionTypes";
 
 const initialState = {
   isLoading: false,
   isError: false,
-  currentUser:"",
+  isAuth: false,
+  token: null,
 };
 
 export const reducer = (state = initialState, { type, payload }) => {

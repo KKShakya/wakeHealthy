@@ -1,4 +1,5 @@
 // krishna kumar shakya todo
+
 import React, { useState } from "react";
 import { Box,
           Flex, 
@@ -24,6 +25,14 @@ import CartItem from "./CarePageComponent/CartItem/CartItem";
 import { useEffect } from "react";
 import axios from "axios";
 
+
+
+import React from "react";
+import { Box, Flex, Link, Button, useDisclosure } from "@chakra-ui/react";
+import { IoLocationOutline, IoCartOutline } from "react-icons/io5";
+
+import Login from "./Navbar/login";
+import { LocationMenu } from "./Navbar/Menu";
 
 const Navbar = () => {
 
@@ -54,6 +63,7 @@ const Navbar = () => {
           " linear-gradient(to bottom, #171A26, rgba(23, 26, 38, 0.0001))"
         }
         bg="#161821"
+        zIndex={"1"}
       >
         {/* ?logo */}
         <Link href="/" color="#fff" textDecoration={"none"}>
@@ -85,22 +95,23 @@ const Navbar = () => {
         {/* cart-login */}
         <Flex justify={"space-between"} gap="1em">
           <Flex justify={"center"} alignItems="center" gap="10px">
-            <Box mt='3px' color="#999d9d">Banglore</Box>
+            <Box mt='3px' color="#999d9d"><LocationMenu/></Box>
             <IoLocationOutline  color="#fff" h="26px" w="26px"/>
           </Flex>
           <Flex justify={"center"} alignItems="center">
             <Button
               p="7px 15px"
-              bg="transparent"
+              colorScheme={'#161821'}
               color="#fff"
-              borderColor="#fff"
+              border="1px solid white"
               borderRadius={"5px"}
             >
               GET APP
             </Button>
           </Flex>
           <Flex justify={"center"} alignItems="center">
-            <AiOutlineUser color="#fff"/>
+            
+            <Login/>
           </Flex>
           <Flex justify={"center"} alignItems="center">
             <IoCartOutline color="#fff" onClick={OpenCartDrawer}/>

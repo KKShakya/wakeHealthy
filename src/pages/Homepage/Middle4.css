@@ -1,0 +1,24 @@
+
+.middle4{
+    display: flex;
+    gap: 4%;
+    width: 80%;
+    justify-content: space-around;
+    margin-left: 8%;
+  
+}
+.middle4_parent{
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+.middle4_parent>:nth-child(2){
+    margin-left: 8%;
+    display: flex;
+    width: 80%;
+}
+/* .middle4_parent>:nth-child(2) img{
+
+    width: 80%;
+} */

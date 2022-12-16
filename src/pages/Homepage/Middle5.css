@@ -1,0 +1,19 @@
+.flex-box_middle5{
+    display: flex;
+    margin-left: 5%;
+}
+.flex-box_middle5 img{
+    width: 75%;
+}
+.flex-box_middle5 ul{
+    margin-right:50% ;
+}
+.middle5_button{
+    display: flex;
+    gap: 4%;
+   
+
+}
+.middle5_button button{
+    width: 36%;
+}
