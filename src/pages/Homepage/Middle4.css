@@ -4,9 +4,21 @@
     gap: 4%;
     width: 80%;
     justify-content: space-around;
+    margin-left: 8%;
   
 }
 .middle4_parent{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    
+    
 }
+.middle4_parent>:nth-child(2){
+    margin-left: 8%;
+    display: flex;
+    width: 80%;
+}
+/* .middle4_parent>:nth-child(2) img{
+
+    width: 80%;
+} */

@@ -4,9 +4,9 @@ import Care from "./Care/Care";
 import CareBooking from "./Care/CareBooking";
 
 import Homepage from "./Homepage";
-import Products from "./SHOP/Products";
-import SingleProduct from "./SHOP/ShopComponents/SingleProduct";
-import ShopHome from "./SHOP/ShopHome";
+// import Products from "./SHOP/Products";
+// import SingleProduct from "./SHOP/ShopComponents/SingleProduct";
+// import ShopHome from "./SHOP/ShopHome";
 
 const AllRoutes = () => {
   return (
@@ -15,12 +15,12 @@ const AllRoutes = () => {
 
       <Route path="/care" element={<Care/>}></Route>
 
-      <Route path="/store" element={<ShopHome />} />
-      <Route path="/store/products/:categeory" element={<Products />} />
-      <Route
+      {/* <Route path="/store" element={<ShopHome />} /> */}
+      {/* <Route path="/store/products/:categeory" element={<Products />} /> */}
+      {/* <Route
         path="/store/products/:categeory/:product_id"
         element={<SingleProduct />}
-      />
+      /> */}
 
      <Route
         path="/care/:Booking_id"

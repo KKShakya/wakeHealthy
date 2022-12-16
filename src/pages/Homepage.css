@@ -1,21 +1,14 @@
 .content > img {
   width: 23%;
 }
-.content {
-  width: 100%;
-  height: 100%;
-  top: 0;
-  display: flex;
-  justify-content: end;
-  flex-direction: column;
-  align-items: center;
-}
+
 
 .main119{
     position: relative;
 }
 video{
     object-fit: cover;
+    width: 100%;
 }
 
 
