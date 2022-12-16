@@ -27,9 +27,8 @@ import axios from "axios";
 
 
 
-import React from "react";
+
 import { Box, Flex, Link, Button, useDisclosure } from "@chakra-ui/react";
-import { IoLocationOutline, IoCartOutline } from "react-icons/io5";
 
 import Login from "./Navbar/login";
 import { LocationMenu } from "./Navbar/Menu";
