@@ -1,3 +1,4 @@
+
 import React from 'react'
 import "./TestCarousel.css"
 import Carousel from "react-multi-carousel";
@@ -71,11 +72,11 @@ Tests Included</h4></div>
    <p>HDL Cholesterol</p>
   </div>
 </Carousel>;
-    
-    
-    
-    </>
-  )
-}
 
-export default TestCarousel
+    
+    
+        </>
+   )
+ }
+
+ export default TestCarousel

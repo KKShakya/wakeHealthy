@@ -1,19 +1,55 @@
 .flex-box_middle5{
     display: flex;
+    
+    background-color:#1A202C ;
+}
+.flex-box_middle5>div{
     margin-left: 5%;
 }
 .flex-box_middle5 img{
     width: 75%;
+    transition: all 250ms ease
+}
+.flex-box_middle5 img:hover{
+    width: 80%;
+
 }
 .flex-box_middle5 ul{
     margin-right:50% ;
+    color:white;
+    margin-top: 3%;
+    line-height: 1.8;
+    margin-bottom: 3%;
+    color :whitesmoke;
+    font-weight: 500;
 }
 .middle5_button{
     display: flex;
     gap: 4%;
+    margin-top: 15%;
+    margin-bottom: 10%;
+    
    
 
 }
 .middle5_button button{
     width: 36%;
+    
+}
+.middle5_button :nth-child(1){
+    background-color: #333;
+    color: white;
+}
+.middle5_button :nth-child(2){
+    color: orange;
+}
+.heading_middle5{
+    background-color: #1A202C;
+    color: white;
+    font-size: 66px;
+    font-weight: bold;
+
+}
+.logo_box1{
+    width: 30%;
 }
