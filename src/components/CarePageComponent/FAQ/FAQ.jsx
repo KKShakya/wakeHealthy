@@ -1,15 +1,23 @@
 // this FAQ  Component to do by Sumit ss
 
 import React from 'react'
+import axios from "axios"
 import "./FAQ.css"
 import {Accordion, Box, Text} from '@chakra-ui/react'
 import Accordion_Item from './Accordion_Item'
-import Faq_data from "../../../db.json"
+
 
 const FAQ = () => {
+
+   const [AccordionItems ,SetAccordionItem]=React.useState([])
+
+   React.useEffect(()=>{
+           
+    axios.get('http://localhost:8080/FAQ_DATA').then((data)=>SetAccordionItem(data.data))
+
+   },[])
  
 
-  let {FAQ_DATA}=Faq_data
 
   return (
     <div className='faq_div'>
@@ -23,7 +31,7 @@ const FAQ = () => {
             <div className='Accordion'>
                     <Accordion allowToggle>
                         {
-                            FAQ_DATA.map((item)=>(
+                            AccordionItems.map((item)=>(
                               <Accordion_Item  item={item} key={Math.random()*100000}/>
                             ))
                         }
