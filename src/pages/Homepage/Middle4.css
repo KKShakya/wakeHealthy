@@ -1,7 +1,7 @@
 
 .middle4{
     display: flex;
-    gap: 4%;
+    gap: 2%;
     width: 80%;
     justify-content: space-around;
     margin-left: 8%;
@@ -10,13 +10,17 @@
 .middle4_parent{
     display: flex;
     flex-direction: column;
+    background-color:#1A202C ;;
     
     
 }
-.middle4_parent>:nth-child(2){
+.middle4-box2{
     margin-left: 8%;
+    margin-top: 1%;
     display: flex;
     width: 80%;
+    gap:2%;
+    justify-content: space-around;
 }
 /* .middle4_parent>:nth-child(2) img{
 
