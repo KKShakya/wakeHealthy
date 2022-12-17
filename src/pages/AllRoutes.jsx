@@ -1,9 +1,14 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 
+import Admin from "./Admin/Admin";
+
+ import Care from "./Care/Care";
+ import CareBooking from "./Care/CareBooking";
+
+
 import FitnessHome from "./FitnessHome/FitnessHome";
-import Care from "./Care/Care";
-import CareBooking from "./Care/CareBooking";
+
 
 import Homepage from "./Homepage";
 
@@ -26,7 +31,11 @@ const AllRoutes = () => {
         element={<SingleProduct />}
       />
 
-      <Route path="/care/:Booking_id" element={<CareBooking />} />
+
+      <Route path="/admin" element={<Admin />} />
+
+   <Route path="/care/:Booking_id" element={<CareBooking />} /> 
+
     </Routes>
   );
 };

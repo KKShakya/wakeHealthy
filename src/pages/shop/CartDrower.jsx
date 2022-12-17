@@ -21,7 +21,7 @@ import {
   Link,
   useToast,
 } from "@chakra-ui/react";
-import { SmallCloseIcon, DeleteIcon } from "@chakra-ui/icons";
+import {  DeleteIcon } from "@chakra-ui/icons";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import {
@@ -29,8 +29,6 @@ import {
   delete_from_cart,
   update_cart,
 } from "../../store/Cart/cart.action";
-import { NavLink } from "react-router-dom";
-import { useState } from "react";
 import CheckoutModal from "./ShopComponents/CheckoutModal";
 
 export default function CartDrower({ title }) {
