@@ -28,7 +28,7 @@ import axios from "axios";
 
 
 
-import { Box, Flex, Link, Button, useDisclosure } from "@chakra-ui/react";
+ import { useDisclosure } from "@chakra-ui/react";
 
 import Login from "./Navbar/login";
 import { LocationMenu } from "./Navbar/Menu";

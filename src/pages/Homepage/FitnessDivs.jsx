@@ -39,12 +39,13 @@ const DATA = [
 
 export default function FitnessDivs() {
   return (
-    <Container maxW={"5xl"}>
+    <div style={{backgroundColor:"#1A202C"}}>
+    <Container  maxW={"5xl"}>
       <Flex flexWrap={"wrap"} justify={"center"} gap="50px" p={"20px"}>
         {DATA.map((el) => (
           <Link href="/" _hover={{ textDecoration: "none" }}>
             <Stack
-              w="350px"
+              w="450px"
               h="300px"
               backgroundImage={el.image}
               backgroundRepeat="no-repeat"
@@ -73,5 +74,6 @@ export default function FitnessDivs() {
         ))}
       </Flex>
     </Container>
+    </div>
   );
 }

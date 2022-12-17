@@ -71,3 +71,64 @@ video{
     font-size: 76px;
     font-weight: 550
 }
+@media screen and (max-width:760px) {
+    .content{
+        position: absolute;
+        /* width: 100%;
+        height: 100%; */
+        width: 100%;
+       top: 5%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        display: flex;
+        justify-content: baseline;
+       
+        flex-direction: column;
+        align-items: center;
+    }
+    .content2{
+   
+        color: white;
+        position: absolute;
+        /* width: 100%;
+        height: 100%; */
+        width: 100%;
+       top: 15%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        display: flex;
+        justify-content: baseline;
+       
+        flex-direction: column;
+        align-items: center;
+        
+    
+    }
+    .content2 h1{
+        font-size: 26px;
+        font-weight: bold;
+    }
+
+    .content3{
+   
+        color: white;
+        position: absolute;
+        /* width: 100%;
+        height: 100%; */
+        width: 100%;
+       top: 22%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        display: flex;
+        justify-content: baseline;
+       
+        flex-direction: column;
+        align-items: center;
+        
+    
+    }
+    .content3 h1{
+        font-size: 26px;
+        font-weight: 550
+    }
+}

@@ -3,7 +3,7 @@ import './Middle.css'
 const Middle = () => {
   return (
     <div className='section1'>
-    <div>
+    <div className='section1_first'>
         <div className='logo1'>
             <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_106,q_auto:eco,dpr_2,f_auto,fl_progressive//image/test/brand-logo/cult-pass.svg" alt="" />
             <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_107,q_auto:eco,dpr_2,f_auto,fl_progressive//image/test/brand-logo/cult-pass-elite-partial.png" alt="" />
