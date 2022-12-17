@@ -19,13 +19,14 @@ import {
     ModalContent,
     ModalHeader, 
     ModalOverlay, 
-    useDisclosure 
+    useDisclosure ,
     
   } from '@chakra-ui/react'
 
   
 import { useParams } from "react-router-dom";
 import TestCarousel from "../../components/CarePageComponent/Carousel/TestCarousel";
+import Information from "../../components/CarePageComponent/Information/Information";
 
 const CareBooking = () => {
 
@@ -67,7 +68,8 @@ const CareBooking = () => {
                   ),
                 position: 'top-right',
                 isClosable: true,
-                status: "success"
+                status: "success",
+                duration: 1000,
               })
 
               axios.post(" http://localhost:8080/Lab_Test_Cart",{...item,"id":uuidv4()}).then((res)=>console.log(res))
@@ -116,7 +118,7 @@ const CareBooking = () => {
 
                                 <Box p="0 12px">
 
-                                <Text fontSize="13px" color="#888E9E" textAlign="left">{TestData.desp}</Text> 
+                                <Text fontSize={{ base: '10px', md: '11px', lg: '13px' }} color="#888E9E" textAlign="left">{TestData.desp}</Text> 
                                 </Box>
 
 
@@ -214,6 +216,9 @@ const CareBooking = () => {
            
 
           </Box>
+
+          <Information />
+
  </Box>
    
   )

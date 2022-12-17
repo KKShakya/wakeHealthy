@@ -1,0 +1,16 @@
+.emptycart_box button{
+    width: 200px;
+    height: 35px;
+    border-radius: 10px;
+    margin-top: 25px;
+    font-size: 13px;
+    color: red;
+    background: rgb(88, 213, 109);
+
+}
+.emptycart_box button:hover{
+  
+    color: black;
+    background: rgb(61, 232, 78);
+
+}
