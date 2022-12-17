@@ -53,3 +53,22 @@
 .logo_box1{
     width: 30%;
 }
+
+@media screen and (max-width:760px) {
+    .flex-box_middle5{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    
+        
+        
+        background-color:#1A202C ;
+    }
+    .flex-box_middle5 img{
+        width: 85%;
+        transition: all 250ms ease
+    }
+    .flex-box_middle5>div{
+        margin-left: 10%;
+    }
+}

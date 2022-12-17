@@ -12,11 +12,13 @@ function App() {
   useEffect(() => {
     Aos.init({duration:2000})
 },[])
+
   return (
     <div className="App">
       <Navbar />
       <AllRoutes />
       <Footer/>
+
     </div>
   );
 }
