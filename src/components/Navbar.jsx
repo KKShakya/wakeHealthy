@@ -23,6 +23,7 @@ import { AiOutlineUser } from "react-icons/ai";
 import CartItem from "./CarePageComponent/CartItem/CartItem";
 import { useEffect } from "react";
 import axios from "axios";
+import EmptyCart from "./EmptyCart/EmptyCart";
 
 
 const Navbar = () => {
@@ -39,7 +40,7 @@ const Navbar = () => {
 
   useEffect(()=>{
         axios.get(` http://localhost:8080/Lab_Test_Cart`).then((response)=>SetCartItems(response.data))
-  },[])
+  },[CartItems])
   return (
     <Box>
       <Flex
@@ -113,21 +114,24 @@ const Navbar = () => {
                                   <Tabs isFitted variant='enclosed'>
                                          
                                           <TabList mb='1em'>
-                                            <Tab>Lab Test</Tab>
+                                            <Tab>Lab Test   {CartItems.length}</Tab>
                                             <Tab>Cults Soprt</Tab>
                                           </TabList>
                                           
                                           <TabPanels>
                                             <TabPanel>
-                                               {
-                                                 CartItems.map((item)=>(
-                                                   <CartItem  key={item.id} cartitem={item}/>
-                                                 ))
-                                                 }
+                                              {
+                                               CartItems.length !==0 ?  
+                                                CartItems.map((item)=>(
+                                                  <CartItem  key={item.id} cartitem={item}/>
+                                                ))
+                                                :<EmptyCart text={"BOOK TEST ON CARE.FIT"} link={"care"}/>
+                                              }
+                                              
                                               
                                             </TabPanel>
                                             <TabPanel>
-                                              <p>two!</p>
+                                            <EmptyCart text={"EXPLORE CULTSPORT"} link={"store"}/>
                                             </TabPanel>
                                           </TabPanels>
                                   </Tabs>
