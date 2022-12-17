@@ -50,15 +50,21 @@ export default function SingleProduct() {
       });
   }, []);
 
-  let handleAdd = async(product) => {
-    let selected = { ...product, size: selectdSize, quantity: 1 };
-    await dispatch(add_to_cart(selected));
+  let handleAdd = async (product) => {
+    let { id } = product;
+    let selected = {
+      ...product,
+      id: id + selectdSize,
+      size: selectdSize,
+      quantity: 1,
+    };
+    dispatch(add_to_cart(selected));
     toast({
       title: item_exist ? "item exist" : "added to cart",
       status: item_exist ? "warning" : "success",
       duration: 3000,
       isClosable: true,
-      position:"top-right"
+      position: "top-right",
     });
   };
 

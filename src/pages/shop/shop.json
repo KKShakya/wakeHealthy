@@ -1,15 +1,15 @@
 {
   "Cart": [
     {
-      "id": 4,
-      "image": "https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/uVqDCnrhWdZvkYV8oG5SpdW1",
+      "id": "7L",
+      "image": "https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/gyEKit98fH6VGSZ2jv1fFkSm",
       "brand": "cultsport",
       "title": "Solid Active Tshirt with Logo",
-      "price": "329",
+      "price": "459",
       "maxPrice": "899",
-      "discount": "60",
-      "size": "XXL",
-      "rating": "4.2",
+      "discount": "50",
+      "size": "L",
+      "rating": "4.3",
       "quantity": 1
     }
   ],

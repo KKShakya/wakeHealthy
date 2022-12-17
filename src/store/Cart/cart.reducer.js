@@ -26,7 +26,7 @@ export const reducer = (state = initialState, { type, payload }) => {
       return {
         ...state,
         CART: [...state.CART, payload],
-        item_exist: false,
+       
       };
     }
     case ITEM_EXIST: {

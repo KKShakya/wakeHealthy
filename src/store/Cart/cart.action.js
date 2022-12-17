@@ -17,16 +17,16 @@ export const add_to_cart = (product) => async (dispatch) => {
     let res = await axios.post("http://localhost:8080/Cart", product);
     dispatch({ type: ADD_TO_CART, payload: res.data });
   } catch (err) {
-    dispatch({ type: ITEM_EXIST });
+    // dispatch({ type: ITEM_EXIST });
   }
 };
 
-export const update_cart =  ({ id, quantity }) =>  async (dispatch) => {
-    let res = await axios.patch(`http://localhost:8080/Cart/${id}`, {
-      quantity,
-    });
-    dispatch({ type: UPDATE_CART, payload: res.data });
-  };
+export const update_cart = (id, quantity) => async (dispatch) => {
+  let res = await axios.patch(`http://localhost:8080/Cart/${id}`, {
+    quantity,
+  });
+  dispatch({ type: UPDATE_CART, payload: res.data });
+};
 
 export const delete_from_cart = (id) => async (dispatch) => {
   let res = await axios.delete(`http://localhost:8080/Cart/${id}`);

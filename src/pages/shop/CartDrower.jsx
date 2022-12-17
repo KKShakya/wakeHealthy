@@ -46,18 +46,10 @@ export default function CartDrower({ title }) {
 
   let cartTotal = CART.reduce((acc, el) => acc + +el.price * el.quantity, 0);
 
-  const handleQuantity = (e, product) => {
+  const handleQuantity = (e, id) => {
     let quantity = e.target.value;
-    let updated = { ...product, quantity };
-    dispatch(update_cart(updated));
+    dispatch(update_cart(id, quantity));
   };
-
-  // toast({
-  //   title: item_deleted ? "item exist" : "added to cart",
-  //   status: item_deleted ? "warning" : "success",
-  //   duration: 3000,
-  //   isClosable: true,
-  // });
 
   return (
     <>
@@ -100,12 +92,14 @@ export default function CartDrower({ title }) {
                         <Text>Quantity</Text>
                         <Select
                           w={"auto"}
-                          onChange={(e) => handleQuantity(e, product)}
+                          onChange={(e) => handleQuantity(e, product.id)}
                           value={product.quantity}
                         >
                           <option value="1">1</option>
                           <option value="2">2</option>
                           <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
                         </Select>
                       </HStack>
                     </Stack>
