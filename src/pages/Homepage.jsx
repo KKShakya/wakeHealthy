@@ -1,16 +1,19 @@
+
 import React from "react";
 import "./Homepage.css";
 import FitnessDivs from "./Homepage/FitnessDivs";
+import Footer from "./Homepage/Footer";
 import Middle from "./Homepage/Middle";
 import Middle2 from "./Homepage/Middle2";
 import Middle3 from "./Homepage/Middle3";
 import Middle4 from "./Homepage/Middle4";
 import Middle5 from "./Homepage/Middle5";
-import Middle6 from "./Homepage/Middle6";
-import Middle7 from "./Homepage/Middle7";
+
+
 
 const Homepage = () => {
   return (
+
     <div className="main119">
       <video
         src="https://cdn-images.cure.fit/www-curefit-com/video/upload/c_fill,w_1278,ar_1.77,q_auto:eco,dpr_1.0700000524520874,vc_auto,f_auto/video/test/we-are-cult-web.mp4"
@@ -30,9 +33,12 @@ const Homepage = () => {
       <Middle3 />
       <Middle4 />
       <Middle5 />
-      <Middle6 />
-      <Middle7 />
+      {/* <Middle6 />
+      <Middle7 /> */}
       <FitnessDivs />
+      <Footer/>
+
+
     </div>
   );
 };

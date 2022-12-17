@@ -1,9 +1,14 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+
 import Admin from "./Admin/Admin";
-// import OtpVerification from "../components/Navbar/OtpVerification";
-// import Care from "./Care/Care";
-// import CareBooking from "./Care/CareBooking";
+
+ import Care from "./Care/Care";
+ import CareBooking from "./Care/CareBooking";
+
+
+import FitnessHome from "./FitnessHome/FitnessHome";
+
 
 import Homepage from "./Homepage";
 
@@ -15,8 +20,9 @@ const AllRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Homepage />} />
+      <Route path="/fitness" element={<FitnessHome/>} />
 
-      {/* <Route path="/care" element={<Care />}></Route> */}
+      <Route path="/care" element={<Care />}></Route>
 
       <Route path="/store" element={<ShopHome />} />
       <Route path="/store/products/:categeory" element={<Products />} />
@@ -25,9 +31,11 @@ const AllRoutes = () => {
         element={<SingleProduct />}
       />
 
+
       <Route path="/admin" element={<Admin />} />
 
-      {/* <Route path="/care/:Booking_id" element={<CareBooking />} /> */}
+   <Route path="/care/:Booking_id" element={<CareBooking />} /> 
+
     </Routes>
   );
 };
