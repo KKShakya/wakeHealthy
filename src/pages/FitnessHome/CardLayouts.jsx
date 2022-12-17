@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Image, Heading, Text, Flex, Button } from "@chakra-ui/react";
 
-export const At_Home_Card = () => {
+export const AtHomeCard = () => {
   return (
     <Box width="20%">
       <Flex
@@ -34,7 +34,7 @@ export const At_Home_Card = () => {
   );
 };
 
-export const Card_With_Carousel = ({ direction = "row" }) => {
+export const CardWithCarousel = ({ direction = "row" }) => {
   return (
     <Box>
       <Flex flexDirection={{ base: "column", sm: "column", md: direction }} bg="#0a1017" color="#fff" p="1em" justify="space-around">

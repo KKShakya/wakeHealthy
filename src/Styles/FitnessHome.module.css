@@ -1,0 +1,22 @@
+.image_btn {
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 40%;
+
+}
+
+.bgImage_grid {
+  background: transparent;
+  position: absolute;
+  bottom: 10%;
+  left: 15%;
+}
+.bgImage_Flex {
+  background: rgb(255 255 255 / 5%);
+  flex-direction: column;
+  border: 1px solid rgb(255 255 255 / 20%);
+  border-radius: 10px;
+  padding: 30px 80px;
+  gap: 10px;
+  backdrop-filter: blur(50px);
+}
