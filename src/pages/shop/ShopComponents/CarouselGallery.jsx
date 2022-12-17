@@ -5,14 +5,13 @@ import { NavLink } from "react-router-dom";
 import React from "react";
 import {
   Box,
-  Container,
   Heading,
   HStack,
   Image,
   Stack,
   Text,
 } from "@chakra-ui/react";
-import DATA from "../shop.json";
+import DATA from "../../../db.json";
 
 export default function ShopCarouselGallery() {
   const responsive = {
@@ -63,7 +62,10 @@ export default function ShopCarouselGallery() {
                   <Text fontWeight={"bold"}>₹ {product.price}</Text>
                   <strike>{product.maxPrice}</strike>
                   <Text fontWeight={"bold"} color="pink.400">
-                    {Math.floor(((product.maxPrice - product.price) / product.maxPrice) * 100)}
+                    {Math.floor(
+                      ((product.maxPrice - product.price) / product.maxPrice) *
+                        100
+                    )}
                     % off
                   </Text>
                 </HStack>
@@ -98,7 +100,10 @@ export default function ShopCarouselGallery() {
                   <Text fontWeight={"bold"}>₹ {product.price}</Text>
                   <strike>{product.maxPrice}</strike>
                   <Text fontWeight={"bold"} color="pink.400">
-                    {Math.floor(((product.maxPrice - product.price) / product.maxPrice) * 100)}
+                    {Math.floor(
+                      ((product.maxPrice - product.price) / product.maxPrice) *
+                        100
+                    )}
                     % off
                   </Text>
                 </HStack>

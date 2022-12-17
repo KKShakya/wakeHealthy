@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+import Admin from "./Admin/Admin";
 // import OtpVerification from "../components/Navbar/OtpVerification";
 // import Care from "./Care/Care";
 // import CareBooking from "./Care/CareBooking";
@@ -23,6 +24,8 @@ const AllRoutes = () => {
         path="/store/products/:categeory/:product_id"
         element={<SingleProduct />}
       />
+
+      <Route path="/admin" element={<Admin />} />
 
       {/* <Route path="/care/:Booking_id" element={<CareBooking />} /> */}
     </Routes>
