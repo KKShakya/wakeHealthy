@@ -70,7 +70,15 @@ export default function Products() {
               </ButtonGroup>
             </HStack>
             <br />
-            <Grid gridTemplateColumns={"repeat(4,1fr)"} gap="20px">
+            <Grid
+              gridTemplateColumns={{
+                base: "repeat(1,1fr)",
+                sm: "repeat(2,1fr)",
+                md: "repeat(3,1fr)",
+                lg: "repeat(4,1fr)",
+              }}
+              gap="20px"
+            >
               {DATA.map((product) => (
                 <NavLink to={`${product.id}`} key={product.id}>
                   <Stack fontSize="18px" textAlign="left">
