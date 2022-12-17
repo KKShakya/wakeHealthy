@@ -33,15 +33,23 @@ import { Box,
   Center,} 
             from "@chakra-ui/react";
 
-
-
-
-
 import React from "react";
 
+import {
+  Box,
+  Flex,
+  Link,
+  Button,
+  Image,
+  useDisclosure,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalBody,
+  ModalCloseButton,
+  Center,
 
-
-
+} from "@chakra-ui/react";
 
 
 import { IoLocationOutline, IoCartOutline } from "react-icons/io5";
@@ -52,20 +60,16 @@ import axios from "axios";
 import EmptyCart from "./EmptyCart/EmptyCart";
 
 
-
-
  import { useDisclosure } from "@chakra-ui/react";
 
 import Login from "./Navbar/login";
 
 import { LocationMenu } from "./Navbar/Menu";
 
-
-
+import { BaseMenu, LocationMenu } from "./Navbar/Menu";
 
 
 import { BaseMenu, LocationMenu } from "./Navbar/Menu";
-
 import { useDispatch, useSelector } from "react-redux";
 import { signout } from "../store/Auth/auth.action";
 import Logo from "../Images/Logo.png";
@@ -142,6 +146,7 @@ const Navbar = () => {
 
 
  
+
 
 
   return (
@@ -264,6 +269,9 @@ const Navbar = () => {
                               </DrawerBody>
                         </DrawerContent>
                  </Drawer>
+=======
+            <IoCartOutline color="#fff" />
+
 =======
             <IoCartOutline color="#fff" />
 
