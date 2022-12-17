@@ -1,72 +1,42 @@
 // krishna kumar shakya todo
 
-
-
 import React, { useState } from "react";
-import { Box,
-          Flex, 
-          Link, 
-          Button, 
-          useDisclosure, 
-          Drawer, 
-          DrawerOverlay, 
-          DrawerContent, 
-          DrawerCloseButton,
-            DrawerHeader, 
-            DrawerBody, 
-            Tabs, 
-            TabList, 
-            Tab, 
-            TabPanels, 
-            TabPanel,
-            Box,
-  Flex,
-  Link,
-  Button,
-  Image,
-  useDisclosure,
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalBody,
-  ModalCloseButton,
-  Center,} 
-            from "@chakra-ui/react";
-
-import React from "react";
-
 import {
   Box,
   Flex,
   Link,
   Button,
-  Image,
   useDisclosure,
+  Drawer,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  DrawerHeader,
+  DrawerBody,
+  Tabs,
+  TabList,
+  Tab,
+  TabPanels,
+  TabPanel,
+  Image,
   Modal,
   ModalOverlay,
   ModalContent,
   ModalBody,
   ModalCloseButton,
   Center,
-
 } from "@chakra-ui/react";
 
 
 import { IoLocationOutline, IoCartOutline } from "react-icons/io5";
-import { AiOutlineUser } from "react-icons/ai";
+
 import CartItem from "./CarePageComponent/CartItem/CartItem";
 import { useEffect } from "react";
 import axios from "axios";
 import EmptyCart from "./EmptyCart/EmptyCart";
 
 
- import { useDisclosure } from "@chakra-ui/react";
-
 import Login from "./Navbar/login";
-
-import { LocationMenu } from "./Navbar/Menu";
-
-import { BaseMenu, LocationMenu } from "./Navbar/Menu";
 
 
 import { BaseMenu, LocationMenu } from "./Navbar/Menu";
@@ -125,29 +95,25 @@ export const LogoutUser = () => {
 };
 
 const Navbar = () => {
+  const { currentUser } = useSelector((store) => store.auth);
+  // console.log(currentUser === "", currentUser[0]);
 
+  const [CartItems, SetCartItems] = useState([]);
 
-  const {currentUser} = useSelector((store)=>store.auth);
-  console.log(currentUser==="",currentUser[0])
- 
-  const [CartItems,SetCartItems]=useState([])
- 
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const OpenCartDrawer = () => {
+    axios
+      .get(` http://localhost:8080/Lab_Test_Cart`)
+      .then((response) => SetCartItems(response.data));
+    onOpen();
+  };
 
-  const OpenCartDrawer =()=>{
-    axios.get(` http://localhost:8080/Lab_Test_Cart`).then((response)=>SetCartItems(response.data))
-    onOpen()
-  }
-
-  useEffect(()=>{
-        axios.get(` http://localhost:8080/Lab_Test_Cart`).then((response)=>SetCartItems(response.data))
-  },[CartItems])
-
-
- 
-
-
+  useEffect(() => {
+    axios
+      .get(` http://localhost:8080/Lab_Test_Cart`)
+      .then((response) => SetCartItems(response.data));
+  }, [CartItems]);
 
   return (
     <Box>
@@ -164,7 +130,7 @@ const Navbar = () => {
         bg="#161821"
         zIndex={"1"}
       >
-        <Box display={{ base: "flex", sm: "flex", md: "none" }}>
+        <Box display={{ base: "flex",  md: "flex",lg:"none"}}>
           <BaseMenu />
         </Box>
 
@@ -183,7 +149,7 @@ const Navbar = () => {
           textTransform={"uppercase"}
           color="white"
           ml="120px"
-          display={{ base: "none", sm: "none", md: "inherit" }}
+          display={{ base: "none", sm: "none", md: "none",lg:"inherit" }}
         >
           <Link href="/fitness" color="#fff" textDecoration={"none"}>
             Fitness
@@ -234,47 +200,40 @@ const Navbar = () => {
             {currentUser === "" ? <Login /> : <LogoutUser />}
           </Flex>
           <Flex justify={"center"} alignItems="center">
+            <IoCartOutline color="#fff" onClick={OpenCartDrawer} />
+            <Drawer onClose={onClose} isOpen={isOpen} size={"xs"} bg="black">
+              <DrawerOverlay />
+              <DrawerContent>
+                <DrawerCloseButton />
+                <DrawerHeader> Your Cart</DrawerHeader>
+                <DrawerBody>
+                  <Tabs isFitted variant="enclosed">
+                    <TabList mb="1em">
+                      <Tab>Lab Test {CartItems.length}</Tab>
+                      <Tab>Cults Soprt</Tab>
+                    </TabList>
 
-            <IoCartOutline color="#fff" onClick={OpenCartDrawer}/>
-                    <Drawer onClose={onClose} isOpen={isOpen} size={"xs"} bg="black">
-                        <DrawerOverlay />
-                          <DrawerContent>
-                              <DrawerCloseButton />
-                              <DrawerHeader> Your Cart</DrawerHeader>
-                              <DrawerBody>
-                                  <Tabs isFitted variant='enclosed'>
-                                         
-                                          <TabList mb='1em'>
-                                            <Tab>Lab Test   {CartItems.length}</Tab>
-                                            <Tab>Cults Soprt</Tab>
-                                          </TabList>
-                                          
-                                          <TabPanels>
-                                            <TabPanel>
-                                              {
-                                               CartItems.length !==0 ?  
-                                                CartItems.map((item)=>(
-                                                  <CartItem  key={item.id} cartitem={item}/>
-                                                ))
-                                                :<EmptyCart text={"BOOK TEST ON CARE.FIT"} link={"care"}/>
-                                              }
-                                              
-                                              
-                                            </TabPanel>
-                                            <TabPanel>
-                                            <EmptyCart text={"EXPLORE CULTSPORT"} link={"store"}/>
-                                            </TabPanel>
-                                          </TabPanels>
-                                  </Tabs>
-                              </DrawerBody>
-                        </DrawerContent>
-                 </Drawer>
-=======
-            <IoCartOutline color="#fff" />
-
-=======
-            <IoCartOutline color="#fff" />
-
+                    <TabPanels>
+                      <TabPanel>
+                        {CartItems.length !== 0 ? (
+                          CartItems.map((item) => (
+                            <CartItem key={item.id} cartitem={item} />
+                          ))
+                        ) : (
+                          <EmptyCart
+                            text={"BOOK TEST ON CARE.FIT"}
+                            link={"care"}
+                          />
+                        )}
+                      </TabPanel>
+                      <TabPanel>
+                        <EmptyCart text={"EXPLORE CULTSPORT"} link={"store"} />
+                      </TabPanel>
+                    </TabPanels>
+                  </Tabs>
+                </DrawerBody>
+              </DrawerContent>
+            </Drawer>
           </Flex>
         </Flex>
       </Flex>

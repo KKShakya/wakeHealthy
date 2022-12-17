@@ -36,7 +36,7 @@ const Homepage = () => {
       {/* <Middle6 />
       <Middle7 /> */}
       <FitnessDivs />
-      <Footer/>
+      {/* <Footer/> */}
 
 
     </div>
