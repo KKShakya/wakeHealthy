@@ -10,6 +10,7 @@ import {
   Grid,
   Input,
   Button,
+  Link,
 } from "@chakra-ui/react";
 import { DeleteIcon } from "@chakra-ui/icons";
 import { useDispatch, useSelector } from "react-redux";
@@ -40,6 +41,10 @@ export default function Admin() {
     <VStack justify={"center"}>
       <Heading>Admin</Heading>
       <AddProduct />
+      <Link href="/">
+        <Button>Logout</Button>
+      </Link>
+
       <Grid
         gridTemplateColumns={{
           base: "repeat(1,1fr)",

@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Admin from "./Admin/Admin";
+import AdminLogin from "./Admin/AdminLogin";
 // import OtpVerification from "../components/Navbar/OtpVerification";
 // import Care from "./Care/Care";
 // import CareBooking from "./Care/CareBooking";
@@ -26,6 +27,7 @@ const AllRoutes = () => {
       />
 
       <Route path="/admin" element={<Admin />} />
+      <Route path="/adminlogin" element={<AdminLogin />} />
 
       {/* <Route path="/care/:Booking_id" element={<CareBooking />} /> */}
     </Routes>

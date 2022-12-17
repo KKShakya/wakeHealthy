@@ -2,16 +2,11 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { NavLink } from "react-router-dom";
 
-import React from "react";
-import {
-  Box,
-  Heading,
-  HStack,
-  Image,
-  Stack,
-  Text,
-} from "@chakra-ui/react";
-import DATA from "../../../db.json";
+import React, { useEffect } from "react";
+import { Box, Heading, HStack, Image, Stack, Text } from "@chakra-ui/react";
+// import DATA from "../../../db.json";
+import axios from "axios";
+import { useState } from "react";
 
 export default function ShopCarouselGallery() {
   const responsive = {
@@ -33,6 +28,19 @@ export default function ShopCarouselGallery() {
     },
   };
 
+  const [TSHIRT, setTSHIRT] = useState([]);
+  const [CYCLES, setCYCLES] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:8080/Tshirts")
+      .then((res) => setTSHIRT(res.data));
+
+    axios
+      .get("http://localhost:8080/Cycles")
+      .then((res) => setCYCLES(res.data));
+  }, []);
+
   return (
     <Stack gap={"20px"}>
       <Box>
@@ -52,7 +60,7 @@ export default function ShopCarouselGallery() {
         </HStack>
 
         <Carousel responsive={responsive}>
-          {DATA.Tshirts.map((product) => (
+          {TSHIRT.map((product) => (
             <NavLink to={`products/Tshirts/${product.id}`} key={product.image}>
               <Stack m={"15px"} fontSize="18px" textAlign="left">
                 <Image src={product.image} alt="t-shirts" />
@@ -75,7 +83,7 @@ export default function ShopCarouselGallery() {
         </Carousel>
       </Box>
 
-      <Box>
+      {/* <Box>
         <HStack align="baseline">
           <Heading
             fontSize={"30px"}
@@ -90,7 +98,7 @@ export default function ShopCarouselGallery() {
           </NavLink>
         </HStack>
         <Carousel responsive={responsive}>
-          {DATA.Cycles.map((product) => (
+          {CYCLES.map((product) => (
             <NavLink to={`products/Cycles/${product.id}`} key={product.image}>
               <Stack m={"15px"} fontSize="18px" textAlign="left">
                 <Image src={product.image} alt="t-shirts" />
@@ -111,7 +119,8 @@ export default function ShopCarouselGallery() {
             </NavLink>
           ))}
         </Carousel>
-      </Box>
+      </Box> */}
+
       <Box>
         <Heading
           fontSize={"30px"}

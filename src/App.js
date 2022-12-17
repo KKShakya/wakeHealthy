@@ -1,6 +1,6 @@
 
 import "./App.css";
-import Navbar from "./components/Navbar";
+// import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import AllRoutes from "./pages/AllRoutes";
 
@@ -11,7 +11,7 @@ function App() {
   AOS.init();
   return (
     <div className="App">
-      <Navbar />
+      {/* <Navbar /> */}
       <AllRoutes />
       <Footer/>
     </div>
