@@ -1,44 +1,87 @@
 // krishna kumar shakya todo
 import React from "react";
-import { Box, Flex, Link, Button } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Link,
+  Button,
+  Image,
+  useDisclosure,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalBody,
+  ModalCloseButton,
+  Center,
+
+} from "@chakra-ui/react";
+
 import { IoLocationOutline, IoCartOutline } from "react-icons/io5";
 
 import Login from "./Navbar/login";
-import { LocationMenu } from "./Navbar/Menu";
+import { BaseMenu, LocationMenu } from "./Navbar/Menu";
 import { useDispatch, useSelector } from "react-redux";
 import { signout } from "../store/Auth/auth.action";
+import Logo from "../Images/Logo.png";
 
-const LogoutUser = ()=>{
-  const {currentUser} = useSelector((store)=>store.auth)
+export const LogoutUser = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
+  const { currentUser } = useSelector((store) => store.auth);
   const dispatch = useDispatch();
 
-  const handleSubmit = (e)=>{
-     e.preventDefault();
-     console.log("fhdsjkfgsdgfhdsjgfhs")
-     dispatch(signout());
-     console.log(currentUser);
-  }
-  return(
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    //  console.log("fhdsjkfgsdgfhdsjgfhs")
+    dispatch(signout());
+    //  console.log(currentUser);
+  };
+  return (
     <>
-     <Button onClick={handleSubmit} borderRadius="50%">{currentUser[0]}</Button>
+      <Button onClick={onOpen} borderRadius="50%">
+        {currentUser[0]}
+      </Button>
+      <Modal
+        blockScrollOnMount={false}
+        isOpen={isOpen}
+        onClose={onClose}
+        size={"sm"}
+      >
+        <ModalOverlay />
+        <ModalContent bg="black" border="1px solid #fff">
+          <ModalCloseButton color={"#fff"} />
+          <ModalBody>
+            {/* this is from component */}
+            <Flex m="10%" flexDirection={"column"} gap="20px">
+              <Center color="#fff">Are You Sure You Want To Log Out?</Center>
+              <Center>
+                <Box
+                  as="button"
+                  bg="red"
+                  color="#fff"
+                  onClick={handleSubmit}
+                  p="10px"
+                  borderRadius="8px"
+                >
+                  Log Out
+                </Box>
+              </Center>
+            </Flex>
+          </ModalBody>
+        </ModalContent>
+      </Modal>
     </>
-  )
-}
-
-
+  );
+};
 
 const Navbar = () => {
-
-  const {currentUser} = useSelector((store)=>store.auth);
-  console.log(currentUser==="",currentUser[0])
- 
-  
+  const { currentUser } = useSelector((store) => store.auth);
+  // console.log(currentUser==="",currentUser[0])
 
   return (
     <Box>
       <Flex
         justify={"space-around"}
-      
         h="60px"
         w="100%"
         mx="auto"
@@ -50,18 +93,26 @@ const Navbar = () => {
         bg="#161821"
         zIndex={"1"}
       >
+        <Box display={{ base: "flex", sm: "flex", md: "none" }}>
+          <BaseMenu />
+        </Box>
+
         {/* ?logo */}
         <Link href="/" color="#fff" textDecoration={"none"}>
-          Logo
+          <Box w="60px">
+            <Image src={Logo} />
+          </Box>
         </Link>
 
         {/* menus */}
+
         <Flex
           justify={"space-between"}
           gap="4em"
           textTransform={"uppercase"}
           color="white"
           ml="120px"
+          display={{ base: "none", sm: "none", md: "inherit" }}
         >
           <Link href="/fitness" color="#fff" textDecoration={"none"}>
             Fitness
@@ -79,27 +130,40 @@ const Navbar = () => {
 
         {/* cart-login */}
         <Flex justify={"space-between"} gap="1em">
-          <Flex justify={"center"} alignItems="center" gap="10px">
-            <Box mt='3px' color="#999d9d"><LocationMenu/></Box>
-            <IoLocationOutline  color="#fff" h="26px" w="26px"/>
+          <Flex
+            justify={"center"}
+            alignItems="center"
+            gap="10px"
+            display={{ sm: "none", md: "inherit" }}
+          >
+            <Box mt="3px" color="#999d9d">
+              <LocationMenu />
+            </Box>
+            <IoLocationOutline color="#fff" h="26px" w="26px" />
           </Flex>
-          <Flex justify={"center"} alignItems="center">
+          <Flex
+            justify={"center"}
+            alignItems="center"
+            display={{ sm: "none", md: "inherit" }}
+          >
             <Button
               p="7px 15px"
-              colorScheme={'#161821'}
+              colorScheme={"#161821"}
               color="#fff"
               border="1px solid white"
               borderRadius={"5px"}
+              onClick={() =>
+                (document.documentElement.scrollTop = document.scrollHeight)
+              }
             >
               GET APP
             </Button>
           </Flex>
           <Flex justify={"center"} alignItems="center">
-            
-            {currentUser===""?<Login/>:<LogoutUser />}
+            {currentUser === "" ? <Login /> : <LogoutUser />}
           </Flex>
           <Flex justify={"center"} alignItems="center">
-            <IoCartOutline color="#fff"/>
+            <IoCartOutline color="#fff" />
           </Flex>
         </Flex>
       </Flex>

@@ -8,7 +8,7 @@ import {
   Image,
   Center,
 } from "@chakra-ui/react";
-import logo from "../../Images/Logo.png";
+import logo from "../../Images/Logo_Login.png";
 import { MdKeyboardArrowDown, MdOutlineMailOutline } from "react-icons/md";
 import { BsGoogle, BsFacebook, BsArrowLeftShort } from "react-icons/bs";
 // import { Link, Navigate } from "react-router-dom";
@@ -31,15 +31,15 @@ const Form1 = ({ handleNext, handleLogin }) => {
     const { name, value } = e.target;
     setUser({ ...user, [name]: value });
   };
-
+  
   const { name, number } = user;
 
   return (
     <Flex flexDirection={"column"} mt="10%" color="#fff">
       {/* Image logo */}
       <Flex justify={"center"} w="30%" m="auto">
-        <Flex justify={"center"} align="center">
-          <Image src={logo} alt="" />
+        <Flex justify={"center"} align="center" w="100px" h="100px">
+          <Image src={logo} alt="logo" />
         </Flex>
       </Flex>
 
@@ -79,7 +79,7 @@ const Form1 = ({ handleNext, handleLogin }) => {
         p="8px"
         borderRadius={"5px"}
       >
-        <Box as="button" color="black" onClick={handleClick}>
+        <Box as="button" color="black" onClick={handleClick} disabled={name==="" || number.length<10 || number.length>10}>
           CONTINUE
         </Box>
       </Flex>
@@ -117,6 +117,9 @@ const Form1 = ({ handleNext, handleLogin }) => {
   );
 };
 
+
+
+// this form is for signin with other platforms
 const Form2 = ({ handleNext }) => {
   const handleEmailSignin = (e) => {
     e.preventDefault();

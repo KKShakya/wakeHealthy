@@ -1,62 +1,63 @@
-import { Center, Heading } from '@chakra-ui/react';
+import { Center, Heading, useToast } from "@chakra-ui/react";
 import {
   Button,
   FormControl,
   Flex,
   Stack,
- Box,
+  Box,
   HStack,
-} from '@chakra-ui/react';
-import { PinInput, PinInputField } from '@chakra-ui/react';
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { signIn } from '../../store/Auth/auth.action';
+} from "@chakra-ui/react";
+import { PinInput, PinInputField } from "@chakra-ui/react";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { signIn } from "../../store/Auth/auth.action";
 
-export default function OtpVerification({loginCreds}) {
- 
- const dispatch  = useDispatch();
+export default function OtpVerification({ loginCreds }) {
+  const toast = useToast()
+  const dispatch = useDispatch();
 
- const [OTP,setOtp] = useState("");
+  const [OTP, setOtp] = useState("");
 
-const handleSubmit = (e)=>{
-e.preventDefault();
-if(OTP==="1234" && OTP!=="")
-{
-  dispatch(signIn(loginCreds));
-  alert("Account created succcessfully");
-}else{
-  alert("Please Enter the correct otp");
-}
-}
-console.log(loginCreds);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (OTP === "1234" && OTP !== "") {
+      dispatch(signIn(loginCreds));
+      toast({
+        title: 'Account created.',
+        description: "We've created your account for you.",
+        status: 'success',
+        duration: 9000,
+        isClosable: true,
+      })
+    } else {
+      alert("Please Enter the correct otp");
+    }
+  };
+  console.log(loginCreds);
   return (
-    <Flex
-      align={'center'}
-      justify={'center'}
-      bg={"black"}>
+    <Flex align={"center"} justify={"center"} bg={"black"}>
       <Stack
         spacing={4}
-        w={'full'}
-        maxW={'md'}
+        w={"full"}
+        maxW={"md"}
         bg={"black"}
-        rounded={'xl'}
+        rounded={"xl"}
         color="#fff"
         p={5}
-        my={5}>
+        my={5}
+      >
         <Center>
-          <Heading lineHeight={1.1} fontSize={{ base: '2xl', md: '3xl' }}>
+          <Heading lineHeight={1.1} fontSize={{ base: "2xl", md: "3xl" }}>
             Enter OTP
           </Heading>
         </Center>
-        <Box
-          fontSize={{ base: 'sm', sm: 'md' }}
-          color="#fff" ml="10px">
+        <Box fontSize={{ base: "sm", sm: "md" }} color="#fff" ml="10px">
           We have sent code to your number
         </Box>
         <FormControl>
           <Center>
             <HStack>
-              <PinInput onChange={(e)=>setOtp(e)}  otp>
+              <PinInput onChange={(e) => setOtp(e)} otp>
                 <PinInputField />
                 <PinInputField />
                 <PinInputField />
@@ -67,14 +68,15 @@ console.log(loginCreds);
         </FormControl>
         <Stack spacing={6}>
           <Button
-          type="submit"
-            bg={'#b3b3b3'}
-            color={'black'}
+            type="submit"
+            bg={"#b3b3b3"}
+            color={"black"}
             _hover={{
-              bg: '#fff',
-              color:"red",
+              bg: "#fff",
+              color: "red",
             }}
-            onClick={handleSubmit}>
+            onClick={handleSubmit}
+          >
             Verify
           </Button>
         </Stack>
