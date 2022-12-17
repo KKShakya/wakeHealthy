@@ -2,9 +2,9 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Admin from "./Admin/Admin";
 import AdminLogin from "./Admin/AdminLogin";
-// import OtpVerification from "../components/Navbar/OtpVerification";
-// import Care from "./Care/Care";
-// import CareBooking from "./Care/CareBooking";
+import OtpVerification from "../components/Navbar/OtpVerification";
+import Care from "./Care/Care";
+import CareBooking from "./Care/CareBooking";
 
 import Homepage from "./Homepage";
 
@@ -17,7 +17,7 @@ const AllRoutes = () => {
     <Routes>
       <Route path="/" element={<Homepage />} />
 
-      {/* <Route path="/care" element={<Care />}></Route> */}
+      <Route path="/care" element={<Care />}></Route>
 
       <Route path="/store" element={<ShopHome />} />
       <Route path="/store/products/:categeory" element={<Products />} />
@@ -29,7 +29,7 @@ const AllRoutes = () => {
       <Route path="/admin" element={<Admin />} />
       <Route path="/adminlogin" element={<AdminLogin />} />
 
-      {/* <Route path="/care/:Booking_id" element={<CareBooking />} /> */}
+      <Route path="/care/:Booking_id" element={<CareBooking />} />
     </Routes>
   );
 };
