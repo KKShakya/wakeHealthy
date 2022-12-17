@@ -1,11 +1,53 @@
 // krishna kumar shakya todo
-import React from "react";
-import { Box, Flex, Link, Button, useDisclosure } from "@chakra-ui/react";
+
+import React, { useState } from "react";
+import { Box,
+          Flex, 
+          Link, 
+          Button, 
+          useDisclosure, 
+          Drawer, 
+          DrawerOverlay, 
+          DrawerContent, 
+          DrawerCloseButton,
+            DrawerHeader, 
+            DrawerBody, 
+            Tabs, 
+            TabList, 
+            Tab, 
+            TabPanels, 
+            TabPanel } 
+            from "@chakra-ui/react";
+
 import { IoLocationOutline, IoCartOutline } from "react-icons/io5";
+import { AiOutlineUser } from "react-icons/ai";
+import CartItem from "./CarePageComponent/CartItem/CartItem";
+import { useEffect } from "react";
+import axios from "axios";
+
+
+
+
+import { Box, Flex, Link, Button, useDisclosure } from "@chakra-ui/react";
 
 import Login from "./Navbar/login";
 import { LocationMenu } from "./Navbar/Menu";
+
 const Navbar = () => {
+
+  const [CartItems,SetCartItems]=useState([])
+ 
+
+  const { isOpen, onOpen, onClose } = useDisclosure()
+
+  const OpenCartDrawer =()=>{
+    axios.get(` http://localhost:8080/Lab_Test_Cart`).then((response)=>SetCartItems(response.data))
+    onOpen()
+  }
+
+  useEffect(()=>{
+        axios.get(` http://localhost:8080/Lab_Test_Cart`).then((response)=>SetCartItems(response.data))
+  },[])
   return (
     <Box>
       <Flex
@@ -71,7 +113,37 @@ const Navbar = () => {
             <Login/>
           </Flex>
           <Flex justify={"center"} alignItems="center">
-            <IoCartOutline color="#fff"/>
+            <IoCartOutline color="#fff" onClick={OpenCartDrawer}/>
+                    <Drawer onClose={onClose} isOpen={isOpen} size={"xs"} bg="black">
+                        <DrawerOverlay />
+                          <DrawerContent>
+                              <DrawerCloseButton />
+                              <DrawerHeader> Your Cart</DrawerHeader>
+                              <DrawerBody>
+                                  <Tabs isFitted variant='enclosed'>
+                                         
+                                          <TabList mb='1em'>
+                                            <Tab>Lab Test</Tab>
+                                            <Tab>Cults Soprt</Tab>
+                                          </TabList>
+                                          
+                                          <TabPanels>
+                                            <TabPanel>
+                                               {
+                                                 CartItems.map((item)=>(
+                                                   <CartItem  key={item.id} cartitem={item}/>
+                                                 ))
+                                                 }
+                                              
+                                            </TabPanel>
+                                            <TabPanel>
+                                              <p>two!</p>
+                                            </TabPanel>
+                                          </TabPanels>
+                                  </Tabs>
+                              </DrawerBody>
+                        </DrawerContent>
+                 </Drawer>
           </Flex>
         </Flex>
       </Flex>

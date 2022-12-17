@@ -1,8 +1,10 @@
 .animation-flex{
     display: flex;
+   
     justify-content:space-around;
     background-color:  #1A202C; ;
 }
 .animation-flex img{
-    width: 40%;
+    width: 70%; margin-left: 4%;
+    margin-bottom: 19%;
 }
