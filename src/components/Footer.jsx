@@ -1,5 +1,3 @@
-import React from "react";
-
 import { ReactNode } from 'react';
 import {
   Box,
@@ -15,9 +13,6 @@ import {
 import { FaTwitter, FaYoutube, FaInstagram } from 'react-icons/fa';
 
 
-export  default  function Footer(){
-  console.log("hi")
-
 
 const ListHeader = ({ children }) => {
   return (
@@ -27,11 +22,7 @@ const ListHeader = ({ children }) => {
   );
 };
 
-const SocialButton = ({
-  children,
-  label,
-  href,
-}) => {
+const SocialButton = ({ children,label, href,}) => {
   return (
     <chakra.button
       bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
@@ -53,44 +44,74 @@ const SocialButton = ({
     </chakra.button>
   );
 };
- function LargeWithAppLinksAndSocial() {
+
+export default function LargeWithAppLinksAndSocial() {
   return (
     <Box
-      bg={useColorModeValue('gray.50', 'gray.900')}
-      color={useColorModeValue('gray.700', 'gray.200')}>
+      bg="#000000"
+      color="#FFFFFF">
       <Container as={Stack} maxW={'6xl'} py={10}>
-        <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
-          <Stack align={'flex-start'}>
-            <ListHeader>Company</ListHeader>
-            <Link href={'#'}>About Us</Link>
-            <Link href={'#'}>Blog</Link>
-            <Link href={'#'}>Careers</Link>
-            <Link href={'#'}>Contact Us</Link>
-          </Stack>
+        <SimpleGrid columns={{ base: 1, sm: 2, md: 5 }} spacing={8}>
+             <Stack align={'flex-start'}>
+                
+                <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_150,q_auto:eco,dpr_2,f_auto,fl_progressive//image/test/brand-logo/vman-and-white-cult-text.png" alt="logo"  width="130px"/>
 
-          <Stack align={'flex-start'}>
-            <ListHeader>Support</ListHeader>
-            <Link href={'#'}>Help Center</Link>
-            <Link href={'#'}>Safety Center</Link>
-            <Link href={'#'}>Community Guidelines</Link>
-          </Stack>
+                <Text fontSize={{ base: '10px', md: '10px', lg: '12px' }} textAlign="left" pt="30px">At cult.fit, we make group workouts fun, daily food healthy & tasty, mental fitness easy with yoga & meditation, Medical & lifestyle care hassle-free.#BeBetterEveryDay</Text>
+              </Stack>
+              
+              <Stack align={'flex-start'} fontSize="12px" lineHeight="40px">
+                
+                <Link href={'#'}>cult.fit for business</Link>
+                <Link href={'#'}>cult.fit franchise</Link>
+                <Link href={'#'}>corporate partnerships</Link>
+                <Link href={'#'}>cult pass network</Link>
+                <Link href={'#'}>t&c for business</Link>
+              </Stack>
 
-          <Stack align={'flex-start'}>
-            <ListHeader>Legal</ListHeader>
-            <Link href={'#'}>Cookies Policy</Link>
-            <Link href={'#'}>Privacy Policy</Link>
-            <Link href={'#'}>Terms of Service</Link>
-            <Link href={'#'}>Law Enforcement</Link>
-          </Stack>
+              <Stack align={'flex-start'} fontSize="12px" lineHeight="40px">
+                
+                <Link href={'#'}>partner.fit</Link>
+                <Link href={'#'}>blogs</Link>
+                <Link href={'#'}>security </Link>
+                <Link href={'#'}>careers</Link>
+              </Stack>
+
+              <Stack align={'flex-start'} fontSize="12px" lineHeight="40px">
+              
+                <Link href={'#'}>contact us</Link>
+                <Link href={'#'}>privacy policy</Link>
+                <Link href={'#'}>cult bmi calculator </Link>
+                <Link href={'#'}>terms & conditions</Link>
+              </Stack>
 
           <Stack align={'flex-start'}>
             <ListHeader>Install App</ListHeader>
-            
+            <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_178,q_auto:eco,dpr_2,f_auto,fl_progressive//image/test/download-app/app-store-dark-card-2.png" alt="" width="150px"/>
+            <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_178,q_auto:eco,dpr_2,f_auto,fl_progressive//image/test/download-app/play-store-dark-card-2.png" alt="" width="150px"/>
+
+            <Stack direction={'row'} spacing={6}>
+            <SocialButton label={'Twitter'} href={'#'}>
+              <FaTwitter />
+            </SocialButton>
+            <SocialButton label={'YouTube'} href={'#'}>
+              <FaYoutube />
+            </SocialButton>
+            <SocialButton label={'Instagram'} href={'#'}>
+              <FaInstagram />
+            </SocialButton>
+          </Stack>
+           
           </Stack>
         </SimpleGrid>
       </Container>
 
-      <Box
+      
+    </Box>
+  );
+}
+
+
+{/* <Box
         borderTopWidth={1}
         borderStyle={'solid'}
         borderColor={useColorModeValue('gray.200', 'gray.700')}>
@@ -102,7 +123,7 @@ const SocialButton = ({
           spacing={4}
           justify={{ md: 'space-between' }}
           align={{ md: 'center' }}>
-          <Text>© 2022 Chakra Templates. All rights reserved</Text>
+        
           <Stack direction={'row'} spacing={6}>
             <SocialButton label={'Twitter'} href={'#'}>
               <FaTwitter />
@@ -115,9 +136,4 @@ const SocialButton = ({
             </SocialButton>
           </Stack>
         </Container>
-      </Box>
-    </Box>
-  );
-}
-
-}
+      </Box> */}

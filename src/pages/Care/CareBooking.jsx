@@ -27,6 +27,7 @@ import {
 import { useParams } from "react-router-dom";
 import TestCarousel from "../../components/CarePageComponent/Carousel/TestCarousel";
 import Information from "../../components/CarePageComponent/Information/Information";
+import LargeWithAppLinksAndSocial from "../../components/Footer";
 
 const CareBooking = () => {
 
@@ -72,21 +73,21 @@ const CareBooking = () => {
                 duration: 1000,
               })
 
-              axios.post(" http://localhost:8080/Lab_Test_Cart",{...item,"id":uuidv4()}).then((res)=>console.log(res))
+              axios.post(" http://localhost:8080/CareCart",{...item,"id":uuidv4()}).then((res)=>console.log(res))
         }
 
   return (
     <Box className='Booking_main_div'>
 
-         <Box className="Book_div">
-            <Box className="image_div">
-                <img src={TestData.image} alt="" />
-            </Box>
+         <Box className="Book_div">   
+                    <Box className="image_div">                   
+                        <img src={TestData.image} alt="" />
+                    </Box>
            
            
                 <Box className="Book_now_div">
 
-                            <Breadcrumb spacing='4px' fontSize="13px" separator={<BiChevronRight color='gray.500' />}>
+                            <Breadcrumb ml="30px" spacing='4px' fontSize="13px" separator={<BiChevronRight color='gray.500' />}>
                                     <BreadcrumbItem>
                                         <BreadcrumbLink color="#00000080" href='#'>Home</BreadcrumbLink>
                                     </BreadcrumbItem>
@@ -152,7 +153,7 @@ const CareBooking = () => {
                     
                     <Box className="Healthians_box">
                         <Box w="100%" p="10px" display="flex" flexDirection="row">
-                             <Box w="40%" display="flex" justifyContent="space-around" gap="10px" fontSize="15px" color="#5A5A5A">
+                             <Box w="40%" display="flex" justifyContent="space-around" gap="10px" fontSize={{ base: '10px', md: '12px', lg: '15px' }} color="#5A5A5A">
                                     <Text>Fulfilled By</Text>
                                     <img src="https://cdn-media.cure.fit/image/carefit/healthians_logo.png" alt="image_abc" width="60px" />
 
@@ -200,7 +201,7 @@ const CareBooking = () => {
 
                         </Box>
 
-                        <Box fontSize="15px" mt="20px" textAlign="left" ml="40px" color="#5A5A5A">
+                        <Box  mt="20px" textAlign="left" ml="40px" color="#5A5A5A" fontSize={{ base: '10px', md: '12px', lg: '15px' }} >
 
                         <ul>
                             <li>DMLT and WHO certified phlebotomists</li>
@@ -218,6 +219,7 @@ const CareBooking = () => {
           </Box>
 
           <Information />
+          <LargeWithAppLinksAndSocial/>
 
  </Box>
    

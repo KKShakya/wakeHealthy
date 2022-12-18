@@ -7,7 +7,7 @@ const CartItem = ({cartitem}) => {
     
 
    const HandleRemoveCartItem  =(id)=>{
-            axios.delete(` http://localhost:8080/Lab_Test_Cart/${id}`)
+            axios.delete(` http://localhost:8080/CareCart/${id}`)
             .then ((res) =>console.log(res))
    }
 

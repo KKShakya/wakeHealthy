@@ -104,14 +104,14 @@ const Navbar = () => {
 
   const OpenCartDrawer = () => {
     axios
-      .get(` http://localhost:8080/Lab_Test_Cart`)
+      .get(` http://localhost:8080/CareCart`)
       .then((response) => SetCartItems(response.data));
     onOpen();
   };
 
   useEffect(() => {
     axios
-      .get(` http://localhost:8080/Lab_Test_Cart`)
+      .get(` http://localhost:8080/CareCart`)
       .then((response) => SetCartItems(response.data));
   }, [CartItems]);
 
@@ -201,6 +201,7 @@ const Navbar = () => {
           </Flex>
           <Flex justify={"center"} alignItems="center">
             <IoCartOutline color="#fff" onClick={OpenCartDrawer} />
+           
             <Drawer onClose={onClose} isOpen={isOpen} size={"xs"} bg="black">
               <DrawerOverlay />
               <DrawerContent>
