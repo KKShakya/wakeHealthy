@@ -11,6 +11,8 @@ import "../../Styles/care.css"
 import FAQ from '../../components/CarePageComponent/FAQ/FAQ'
 import Quote from '../../components/CarePageComponent/Quotes/Quote'
 import Information from '../../components/CarePageComponent/Information/Information'
+import LargeWithAppLinksAndSocial from '../../components/Footer';
+
 
 
 
@@ -79,6 +81,7 @@ const Care = () => {
             <FAQ/>
             <Quote/>  
             <Information/>
+            <LargeWithAppLinksAndSocial/>
 
         </div>
 

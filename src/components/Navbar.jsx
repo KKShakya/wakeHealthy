@@ -1,5 +1,10 @@
 // krishna kumar shakya todo
 
+
+
+
+
+
 import React, { useState } from "react";
 import {
   Box,
@@ -24,11 +29,15 @@ import {
   ModalContent,
   ModalBody,
   ModalCloseButton,
-  Center,
-} from "@chakra-ui/react";
+  Center,} 
+        from "@chakra-ui/react";
+
 
 
 import { IoLocationOutline, IoCartOutline } from "react-icons/io5";
+import { AiOutlineUser } from "react-icons/ai";
+
+
 
 import CartItem from "./CarePageComponent/CartItem/CartItem";
 import { useEffect } from "react";
@@ -39,7 +48,9 @@ import EmptyCart from "./EmptyCart/EmptyCart";
 import Login from "./Navbar/login";
 
 
+
 import { BaseMenu, LocationMenu } from "./Navbar/Menu";
+
 import { useDispatch, useSelector } from "react-redux";
 import { signout } from "../store/Auth/auth.action";
 import Logo from "../Images/Logo.png";
@@ -97,25 +108,33 @@ export const LogoutUser = () => {
 };
 
 const Navbar = () => {
+
   const { currentUser } = useSelector((store) => store.auth);
-  // console.log(currentUser === "", currentUser[0]);
+  // console.log(currentUser);
 
   const [CartItems, SetCartItems] = useState([]);
+
+  const [RenderCartItems,SetRenderCartItems] = useState(true);
 
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const OpenCartDrawer = () => {
     axios
+
       .get(` https://newwake.onrender.com/Lab_Test_Card`)
+
       .then((response) => SetCartItems(response.data));
     onOpen();
   };
 
   useEffect(() => {
     axios
+
       .get(` https://newwake.onrender.com/Lab_Test_Card`)
+
       .then((response) => SetCartItems(response.data));
-  }, [CartItems]);
+  }, [RenderCartItems]);
+
 
   return (
     <Box>
@@ -132,7 +151,9 @@ const Navbar = () => {
         bg="#161821"
         zIndex={"1"}
       >
+
         <Box display={{ base: "flex",  md: "flex",lg:"none"}}>
+
           <BaseMenu />
         </Box>
 
@@ -151,7 +172,9 @@ const Navbar = () => {
           textTransform={"uppercase"}
           color="white"
           ml="120px"
+
           display={{ base: "none", sm: "none", md: "none",lg:"inherit" }}
+
         >
           <Link href="/fitness" color="#fff" textDecoration={"none"}>
             Fitness
@@ -202,7 +225,9 @@ const Navbar = () => {
             {currentUser === "" ? <Login /> : <LogoutUser />}
           </Flex>
           <Flex justify={"center"} alignItems="center">
+
             <IoCartOutline color="#fff" onClick={OpenCartDrawer} />
+           
             <Drawer onClose={onClose} isOpen={isOpen} size={"xs"} bg="black">
               <DrawerOverlay />
               <DrawerContent>
@@ -219,7 +244,7 @@ const Navbar = () => {
                       <TabPanel>
                         {CartItems.length !== 0 ? (
                           CartItems.map((item) => (
-                            <CartItem key={item.id} cartitem={item} />
+                            <CartItem key={item.id} cartitem={item} SetRenderCartItems={SetRenderCartItems} RenderCartItems={RenderCartItems}/>
                           ))
                         ) : (
                           <EmptyCart
@@ -236,6 +261,9 @@ const Navbar = () => {
                 </DrawerBody>
               </DrawerContent>
             </Drawer>
+
+
+
           </Flex>
         </Flex>
       </Flex>
