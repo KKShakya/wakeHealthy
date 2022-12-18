@@ -1,4 +1,5 @@
 
+import { Button } from "@chakra-ui/react";
 import React from "react";
 import "./Homepage.css";
 import FitnessDivs from "./Homepage/FitnessDivs";
@@ -26,7 +27,8 @@ const Homepage = () => {
           src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_500,ar_2.13,q_auto:eco,dpr_2,f_auto,fl_progressive/image/test/we-are-cult-logo/text-only-v2.png"
           alt=""
         />
-        <h2>A fitness movement that is worth breakign a sweat for</h2>
+        <h2 className="fitness_slogan">A fitness movement that is worth<br/> breakign a sweat for</h2>
+        <Button w={{base:"150px" ,md:"150px",lg:'160px'}} className="explore" color={"orange"}>EXPLORE CULTPASS</Button>
       </div>
       <Middle></Middle>
       <Middle2 />

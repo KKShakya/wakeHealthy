@@ -4,21 +4,22 @@
 
 
 import React, { useEffect } from "react";
-import { Box, Heading, HStack, Image, Stack, Text } from "@chakra-ui/react";
-// import DATA from "../../../db.json";
+
+
 import axios from "axios";
 import { useState } from "react";
 
- import React from "react";
+
  import {
-   Box,
+  Box,
+  
    Heading,
    HStack,
    Image,
    Stack,
    Text,
  } from "@chakra-ui/react";
- import DATA from "../../../db.json";
+
 
 
  export default function ShopCarouselGallery() {
@@ -96,7 +97,7 @@ import { useState } from "react";
         </Carousel>
       </Box>
 
-      {/* <Box>
+       <Box>
         <HStack align="baseline">
           <Heading
             fontSize={"30px"}
@@ -132,7 +133,7 @@ import { useState } from "react";
             </NavLink>
           ))}
         </Carousel>
-      </Box> */}
+      </Box>
 
       <Box>
         <Heading
