@@ -1,5 +1,10 @@
 // krishna kumar shakya todo
 
+
+
+
+
+
 import React, { useState } from "react";
 import {
   Box,
@@ -24,11 +29,15 @@ import {
   ModalContent,
   ModalBody,
   ModalCloseButton,
-  Center,
-} from "@chakra-ui/react";
+  Center,} 
+        from "@chakra-ui/react";
+
 
 
 import { IoLocationOutline, IoCartOutline } from "react-icons/io5";
+import { AiOutlineUser } from "react-icons/ai";
+
+ import { useDisclosure } from "@chakra-ui/react";
 
 import CartItem from "./CarePageComponent/CartItem/CartItem";
 import { useEffect } from "react";
@@ -39,7 +48,9 @@ import EmptyCart from "./EmptyCart/EmptyCart";
 import Login from "./Navbar/login";
 
 
+
 import { BaseMenu, LocationMenu } from "./Navbar/Menu";
+
 import { useDispatch, useSelector } from "react-redux";
 import { signout } from "../store/Auth/auth.action";
 import Logo from "../Images/Logo.png";
@@ -95,6 +106,7 @@ export const LogoutUser = () => {
 };
 
 const Navbar = () => {
+
   const { currentUser } = useSelector((store) => store.auth);
   // console.log(currentUser === "", currentUser[0]);
 
@@ -115,6 +127,7 @@ const Navbar = () => {
       .then((response) => SetCartItems(response.data));
   }, [CartItems]);
 
+
   return (
     <Box>
       <Flex
@@ -130,7 +143,9 @@ const Navbar = () => {
         bg="#161821"
         zIndex={"1"}
       >
+
         <Box display={{ base: "flex",  md: "flex",lg:"none"}}>
+
           <BaseMenu />
         </Box>
 
@@ -149,7 +164,9 @@ const Navbar = () => {
           textTransform={"uppercase"}
           color="white"
           ml="120px"
+
           display={{ base: "none", sm: "none", md: "none",lg:"inherit" }}
+
         >
           <Link href="/fitness" color="#fff" textDecoration={"none"}>
             Fitness
@@ -200,40 +217,46 @@ const Navbar = () => {
             {currentUser === "" ? <Login /> : <LogoutUser />}
           </Flex>
           <Flex justify={"center"} alignItems="center">
-            <IoCartOutline color="#fff" onClick={OpenCartDrawer} />
-            <Drawer onClose={onClose} isOpen={isOpen} size={"xs"} bg="black">
-              <DrawerOverlay />
-              <DrawerContent>
-                <DrawerCloseButton />
-                <DrawerHeader> Your Cart</DrawerHeader>
-                <DrawerBody>
-                  <Tabs isFitted variant="enclosed">
-                    <TabList mb="1em">
-                      <Tab>Lab Test {CartItems.length}</Tab>
-                      <Tab>Cults Soprt</Tab>
-                    </TabList>
 
-                    <TabPanels>
-                      <TabPanel>
-                        {CartItems.length !== 0 ? (
-                          CartItems.map((item) => (
-                            <CartItem key={item.id} cartitem={item} />
-                          ))
-                        ) : (
-                          <EmptyCart
-                            text={"BOOK TEST ON CARE.FIT"}
-                            link={"care"}
-                          />
-                        )}
-                      </TabPanel>
-                      <TabPanel>
-                        <EmptyCart text={"EXPLORE CULTSPORT"} link={"store"} />
-                      </TabPanel>
-                    </TabPanels>
-                  </Tabs>
-                </DrawerBody>
-              </DrawerContent>
-            </Drawer>
+
+            <IoCartOutline color="#fff" onClick={OpenCartDrawer}/>
+                    <Drawer onClose={onClose} isOpen={isOpen} size={"xs"} bg="black">
+                        <DrawerOverlay />
+                          <DrawerContent>
+                              <DrawerCloseButton />
+                              <DrawerHeader> Your Cart</DrawerHeader>
+                              <DrawerBody>
+                                  <Tabs isFitted variant='enclosed'>
+                                         
+                                          <TabList mb='1em'>
+                                            <Tab>Lab Test   {CartItems.length}</Tab>
+                                            <Tab>Cults Soprt</Tab>
+                                          </TabList>
+                                          
+                                          <TabPanels>
+                                            <TabPanel>
+                                              {
+                                               CartItems.length !==0 ?  
+                                                CartItems.map((item)=>(
+                                                  <CartItem  key={item.id} cartitem={item}/>
+                                                ))
+                                                :<EmptyCart text={"BOOK TEST ON CARE.FIT"} link={"care"}/>
+                                              }
+                                              
+                                              
+                                            </TabPanel>
+                                            <TabPanel>
+                                            <EmptyCart text={"EXPLORE CULTSPORT"} link={"store"}/>
+                                            </TabPanel>
+                                          </TabPanels>
+                                  </Tabs>
+                              </DrawerBody>
+                        </DrawerContent>
+                 </Drawer>
+
+            <IoCartOutline color="#fff" />
+
+
           </Flex>
         </Flex>
       </Flex>
