@@ -121,7 +121,7 @@ const Navbar = () => {
   const OpenCartDrawer = () => {
     axios
 
-      .get(` https://newwake.onrender.com/Lab_Test_Card`)
+      .get(` https://wakehealhty-update.onrender.com/CareCart`)
 
       .then((response) => SetCartItems(response.data));
     onOpen();
@@ -130,7 +130,7 @@ const Navbar = () => {
   useEffect(() => {
     axios
 
-      .get(` https://newwake.onrender.com/Lab_Test_Card`)
+      .get(`https://wakehealhty-update.onrender.com/CareCart`)
 
       .then((response) => SetCartItems(response.data));
   }, [RenderCartItems]);

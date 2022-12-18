@@ -7,7 +7,7 @@ const CartItem = ({cartitem,SetRenderCartItems,RenderCartItems}) => {
     
 
    const HandleRemoveCartItem  =(id)=>{
-            axios.delete(` http://localhost:8080/CareCart/${id}`)
+            axios.delete(` https://wakehealhty-update.onrender.com/CareCart/${id}`)
             .then ((res) =>console.log(res))
 
             let val=RenderCartItems ? false : true

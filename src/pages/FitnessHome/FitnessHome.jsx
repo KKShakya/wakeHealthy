@@ -20,6 +20,7 @@ import table from "../../Images/table.png";
 import bottomfitness from "../../Images/bottomfitness.png"
 import FAQ from "../../components/CarePageComponent/FAQ/FAQ";
 import FitnessFaq from "./FitnesssFaq";
+import Footer from "../../components/Footer";
 
 
 
@@ -207,7 +208,7 @@ function FitnessHome() {
       <Box bg="#161b22" mt="-2%">
         <Box w="80%" m="auto" color="#fff" p="100px">
           <Center fontSize={"3rem"} fontWeight="bold">
-            FREE TRIALs
+            FREE TRIALS
           </Center>
           <Flex
             mt="5%"
@@ -250,10 +251,10 @@ function FitnessHome() {
       </Box>
     
      <Box mt="-3%">
-      <FitnessFaq />
+      {/* <FitnessFaq /> */}
      </Box>
     
-    
+    <Footer />
     </Box>
 
     

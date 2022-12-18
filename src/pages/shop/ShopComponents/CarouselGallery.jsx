@@ -47,11 +47,11 @@ import { useState } from "react";
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/Tshirts")
+      .get("https://wakehealhty-update.onrender.com/Tshirts")
       .then((res) => setTSHIRT(res.data));
 
     axios
-      .get("http://localhost:8080/Cycles")
+      .get("https://wakehealhty-update.onrender.com/cycles")
       .then((res) => setCYCLES(res.data));
   }, []);
 

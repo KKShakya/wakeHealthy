@@ -14,10 +14,11 @@ import {
 import { NavLink, useParams } from "react-router-dom";
 import Loading from "../../components/Loading";
 import ShopNavbar from "./ShopComponents/ShopNavbar";
+import Footer from "../../components/Footer";
 
 function getByCategeory({ categeory }, sort, order) {
   return fetch(
-    `http://localhost:8080/${categeory}?_sort=${sort}&_order=${order}`
+    `https://wakehealhty-update.onrender.com/${categeory}?_sort=${sort}&_order=${order}`
   ).then((res) => res.json());
 }
 
@@ -113,6 +114,7 @@ export default function Products() {
               ))}
             </Grid>
           </Container>
+          <Footer />
         </>
       )}
     </>

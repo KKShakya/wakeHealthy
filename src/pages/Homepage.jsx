@@ -1,6 +1,7 @@
 
 import { Button } from "@chakra-ui/react";
 import React from "react";
+import Footer from "../components/Footer";
 import "./Homepage.css";
 import FitnessDivs from "./Homepage/FitnessDivs";
 
@@ -39,7 +40,7 @@ const Homepage = () => {
       <Middle7 /> */}
       <FitnessDivs />
      
-
+ <Footer />
 
     </div>
   );

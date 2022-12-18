@@ -22,9 +22,10 @@ import Loading from "../../../components/Loading";
 import { useDispatch, useSelector } from "react-redux";
 import { add_to_cart } from "../../../store/Cart/cart.action";
 import ShopNavbar from "./ShopNavbar";
+import Footer from "../../../components/Footer";
 
 function getById({ categeory, product_id }) {
-  return fetch(`http://localhost:8080/${categeory}/${product_id}`).then((res) =>
+  return fetch(`https://wakehealhty-update.onrender.com/${categeory}/${product_id}`).then((res) =>
     res.json()
   );
 }
@@ -185,6 +186,7 @@ export default function SingleProduct() {
               </InputGroup>
             </Stack>
           </Flex>
+          <Footer />
         </Box>
       )}
     </>

@@ -1,16 +1,16 @@
 {
   "Cart": [
     {
-      "id": "3M",
-      "image": "https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/MbwMLHyajasEhEuQSzoEoKWV",
+      "id": "5S",
+      "image": "https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_300,h_400,ar_0.75,c_fill/dpr_2/cultgear-content/6BNADeqJxiu1CPNdg9k7wdbA",
       "brand": "cultsport",
       "title": "Solid Active Tshirt with Logo",
-      "price": "759",
+      "price": "349",
       "maxPrice": "899",
-      "discount": "20",
-      "size": "M",
-      "rating": "4.3",
-      "quantity": "4"
+      "discount": "55",
+      "size": "S",
+      "rating": "3.1",
+      "quantity": 1
     }
   ],
   "Tshirts": [
@@ -567,7 +567,6 @@
       "time": "Report Ready in 60 Hrs"
     }
   ],
-
   "CareCart": [
     {
       "id": "418f11a0-b3bd-424b-a5ed-bc05a80abced",
@@ -578,9 +577,18 @@
       "desp": "Understand your fitness from the inside out. This pack will help you understand your vitals, hormones and vitamin levels, which will help you understand how to plan your workout journey accordingly..",
       "Test": "81 Test",
       "time": "Report Ready in 71 Hrs"
+    },
+    {
+      "id": "472fa067-aeee-4fa2-a220-4fa8c9503029",
+      "title": "Vitamin Screening (VitB12,VitD)",
+      "image": "https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/bundle/mp/diag_pack_Vitamin_Profile_clp.jpg",
+      "Price": 1990,
+      "Offer_price": 890,
+      "desp": "This pack checks for Vitamin B12 and vitamin D levels in your body. It is recommended for people showing symptoms of Vitamin B12 deficiency include low energy levels, muscle weakness or mouth ulcers, bone pain",
+      "Test": "2 Test",
+      "time": "Report Ready in 36 Hrs"
     }
   ],
-
   "FAQ_DATA": [
     {
       "que": "How does home sample collection work?",
@@ -610,7 +618,6 @@
       "que": "Can I club two or more sample collection slots",
       "ans": "We are currently working on enabling multiple orders from the same address (for the same person or different).  Till then, you can request the phlebotomist who comes for the sample collection for the first order, to add on the rest of the tests (for the same person or different).  You can directly pay him via card / UPI / cash for the additional tests purchased. "
     }
-
   ],
   "Home_FAQ": [
     {
@@ -641,7 +648,6 @@
       "que": "What is the difference between a PRO gym and a ELITE gym?",
       "ans": "PRO gyms are full service gyms that offer you great value. They provide a safe space to workout with top quality equipment and cult certified trainers present to assist you ELITE gyms are a curated collection of handpicked,  full-service gyms at prime locations. They offer everything you get in a PRO gym plus added comfort and luxury to make your workout enjoyable. Lookout for the ELITE tag to to identify a ELITE gym.  "
     }
-
   ],
   "user": [
     {

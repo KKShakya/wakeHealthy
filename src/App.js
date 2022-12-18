@@ -9,6 +9,7 @@ import AllRoutes from "./pages/AllRoutes";
 
 import Aos from "aos"
 import "aos/dist/aos.css"
+// import Footer from "./components/Footer";
 
 function App() {
   useEffect(() => {
@@ -19,7 +20,7 @@ function App() {
     <div className="App">
       <Navbar />
       <AllRoutes />
-    
+     {/* <Footer /> */}
 
     </div>
   );

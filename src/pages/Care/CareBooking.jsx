@@ -29,6 +29,7 @@ import TestCarousel from "../../components/CarePageComponent/Carousel/TestCarous
 import Information from "../../components/CarePageComponent/Information/Information";
 import LargeWithAppLinksAndSocial from "../../components/Footer";
 import { useSelector } from "react-redux";
+import Footer from "../../components/Footer";
 
 const CareBooking = () => {
 
@@ -49,7 +50,7 @@ const CareBooking = () => {
         let {Booking_id}=param
 
         React.useEffect(()=>{
-            axios.get(`http://localhost:8080/Lab_Test_Card/${Booking_id}`)
+            axios.get(`https://newwake.onrender.com/Lab_Test_Card/${Booking_id}`)
             .then((data)=>{
                 
                             SetTestData(data.data)
@@ -73,10 +74,10 @@ const CareBooking = () => {
                 position: 'top-right',
                 isClosable: true,
                 status: "success",
-                duration: 1000,
+                duration: 2000,
               })
 
-              axios.post(" http://localhost:8080/CareCart",{...item,"id":uuidv4()})
+              axios.post(" https://wakehealhty-update.onrender.com/CareCart",{...item,"id":uuidv4()})
         }
 
   return (
@@ -222,7 +223,7 @@ const CareBooking = () => {
           </Box>
 
           <Information />
-          <LargeWithAppLinksAndSocial/>
+         <Footer />
 
  </Box>
    
