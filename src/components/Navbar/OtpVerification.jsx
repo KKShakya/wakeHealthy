@@ -21,19 +21,28 @@ export default function OtpVerification({ loginCreds }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (OTP === "1234" && OTP !== "") {
+
       dispatch(signIn(loginCreds));
+
       toast({
         title: 'Account created.',
         description: "We've created your account for you.",
         status: 'success',
-        duration: 9000,
+        duration: 1500,
+        position:"top",
         isClosable: true,
       })
     } else {
-      alert("Please Enter the correct otp");
+      toast({
+        title: 'Please Enter the correct OTP.',
+        status: 'error',
+        duration: 1500,
+        position:"top",
+        isClosable: true,
+      })
     }
   };
-  console.log(loginCreds);
+  // console.log(loginCreds);
   return (
     <Flex align={"center"} justify={"center"} bg={"black"}>
       <Stack

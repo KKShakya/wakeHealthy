@@ -195,7 +195,7 @@ const Form2 = ({ handleNext }) => {
 
 // form for email and password signin
 const Form3 = ({ handleNext, handleLogin }) => {
-  const [user2, setUser2] = useState({ name: "", email: "" });
+  const [user2, setUser2] = useState({ name: "", email: ""});
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -266,6 +266,7 @@ const Form3 = ({ handleNext, handleLogin }) => {
           color="black"
           _hover={{ color: "red" }}
           onClick={handleSubmit}
+          disabled={name==="" || email===""}
         >
           CONTINUE
         </Box>

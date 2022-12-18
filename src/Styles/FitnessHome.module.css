@@ -1,22 +1,45 @@
-.image_btn {
-  text-transform: uppercase;
-  position: absolute;
-  bottom: 40%;
-
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
+.bgImage_scroll{
+  background-image: url("https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_1600,q_auto:eco,dpr_1,f_auto,fl_progressive/image/vm/7996a88c-8958-4bba-9bbd-bbf0433598ee.png");
+  object-fit: cover;
+  width:100%;
+  height:800px;
+  /* background-position:10%; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  position:relative;
+}
+
 
 .bgImage_grid {
   background: transparent;
-  position: absolute;
-  bottom: 10%;
-  left: 15%;
+
 }
 .bgImage_Flex {
-  background: rgb(255 255 255 / 5%);
+  background: rgba(127, 126, 126, 0.05);
   flex-direction: column;
   border: 1px solid rgb(255 255 255 / 20%);
   border-radius: 10px;
   padding: 30px 80px;
   gap: 10px;
   backdrop-filter: blur(50px);
+}
+
+.carousel1{
+
+  margin-left: 20px;
+}
+.carousel1:hover{
+
+transform: scale(1.2);
+transition: all 1s ease-in-out;
+}
+
+.free_trials_img:hover{
+  transform: scale(1.08);
+transition: all 0.2s linear;
 }
