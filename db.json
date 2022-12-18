@@ -563,7 +563,18 @@
       "time": "Report Ready in 60 Hrs"
     }
   ],
-  "CareCart": [],
+  "CareCart": [
+    {
+      "id": "418f11a0-b3bd-424b-a5ed-bc05a80abced",
+      "title": "Fitness Essentials - Women",
+      "image": "https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/diagnostics/screening-packs/WorkoutWellness_women_magazine_web2.png",
+      "Price": 2990,
+      "Offer_price": 1990,
+      "desp": "Understand your fitness from the inside out. This pack will help you understand your vitals, hormones and vitamin levels, which will help you understand how to plan your workout journey accordingly..",
+      "Test": "81 Test",
+      "time": "Report Ready in 71 Hrs"
+    }
+  ],
   "FAQ_DATA": [
     {
       "que": "How does home sample collection work?",

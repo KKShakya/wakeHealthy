@@ -3,12 +3,15 @@ import "./CartItem.css"
 import { AiOutlineClose } from "react-icons/ai";
 import axios from 'axios';
 
-const CartItem = ({cartitem}) => { 
+const CartItem = ({cartitem,SetRenderCartItems,RenderCartItems}) => { 
     
 
    const HandleRemoveCartItem  =(id)=>{
             axios.delete(` http://localhost:8080/CareCart/${id}`)
             .then ((res) =>console.log(res))
+
+            let val=RenderCartItems ? false : true
+            SetRenderCartItems( val)
    }
 
   return (

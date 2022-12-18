@@ -28,6 +28,7 @@ import { useParams } from "react-router-dom";
 import TestCarousel from "../../components/CarePageComponent/Carousel/TestCarousel";
 import Information from "../../components/CarePageComponent/Information/Information";
 import LargeWithAppLinksAndSocial from "../../components/Footer";
+import { useSelector } from "react-redux";
 
 const CareBooking = () => {
 
@@ -35,7 +36,9 @@ const CareBooking = () => {
 
    const { isOpen, onOpen, onClose } = useDisclosure()
    const toast = useToast()
+   const { currentUser } = useSelector((store) => store.auth);
 
+   console.log(currentUser)
 
    const [ShowADDbtn,setShowADDbtn]=useState(true)
   
@@ -63,7 +66,7 @@ const CareBooking = () => {
                 render: () => (
                     <Box color='white' p={3} bg='blue.500'>
                      <p>{item.title} - {item.Test}</p>
-                     <p>For sumit  | Male</p>
+                     <p>For {currentUser}  | Male</p>
 
                     </Box>
                   ),
@@ -73,7 +76,7 @@ const CareBooking = () => {
                 duration: 1000,
               })
 
-              axios.post(" http://localhost:8080/CareCart",{...item,"id":uuidv4()}).then((res)=>console.log(res))
+              axios.post(" http://localhost:8080/CareCart",{...item,"id":uuidv4()})
         }
 
   return (
@@ -109,7 +112,7 @@ const CareBooking = () => {
                             <Box className="Booking_card">
                             
                                 <Box className="card_top_div">
-                                    <Text >{TestData.title}</Text>
+                                    <Text fontSize={{ base: '14px', md: '17px', lg: '20px' }} >{TestData.title}</Text>
 
                                     <Box display="flex" flexDirection="row" >
                                         <Text display="flex" justifyContent="center" alignItems="center" color="#888E9E"><BiRupee/><del>{TestData.Price}</del>   </Text>

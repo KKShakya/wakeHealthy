@@ -96,9 +96,11 @@ export const LogoutUser = () => {
 
 const Navbar = () => {
   const { currentUser } = useSelector((store) => store.auth);
-  // console.log(currentUser === "", currentUser[0]);
+  // console.log(currentUser);
 
   const [CartItems, SetCartItems] = useState([]);
+
+  const [RenderCartItems,SetRenderCartItems] = useState(true);
 
   const { isOpen, onOpen, onClose } = useDisclosure();
 
@@ -113,7 +115,7 @@ const Navbar = () => {
     axios
       .get(` http://localhost:8080/CareCart`)
       .then((response) => SetCartItems(response.data));
-  }, [CartItems]);
+  }, [RenderCartItems]);
 
   return (
     <Box>
@@ -218,7 +220,7 @@ const Navbar = () => {
                       <TabPanel>
                         {CartItems.length !== 0 ? (
                           CartItems.map((item) => (
-                            <CartItem key={item.id} cartitem={item} />
+                            <CartItem key={item.id} cartitem={item} SetRenderCartItems={SetRenderCartItems} RenderCartItems={RenderCartItems}/>
                           ))
                         ) : (
                           <EmptyCart

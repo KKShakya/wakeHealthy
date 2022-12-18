@@ -60,11 +60,15 @@
 .test_card{
     
     height: 274px;
-
+    transition: transform .2s;
     text-align: left;
   
     font-size: 13px;
     color: black;
+}
+
+.test_card:hover{
+    transform: scale(0.95);
 }
 .test_card img{
     border-radius: 8px;
@@ -91,7 +95,7 @@
 
 
 /* medium screen */
-@media all and (min-width:481px)and (max-width:768px){
+@media all and (min-width:481px)and (max-width:850px){
    .card_container{
     display: grid;
     grid-template-columns: repeat(3,1fr);
