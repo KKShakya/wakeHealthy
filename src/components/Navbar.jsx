@@ -37,7 +37,7 @@ import {
 import { IoLocationOutline, IoCartOutline } from "react-icons/io5";
 import { AiOutlineUser } from "react-icons/ai";
 
- import { useDisclosure } from "@chakra-ui/react";
+//  import { useDisclosure } from "@chakra-ui/react";
 
 import CartItem from "./CarePageComponent/CartItem/CartItem";
 import { useEffect } from "react";

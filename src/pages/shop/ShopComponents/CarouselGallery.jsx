@@ -4,21 +4,22 @@
 
 
 import React, { useEffect } from "react";
-import { Box, Heading, HStack, Image, Stack, Text } from "@chakra-ui/react";
+// import { Box, Heading, HStack, Image, Stack, Text } from "@chakra-ui/react";
 // import DATA from "../../../db.json";
 import axios from "axios";
 import { useState } from "react";
 
- import React from "react";
+//  import React from "react";
  import {
-   Box,
+  Box,
+  
    Heading,
    HStack,
    Image,
    Stack,
    Text,
  } from "@chakra-ui/react";
- import DATA from "../../../db.json";
+//  import DATA from "../../../db.json";
 
 
  export default function ShopCarouselGallery() {

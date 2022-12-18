@@ -1,17 +1,23 @@
 .flex-box_middle5{
     display: flex;
     
+    
     background-color:#1A202C ;
 }
+
 .flex-box_middle5>div{
-    margin-left: 5%;
+    left: 4%;
+
+
+    position: relative;
+ 
 }
 .flex-box_middle5 img{
-    width: 75%;
+    width: 80%;
     transition: all 250ms ease
 }
 .flex-box_middle5 img:hover{
-    width: 80%;
+    transform: scale(1.04)
 
 }
 .flex-box_middle5 ul{
@@ -52,8 +58,11 @@
 }
 .logo_box1{
     width: 30%;
-}
+    position: absolute;
+    top: 40%;
+    left: 2%;
 
+}
 @media screen and (max-width:760px) {
     .flex-box_middle5{
         display: flex;

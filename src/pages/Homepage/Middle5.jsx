@@ -4,7 +4,7 @@ import './Middle5.css'
 
 const Middle5 = () => {
   return (
-    <div>
+    <div className='bigger_box'>
     <div className='heading_middle5'>
         <h1>Cultpass</h1>
     </div>
