@@ -1,6 +1,7 @@
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
-import { NavLink } from "react-router-dom";
+ import Carousel from "react-multi-carousel";
+ import "react-multi-carousel/lib/styles.css";
+ import { NavLink } from "react-router-dom";
+
 
 import React, { useEffect } from "react";
 import { Box, Heading, HStack, Image, Stack, Text } from "@chakra-ui/react";
@@ -8,25 +9,37 @@ import { Box, Heading, HStack, Image, Stack, Text } from "@chakra-ui/react";
 import axios from "axios";
 import { useState } from "react";
 
-export default function ShopCarouselGallery() {
-  const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5.2,
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 4.2,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 520 },
-      items: 2.2,
-    },
-    mobile: {
-      breakpoint: { max: 519, min: 0 },
-      items: 1.5,
-    },
-  };
+ import React from "react";
+ import {
+   Box,
+   Heading,
+   HStack,
+   Image,
+   Stack,
+   Text,
+ } from "@chakra-ui/react";
+ import DATA from "../../../db.json";
+
+
+ export default function ShopCarouselGallery() {
+   const responsive = {
+     superLargeDesktop: {
+       breakpoint: { max: 4000, min: 3000 },
+       items: 5.2,
+     },
+     desktop: {
+       breakpoint: { max: 3000, min: 1024 },
+       items: 4.2,
+     },
+     tablet: {
+       breakpoint: { max: 1024, min: 520 },
+       items: 2.2,
+     },
+     mobile: {
+       breakpoint: { max: 519, min: 0 },
+       items: 1.5,
+     },
+   };
 
   const [TSHIRT, setTSHIRT] = useState([]);
   const [CYCLES, setCYCLES] = useState([]);
@@ -138,3 +151,4 @@ export default function ShopCarouselGallery() {
     </Stack>
   );
 }
+

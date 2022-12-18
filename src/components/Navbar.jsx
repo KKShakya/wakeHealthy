@@ -2,65 +2,50 @@
 
 
 
+
+
+
 import React, { useState } from "react";
-import { Box,
-          Flex, 
-          Link, 
-          Button, 
-          useDisclosure, 
-          Drawer, 
-          DrawerOverlay, 
-          DrawerContent, 
-          DrawerCloseButton,
-            DrawerHeader, 
-            DrawerBody, 
-            Tabs, 
-            TabList, 
-            Tab, 
-            TabPanels, 
-            TabPanel,
-            Box,
+import {
+  Box,
   Flex,
   Link,
   Button,
-  Image,
   useDisclosure,
+  Drawer,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  DrawerHeader,
+  DrawerBody,
+  Tabs,
+  TabList,
+  Tab,
+  TabPanels,
+  TabPanel,
+  Image,
   Modal,
   ModalOverlay,
   ModalContent,
   ModalBody,
   ModalCloseButton,
   Center,} 
-            from "@chakra-ui/react";
-
-
-
-
-
-import React from "react";
-
-
-
+        from "@chakra-ui/react";
 
 
 
 import { IoLocationOutline, IoCartOutline } from "react-icons/io5";
 import { AiOutlineUser } from "react-icons/ai";
+
+ import { useDisclosure } from "@chakra-ui/react";
+
 import CartItem from "./CarePageComponent/CartItem/CartItem";
 import { useEffect } from "react";
 import axios from "axios";
 import EmptyCart from "./EmptyCart/EmptyCart";
 
 
-
-
- import { useDisclosure } from "@chakra-ui/react";
-
 import Login from "./Navbar/login";
-
-import { LocationMenu } from "./Navbar/Menu";
-
-
 
 
 
@@ -122,26 +107,25 @@ export const LogoutUser = () => {
 
 const Navbar = () => {
 
+  const { currentUser } = useSelector((store) => store.auth);
+  // console.log(currentUser === "", currentUser[0]);
 
-  const {currentUser} = useSelector((store)=>store.auth);
-  console.log(currentUser==="",currentUser[0])
- 
-  const [CartItems,SetCartItems]=useState([])
- 
+  const [CartItems, SetCartItems] = useState([]);
 
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const OpenCartDrawer =()=>{
-    axios.get(` http://localhost:8080/Lab_Test_Cart`).then((response)=>SetCartItems(response.data))
-    onOpen()
-  }
+  const OpenCartDrawer = () => {
+    axios
+      .get(` http://localhost:8080/Lab_Test_Cart`)
+      .then((response) => SetCartItems(response.data));
+    onOpen();
+  };
 
-  useEffect(()=>{
-        axios.get(` http://localhost:8080/Lab_Test_Cart`).then((response)=>SetCartItems(response.data))
-  },[CartItems])
-
-
- 
+  useEffect(() => {
+    axios
+      .get(` http://localhost:8080/Lab_Test_Cart`)
+      .then((response) => SetCartItems(response.data));
+  }, [CartItems]);
 
 
   return (
@@ -159,7 +143,9 @@ const Navbar = () => {
         bg="#161821"
         zIndex={"1"}
       >
-        <Box display={{ base: "flex", sm: "flex", md: "none" }}>
+
+        <Box display={{ base: "flex",  md: "flex",lg:"none"}}>
+
           <BaseMenu />
         </Box>
 
@@ -178,7 +164,9 @@ const Navbar = () => {
           textTransform={"uppercase"}
           color="white"
           ml="120px"
-          display={{ base: "none", sm: "none", md: "inherit" }}
+
+          display={{ base: "none", sm: "none", md: "none",lg:"inherit" }}
+
         >
           <Link href="/fitness" color="#fff" textDecoration={"none"}>
             Fitness
@@ -230,6 +218,7 @@ const Navbar = () => {
           </Flex>
           <Flex justify={"center"} alignItems="center">
 
+
             <IoCartOutline color="#fff" onClick={OpenCartDrawer}/>
                     <Drawer onClose={onClose} isOpen={isOpen} size={"xs"} bg="black">
                         <DrawerOverlay />
@@ -264,8 +253,9 @@ const Navbar = () => {
                               </DrawerBody>
                         </DrawerContent>
                  </Drawer>
-=======
+
             <IoCartOutline color="#fff" />
+
 
           </Flex>
         </Flex>

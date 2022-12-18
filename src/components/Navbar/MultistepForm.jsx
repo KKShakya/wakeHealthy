@@ -1,37 +1,25 @@
 import React, { useState } from "react";
 import {
-  Progress,
   Box,
   ButtonGroup,
   Button,
-  Heading,
   Flex,
-  FormControl,
-  GridItem,
-  FormLabel,
   Input,
-  Select,
-  SimpleGrid,
-  InputLeftAddon,
-  InputGroup,
-  Textarea,
-  FormHelperText,
   Image,
-  Text,
   Center,
 } from "@chakra-ui/react";
-import logo from "../../Images/Logo.png";
-import { useToast } from "@chakra-ui/react";
+import logo from "../../Images/Logo_Login.png";
 import { MdKeyboardArrowDown, MdOutlineMailOutline } from "react-icons/md";
 import { BsGoogle, BsFacebook, BsArrowLeftShort } from "react-icons/bs";
-import { Link, Navigate } from "react-router-dom";
+// import { Link, Navigate } from "react-router-dom";
 import OtpVerification from "./OtpVerification";
 
-const Form1 = ({ handleNext }) => {
-  const [show, setShow] = React.useState(false);
+const Form1 = ({ handleNext, handleLogin }) => {
+  const [user, setUser] = useState({ name: "", number: "" });
   const handleClick = (e) => {
     e.preventDefault();
     handleNext(2);
+    handleLogin(user);
   };
 
   const handleClick2 = (e) => {
@@ -39,17 +27,35 @@ const Form1 = ({ handleNext }) => {
     handleNext(3);
   };
 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setUser({ ...user, [name]: value });
+  };
+  
+  const { name, number } = user;
+
   return (
     <Flex flexDirection={"column"} mt="10%" color="#fff">
       {/* Image logo */}
       <Flex justify={"center"} w="30%" m="auto">
-        <Flex justify={"center"} align="center">
-          <Image src={logo} alt="" />
+        <Flex justify={"center"} align="center" w="100px" h="100px">
+          <Image src={logo} alt="logo" />
         </Flex>
       </Flex>
 
       {/* form starts from here */}
       {/* phone number */}
+
+      <Flex borderBottom={"2px solid #fff"} mt="15%" gap="10px">
+        <Input
+          type="text"
+          variant="unstyled"
+          placeholder="Name"
+          onChange={handleChange}
+          value={name}
+          name="name"
+        />
+      </Flex>
       <Flex borderBottom={"2px solid #fff"} mt="15%" gap="10px">
         <Flex>
           +91 <MdKeyboardArrowDown />
@@ -58,6 +64,9 @@ const Form1 = ({ handleNext }) => {
           type="text"
           variant="unstyled"
           placeholder="Enter your phone number"
+          onChange={handleChange}
+          value={number}
+          name="number"
         />
       </Flex>
 
@@ -70,7 +79,7 @@ const Form1 = ({ handleNext }) => {
         p="8px"
         borderRadius={"5px"}
       >
-        <Box as="button" color="black" onClick={handleClick}>
+        <Box as="button" color="black" onClick={handleClick} disabled={name==="" || number.length<10 || number.length>10}>
           CONTINUE
         </Box>
       </Flex>
@@ -84,7 +93,6 @@ const Form1 = ({ handleNext }) => {
         mt="10%"
         p="8px 10px"
         borderRadius={"5px"}
-        to="/otp"
         onClick={handleClick2}
       >
         <Box color="#fff">or connect with</Box>
@@ -109,6 +117,9 @@ const Form1 = ({ handleNext }) => {
   );
 };
 
+
+
+// this form is for signin with other platforms
 const Form2 = ({ handleNext }) => {
   const handleEmailSignin = (e) => {
     e.preventDefault();
@@ -183,7 +194,20 @@ const Form2 = ({ handleNext }) => {
 };
 
 // form for email and password signin
-const Form3 = () => {
+const Form3 = ({ handleNext, handleLogin }) => {
+  const [user2, setUser2] = useState({ name: "", email: "" });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setUser2({ ...user2, [name]: value });
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    handleNext(2);
+    handleLogin(user2);
+  };
+
+  const { name, email } = user2;
   return (
     <Flex flexDirection={"column"} mt="10%" color="#fff">
       {/* Image logo */}
@@ -201,10 +225,25 @@ const Form3 = () => {
 
       <Flex borderBottom={"2px solid #fff"} mt="10%" gap="10px">
         <Input
+          name="name"
+          type="text"
+          variant="unstyled"
+          placeholder="Name"
+          _focus={{ outline: "none" }}
+          value={name}
+          onChange={handleChange}
+        />
+      </Flex>
+
+      <Flex borderBottom={"2px solid #fff"} mt="10%" gap="10px">
+        <Input
+          name="email"
           type="email"
           variant="unstyled"
           placeholder="Email ID"
           _focus={{ outline: "none" }}
+          value={email}
+          onChange={handleChange}
         />
       </Flex>
 
@@ -222,7 +261,12 @@ const Form3 = () => {
         p="8px"
         borderRadius={"5px"}
       >
-        <Box as="button" color="black" _hover={{ color: "red" }}>
+        <Box
+          as="button"
+          color="black"
+          _hover={{ color: "red" }}
+          onClick={handleSubmit}
+        >
           CONTINUE
         </Box>
       </Flex>
@@ -231,10 +275,11 @@ const Form3 = () => {
 };
 
 export default function MultistepForm() {
-  const toast = useToast();
+
   const [step, setStep] = useState(1);
   const [progress, setProgress] = useState(33.33);
-  const [number, setNumber]  = useState(0);
+  const [loginCreds, setLoginCreds] = useState({});
+
   return (
     <>
       <Box
@@ -246,15 +291,14 @@ export default function MultistepForm() {
         as="form"
         bg="black"
       >
-      
         {step === 1 ? (
-          <Form1 handleNext={setStep} />
+          <Form1 handleNext={setStep} handleLogin={setLoginCreds} />
         ) : step === 2 ? (
-          <OtpVerification />
+          <OtpVerification loginCreds={loginCreds} />
         ) : step === 3 ? (
           <Form2 handleNext={setStep} />
         ) : (
-          <Form3 />
+          <Form3 handleLogin={setLoginCreds} handleNext={setStep} />
         )}
         <ButtonGroup mt="5%" w="100%">
           <Flex w="100%" justifyContent="space-between">

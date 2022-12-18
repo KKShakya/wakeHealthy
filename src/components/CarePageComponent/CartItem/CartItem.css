@@ -1,0 +1,30 @@
+.CartItemBox{
+    width: 250px;
+    height: auto;
+    padding: 3px;
+    margin-bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+   
+}
+.test_name,.test_price{
+    width: 100%;
+    height: auto;
+    padding: 4px;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.test_name p{
+    width: 80%;
+   
+}
+.test_name{
+    font-size: 14px;
+    
+}
+.test_price{
+    font-size: 12px;
+    color: #888E9E;
+}

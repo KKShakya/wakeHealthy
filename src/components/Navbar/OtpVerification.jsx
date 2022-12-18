@@ -1,50 +1,63 @@
-import { Center, Heading } from '@chakra-ui/react';
+import { Center, Heading, useToast } from "@chakra-ui/react";
 import {
   Button,
   FormControl,
   Flex,
-  Input,
   Stack,
- Box,
+  Box,
   HStack,
-} from '@chakra-ui/react';
-import { PinInput, PinInputField } from '@chakra-ui/react';
+} from "@chakra-ui/react";
+import { PinInput, PinInputField } from "@chakra-ui/react";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { signIn } from "../../store/Auth/auth.action";
 
-export default function OtpVerification() {
+export default function OtpVerification({ loginCreds }) {
+  const toast = useToast()
+  const dispatch = useDispatch();
+
+  const [OTP, setOtp] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (OTP === "1234" && OTP !== "") {
+      dispatch(signIn(loginCreds));
+      toast({
+        title: 'Account created.',
+        description: "We've created your account for you.",
+        status: 'success',
+        duration: 9000,
+        isClosable: true,
+      })
+    } else {
+      alert("Please Enter the correct otp");
+    }
+  };
+  console.log(loginCreds);
   return (
-    <Flex
-      align={'center'}
-      justify={'center'}
-      bg={"black"}>
+    <Flex align={"center"} justify={"center"} bg={"black"}>
       <Stack
         spacing={4}
-        w={'full'}
-        maxW={'md'}
+        w={"full"}
+        maxW={"md"}
         bg={"black"}
-        rounded={'xl'}
+        rounded={"xl"}
         color="#fff"
         p={5}
-        my={5}>
+        my={5}
+      >
         <Center>
-          <Heading lineHeight={1.1} fontSize={{ base: '2xl', md: '3xl' }}>
+          <Heading lineHeight={1.1} fontSize={{ base: "2xl", md: "3xl" }}>
             Enter OTP
           </Heading>
         </Center>
-        <Box
-          fontSize={{ base: 'sm', sm: 'md' }}
-          color="#fff" ml="10px">
+        <Box fontSize={{ base: "sm", sm: "md" }} color="#fff" ml="10px">
           We have sent code to your number
         </Box>
-        <Center
-          fontSize={{ base: 'sm', sm: 'md' }}
-          fontWeight="bold"
-          color={"#fff"}>
-          username@mail.com
-        </Center>
         <FormControl>
           <Center>
             <HStack>
-              <PinInput>
+              <PinInput onChange={(e) => setOtp(e)} otp>
                 <PinInputField />
                 <PinInputField />
                 <PinInputField />
@@ -55,12 +68,15 @@ export default function OtpVerification() {
         </FormControl>
         <Stack spacing={6}>
           <Button
-            bg={'#b3b3b3'}
-            color={'black'}
+            type="submit"
+            bg={"#b3b3b3"}
+            color={"black"}
             _hover={{
-              bg: '#fff',
-              color:"red",
-            }}>
+              bg: "#fff",
+              color: "red",
+            }}
+            onClick={handleSubmit}
+          >
             Verify
           </Button>
         </Stack>
