@@ -108,24 +108,26 @@ export const LogoutUser = () => {
 const Navbar = () => {
 
   const { currentUser } = useSelector((store) => store.auth);
-  // console.log(currentUser === "", currentUser[0]);
+  // console.log(currentUser);
 
   const [CartItems, SetCartItems] = useState([]);
+
+  const [RenderCartItems,SetRenderCartItems] = useState(true);
 
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const OpenCartDrawer = () => {
     axios
-      .get(` http://localhost:8080/Lab_Test_Cart`)
+      .get(` http://localhost:8080/CareCart`)
       .then((response) => SetCartItems(response.data));
     onOpen();
   };
 
   useEffect(() => {
     axios
-      .get(` http://localhost:8080/Lab_Test_Cart`)
+      .get(` http://localhost:8080/CareCart`)
       .then((response) => SetCartItems(response.data));
-  }, [CartItems]);
+  }, [RenderCartItems]);
 
 
   return (
@@ -218,43 +220,42 @@ const Navbar = () => {
           </Flex>
           <Flex justify={"center"} alignItems="center">
 
+            <IoCartOutline color="#fff" onClick={OpenCartDrawer} />
+           
+            <Drawer onClose={onClose} isOpen={isOpen} size={"xs"} bg="black">
+              <DrawerOverlay />
+              <DrawerContent>
+                <DrawerCloseButton />
+                <DrawerHeader> Your Cart</DrawerHeader>
+                <DrawerBody>
+                  <Tabs isFitted variant="enclosed">
+                    <TabList mb="1em">
+                      <Tab>Lab Test {CartItems.length}</Tab>
+                      <Tab>Cults Soprt</Tab>
+                    </TabList>
 
-            <IoCartOutline color="#fff" onClick={OpenCartDrawer}/>
-                    <Drawer onClose={onClose} isOpen={isOpen} size={"xs"} bg="black">
-                        <DrawerOverlay />
-                          <DrawerContent>
-                              <DrawerCloseButton />
-                              <DrawerHeader> Your Cart</DrawerHeader>
-                              <DrawerBody>
-                                  <Tabs isFitted variant='enclosed'>
-                                         
-                                          <TabList mb='1em'>
-                                            <Tab>Lab Test   {CartItems.length}</Tab>
-                                            <Tab>Cults Soprt</Tab>
-                                          </TabList>
-                                          
-                                          <TabPanels>
-                                            <TabPanel>
-                                              {
-                                               CartItems.length !==0 ?  
-                                                CartItems.map((item)=>(
-                                                  <CartItem  key={item.id} cartitem={item}/>
-                                                ))
-                                                :<EmptyCart text={"BOOK TEST ON CARE.FIT"} link={"care"}/>
-                                              }
-                                              
-                                              
-                                            </TabPanel>
-                                            <TabPanel>
-                                            <EmptyCart text={"EXPLORE CULTSPORT"} link={"store"}/>
-                                            </TabPanel>
-                                          </TabPanels>
-                                  </Tabs>
-                              </DrawerBody>
-                        </DrawerContent>
-                 </Drawer>
+                    <TabPanels>
+                      <TabPanel>
+                        {CartItems.length !== 0 ? (
+                          CartItems.map((item) => (
+                            <CartItem key={item.id} cartitem={item} SetRenderCartItems={SetRenderCartItems} RenderCartItems={RenderCartItems}/>
+                          ))
+                        ) : (
+                          <EmptyCart
+                            text={"BOOK TEST ON CARE.FIT"}
+                            link={"care"}
+                          />
+                        )}
+                      </TabPanel>
+                      <TabPanel>
+                        <EmptyCart text={"EXPLORE CULTSPORT"} link={"store"} />
+                      </TabPanel>
+                    </TabPanels>
+                  </Tabs>
+                </DrawerBody>
+              </DrawerContent>
+            </Drawer>
 
-            <IoCartOutline color="#fff" />
 
 
           </Flex>

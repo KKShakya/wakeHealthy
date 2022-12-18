@@ -11,7 +11,7 @@
     height: 300px;
     margin: auto;
     margin-top: 60px;
-   
+  
     display: flex;
     flex-direction: row;
     gap: 50px;
@@ -34,9 +34,10 @@
 
 }
 .Booking_card{
-    width: 570px;
+    width: 90%;
     height: auto;
     padding:15px 10px;
+    margin: auto;
     margin-top: 20px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -73,14 +74,18 @@
 
 .TestCarousel_div{
     width: 60%;
-    height: 70vh;
+    height: auto;
+    margin: auto;
     margin-left: 40%;
-    padding: 35px;
+    padding: 25px;
+ 
    
 }
 .Test_Include_box,.Healthians_box{
     width: 88%;
-    height: 25vh;
+    margin: auto;
+    height: auto;
+    padding: 20px;
   
    
    
@@ -90,15 +95,120 @@
 .Healthians_box{
     
   margin-top: 30px;
+ 
 box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
+.Healthians_box img{
+    width: 90px;
+    margin-top: -10px;
 }
 
 
 
-/* @media all and (min-width:481px)and (max-width:768px){
+ @media all and (min-width:481px)and (max-width:768px){
+
+    .Book_div{
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+      
+
+    }
+    .image_div{
+        width: 70%;
+        height: 60%;
+        margin: auto;
+        margin-left: 18%;
+       
+   }
+   .Book_now_div{
+    width: 90%;
+    margin: auto;
+ 
+    margin-top: -20%;
+   }
+   .TestCarousel_div{
+    width: 90%;
+    height: auto;
+    margin: auto;
+    margin-left: 5%;
+    padding: 20px;
+    
+   }
+   .Test_Include_box{
+    display: none;
+   }
+
+   .Healthians_box{
+    padding: 15px;
+    font-size: 10px;
+    height: auto;
+    margin: auto;
+   }
+   .Healthians_box img{
+    width: 55px;
+    height: 15px;
+}
 
  }
  
  @media all and (min-width:320px)and (max-width:480px){
+
+    .Book_div{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+      
+
+    }
+    .image_div{
+        width: 70%;
+        height: 200px;
+        
+        margin: auto;
+       
+       
+   }
+   .image_div img{
+    margin: auto;
+    margin-top: 20px;
+   }
+   .Book_now_div{
+    width: 90%;
+    margin: auto;
+    
+    margin-top: -10%;
+   }
+
+   
+
+   .TestCarousel_div{
+    width: 90%;
+    height: auto;
+    margin: auto;
+    margin-top: 20px;
+    margin-left: 5%;
+    padding: 20px;
+    
+   }
+   .Test_Include_box{
+    display: none;
+   }
+
+   .Healthians_box{
+    padding: 15px;
+    font-size: 5px;
+    height: auto;
+    margin: auto;
+   
+   }
+   .Healthians_box img{
+    width: 35px;
+    height: 15px;
+    margin-top: 3px;
+   
+    
+}
   
- } */
+ } 

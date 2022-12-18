@@ -2,7 +2,7 @@
 import React from "react";
 import "./Homepage.css";
 import FitnessDivs from "./Homepage/FitnessDivs";
-import Footer from "./Homepage/Footer";
+
 import Middle from "./Homepage/Middle";
 import Middle2 from "./Homepage/Middle2";
 import Middle3 from "./Homepage/Middle3";
@@ -36,7 +36,7 @@ const Homepage = () => {
       {/* <Middle6 />
       <Middle7 /> */}
       <FitnessDivs />
-      {/* <Footer/> */}
+     
 
 
     </div>
