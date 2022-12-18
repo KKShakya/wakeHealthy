@@ -1,85 +1,145 @@
 import React from "react";
 import { Box, Image, Heading, Text, Flex, Button } from "@chakra-ui/react";
 
-export const AtHomeCard = () => {
-  return (
-    <Box width="20%">
-      <Flex
-        justify="center"
-        align="center"
-        bg="#2d3745"
-        flexDirection={"column"}
-        gap="10px"
-        borderRadius={"10px"}
-      >
-        <Image
-          src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_400,q_auto:eco,dpr_1,f_auto,fl_progressive//image/diy/e32fbb9b-ffd5-4c45-9fe0-1500fd03a222"
-          width="100%"
-          height="200px"
-          borderRadius={"10px"}
-        />
-
-        <Text color="#686d74">Chaya P</Text>
-        <Heading as="h4" color="#fff">
-          Bolly Express Bolly 1
-        </Heading>
-        <Text color="#686d74" transform="uppercase">
-          Dance . Beginner . 30 min
-        </Text>
-        <Button leftIcon={""} mb="10px">
-          Book
-        </Button>
-      </Flex>
-    </Box>
-  );
-};
-
-export const CardWithCarousel = ({ direction = "row" }) => {
+export const BigCard1 = ({ direction = "row" }) => {
   return (
     <Box>
-      <Flex flexDirection={{ base: "column", sm: "column", md: direction }} bg="#0a1017" color="#fff" p="1em" justify="space-around">
+      <Flex
+        flexDirection={{ base: "column", sm: "column", md: direction }}
+        bg="#0a1017"
+        color="#fff"
+        p="3em"
+        justify="space-around"
+      >
         {/* for data */}
-        <Box >
+        <Box p="20px" w="40%">
           <Flex flexDirection={"column"} gap="4rem" justify={"flex-start"}>
-            <Image />
+            <Image
+              src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_294,q_auto:eco,dpr_2,f_auto,fl_progressive//image/test/brand-logo/cult-pass-elite.png"
+              w="50%"
+              m="auto"
+            />
             <Heading color="#fff">
-              Unlimited acess to Everything you like
+              Unlimited acess to Everything in Your city
             </Heading>
 
-            <Flex flexDirection={"column"} justify="flex-start">
-              <Text ml="-100px">umlimited acesss</Text>
-              <Flex gap={"10px"} align="center">
-                <Text>icon</Text>
-                <Text>unlimited acess to gym</Text>
+            <Flex flexDirection={"column"} justify="flex-start" gap="20px">
+              <Flex gap={"20px"} align="center">
+                <Image src="https://static.cure.fit/assets/images/orangeTick.png" />
+                <Text color="#a6a8ab">At-center group classes</Text>
               </Flex>
-              <Flex gap={"10px"} align="center">
-                <Text>icon</Text>
-                <Text>unlimited acess to gym</Text>
+              <Flex gap={"20px"} align="center">
+                <Image src="https://static.cure.fit/assets/images/orangeTick.png" />
+                <Text color="#a6a8ab">All ELITE & PRO gyms</Text>
               </Flex>
-              <Flex gap={"10px"} align="center">
-                <Text>icon</Text>
-                <Text>unlimited acess to gym</Text>
+              <Flex gap={"20px"} align="center">
+                <Image src="https://static.cure.fit/assets/images/orangeTick.png" />
+                <Text color="#a6a8ab">At-home live workouts</Text>
               </Flex>
             </Flex>
 
-            <Text>starting at price {}/ year</Text>
             <Flex gap="20px">
-              <Button variant="solid" transform={"uppercase"} bg="#23282f" color="#fff">Try for Free</Button>
-              <Button variant="solid" transform={"uppercase"} color="red" bg="#fff">Buy now</Button>
-            </Flex>
-
-            <Flex gap={"10px"}>
-              <Image />
-              <Text>sale now</Text>
+              <Button
+                variant="solid"
+                transform={"uppercase"}
+                bg="#23282f"
+                color="#fff"
+              >
+                Try for Free
+              </Button>
+              <Button
+                variant="solid"
+                transform={"uppercase"}
+                color="red"
+                bg="#fff"
+              >
+                Buy now
+              </Button>
             </Flex>
           </Flex>
         </Box>
 
         {/* for Image carousel*/}
-        <Box>
-          <Image  src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_842,q_auto:eco,dpr_1,f_auto,fl_progressive/image/test/sku-card-widget/black2.png"/>
+        <Box w="50%">
+          <Image
+            src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_842,q_auto:eco,dpr_1,f_auto,fl_progressive/image/test/sku-card-widget/black2.png"
+            borderRadius={"10px"}
+          />
         </Box>
       </Flex>
     </Box>
   );
 };
+
+
+export const BigCard2 = ({direction="row"})=>{
+  return(
+    <Box>
+    <Flex
+      flexDirection={{ base: "column", sm: "column", md: direction }}
+      bg="#0a1017"
+      color="#fff"
+      p="3em"
+      justify="space-around"
+    >
+      {/* for data */}
+      <Box p="20px" w="40%">
+        <Flex flexDirection={"column"} gap="4rem" justify={"flex-start"}>
+          <Image
+            src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_265,q_auto:eco,dpr_2,f_auto,fl_progressive//image/test/brand-logo/cult-pass-pro.png"
+            w="50%"
+            m="auto"
+          />
+          <Heading color="#fff">
+            Unlimited access to PRO in Your city
+          </Heading>
+
+          <Flex flexDirection={"column"} justify="flex-start" gap="20px">
+            <Flex gap={"20px"} align="center">
+              <Image src="https://static.cure.fit/assets/images/orangeTick.png" />
+              <Text color="#a6a8ab">All PRO gyms</Text>
+            </Flex>
+            <Flex gap={"20px"} align="center">
+              <Image src="https://static.cure.fit/assets/images/orangeTick.png" />
+              <Text color="#a6a8ab">At-home live workouts</Text>
+            </Flex>
+            <Flex gap={"20px"} align="center">
+              <Image src="https://static.cure.fit/assets/images/orangeTick.png" />
+              <Text color="#a6a8ab">
+                2 Sessions/month at ELITE gyms & group classes
+              </Text>
+            </Flex>
+          </Flex>
+
+          <Flex gap="20px">
+            <Button
+              variant="solid"
+              transform={"uppercase"}
+              bg="#23282f"
+              color="#fff"
+            >
+              Try for Free
+            </Button>
+            <Button
+              variant="solid"
+              transform={"uppercase"}
+              color="red"
+              bg="#fff"
+            >
+              Buy now
+            </Button>
+          </Flex>
+        </Flex>
+      </Box>
+
+      {/* for Image carousel*/}
+      <Box w="50%">
+        <Image
+          src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_842,q_auto:eco,dpr_2,f_auto,fl_progressive/image/test/sku-card-widget/gold2.png"
+          borderRadius={"10px"}
+        />
+      </Box>
+    </Flex>
+  </Box>
+);
+}

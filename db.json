@@ -567,6 +567,7 @@
       "time": "Report Ready in 60 Hrs"
     }
   ],
+
   "CareCart": [
     {
       "id": "418f11a0-b3bd-424b-a5ed-bc05a80abced",
@@ -579,6 +580,7 @@
       "time": "Report Ready in 71 Hrs"
     }
   ],
+
   "FAQ_DATA": [
     {
       "que": "How does home sample collection work?",
@@ -608,6 +610,38 @@
       "que": "Can I club two or more sample collection slots",
       "ans": "We are currently working on enabling multiple orders from the same address (for the same person or different).  Till then, you can request the phlebotomist who comes for the sample collection for the first order, to add on the rest of the tests (for the same person or different).  You can directly pay him via card / UPI / cash for the additional tests purchased. "
     }
+
+  ],
+  "Home_FAQ": [
+    {
+      "que": "What is cult?",
+      "ans": "At Cult, we make fitness fun and easy. We have best-in-class trainers & offer group workouts ranging from yoga to Boxing. Our workouts can be done both at a cult center and at home with the help of do it yourself (DIY) workout videos. Cult.fit uses the best in technology to give you a world-class experience. You can book classes, follow workout videos - all with the click of a button from the cult.fit app or website."
+    },
+    {
+      "que": "What kind of workout formats are available at cult?",
+      "ans": "At cult centers, you’ll find a wide variety of workout formats, such as - Boxing, Dance Fitness, Yoga, S&C, and HRX. These workouts focus on strength, muscle endurance, flexibility, stamina & balance. So mix it up, pick formats that help you achieve your personal fitness goals.  You’ll also find unique workout formats designed by Bollywood stars like Hrithik Roshan! We can assure you that your sessions will be more fun, interesting, and less monotonous.  You can find more info about all our workout formats here. If you prefer to workout at home, we've got you covered! You can follow DIY and LIVE videos that are meant for both beginner & advanced levels and focus on building strength, stamina & mobility. "
+    },
+    {
+      "que": "How is the cult center different from a regular gym?",
+      "ans": "With our non-conventional training facility, we aim to give you a balanced mix of workouts that will enhance your health while having fun at the same time. Cult differentiates itself, from other fitness centers by offering group workouts that focus on overall development. Cult has a simple philosophy - make fitness fun and easy with the help of best-in-class trainers and group workouts. Our workouts can be done both at a cult center as group classes and at home with the help of do-it-yourself (DIY) workout videos.  Cult.fit uses the best in technology to give you a world-class experience. You can book classes, follow workout videos - all with the click of a button from the cult.fit app or website.  To know more about cult, check this link."
+    },
+    {
+      "que": "What is cultpass ELITE?",
+      "ans": "Cultpass ELITE  is a membership pack where you get unlimited access to trainer ledGX sessions and Gym classes as you like in the city. However, you can prebook only 4 classes at any given point in time. The moment you finish one class, you get the option to book another class.  We have 3 month, 6 month & 12 month cultpass. You also get a feature where you can Pause (limited duration basis the pack) the membership if you are unable to attend or transfer your pack to a different city if you are relocating. You would get complimentary at home workout access. You can also create a smart workout plan based on your lifestyle. To find out more about memberships & pricing you can check our website"
+    },
+    {
+      "que": "Are cult classes beginner friendly?",
+      "ans": "Don’t worry! All our classes are beginner friendly. If you are doing an at Home cult.fit DIY session, we have sessions designed specifically for beginners. At our cult.fit centers too, we welcome beginners and look after them in every class. If it’s your first class, just arrive 10 minutes early, and we’ll make sure we help you get started and feel totally comfortable. To know more about what to expect in your first class read here."
+    },
+    {
+      "que": "What is a cultpass Home?",
+      "ans": "cultpass Home gives you unlimited access to all at Home sessions and DIY (on demand) sessions. This includes unlimited access to fitness, dance, meditation, health video content and podcasts. A cultpass Home member has an all access pass to celebrity masterclasses, ability to workout with friends and track their energy scores, and  monitor their progress in the form of reports. You can purchase the membership through the official cult.fit website or on the android app."
+    },
+    {
+      "que": "What is the difference between a PRO gym and a ELITE gym?",
+      "ans": "PRO gyms are full service gyms that offer you great value. They provide a safe space to workout with top quality equipment and cult certified trainers present to assist you ELITE gyms are a curated collection of handpicked,  full-service gyms at prime locations. They offer everything you get in a PRO gym plus added comfort and luxury to make your workout enjoyable. Lookout for the ELITE tag to to identify a ELITE gym.  "
+    }
+
   ],
   "user": [
     {
@@ -679,6 +713,16 @@
       "name": "krsdjklsj",
       "number": "7987905532",
       "id": 14
+    },
+    {
+      "name": "sdhjshafjkhk",
+      "number": "1234568787",
+      "id": 15
+    },
+    {
+      "name": "krishna",
+      "number": "7987905532",
+      "id": 16
     }
   ]
 }

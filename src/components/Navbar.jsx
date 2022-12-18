@@ -37,7 +37,7 @@ import {
 import { IoLocationOutline, IoCartOutline } from "react-icons/io5";
 import { AiOutlineUser } from "react-icons/ai";
 
-//  import { useDisclosure } from "@chakra-ui/react";
+
 
 import CartItem from "./CarePageComponent/CartItem/CartItem";
 import { useEffect } from "react";
@@ -85,6 +85,8 @@ export const LogoutUser = () => {
             {/* this is from component */}
             <Flex m="10%" flexDirection={"column"} gap="20px">
               <Center color="#fff">Are You Sure You Want To Log Out?</Center>
+              <Center fontSize="2rem" color="#fff">{currentUser}</Center>
+
               <Center>
                 <Box
                   as="button"
@@ -118,14 +120,18 @@ const Navbar = () => {
 
   const OpenCartDrawer = () => {
     axios
-      .get(` http://localhost:8080/CareCart`)
+
+      .get(` https://newwake.onrender.com/Lab_Test_Card`)
+
       .then((response) => SetCartItems(response.data));
     onOpen();
   };
 
   useEffect(() => {
     axios
-      .get(` http://localhost:8080/CareCart`)
+
+      .get(` https://newwake.onrender.com/Lab_Test_Card`)
+
       .then((response) => SetCartItems(response.data));
   }, [RenderCartItems]);
 
@@ -190,7 +196,7 @@ const Navbar = () => {
             justify={"center"}
             alignItems="center"
             gap="10px"
-            display={{ sm: "none", md: "inherit" }}
+            display={{ base: "none", sm: "none", md: "inherit" }}
           >
             <Box mt="3px" color="#999d9d">
               <LocationMenu />
@@ -200,7 +206,7 @@ const Navbar = () => {
           <Flex
             justify={"center"}
             alignItems="center"
-            display={{ sm: "none", md: "inherit" }}
+            display={{ base: "none", sm: "none", md: "inherit" }}
           >
             <Button
               p="7px 15px"

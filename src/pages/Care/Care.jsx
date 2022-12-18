@@ -32,7 +32,7 @@ const Care = () => {
 
     React.useEffect(()=>{
 
-        axios.get(' http://localhost:8080/Lab_Test_Card').then((data)=>setTestCardData(data.data))
+        axios.get(' https://wake-healthy.vercel.app/Lab_Test_Card').then((data)=>setTestCardData(data.data))
     },[])
   
     
