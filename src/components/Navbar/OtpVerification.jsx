@@ -10,7 +10,7 @@ import {
 import { PinInput, PinInputField } from "@chakra-ui/react";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { signIn } from "../../store/Auth/auth.action";
+import { signIn } from "../../redux/Auth/auth.action";
 
 export default function OtpVerification({ loginCreds }) {
   const toast = useToast()

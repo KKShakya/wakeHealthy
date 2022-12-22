@@ -20,7 +20,7 @@ import { NavLink, useParams } from "react-router-dom";
 import CartDrower from "../CartDrower";
 import Loading from "../../../components/Loading";
 import { useDispatch, useSelector } from "react-redux";
-import { add_to_cart } from "../../../store/Cart/cart.action";
+import { add_to_cart } from "../../../redux/Cart/cart.action";
 import ShopNavbar from "./ShopNavbar";
 import Footer from "../../../components/Footer";
 

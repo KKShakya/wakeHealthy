@@ -11,7 +11,7 @@ import {
 import React from "react";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { add_to_shop } from "../../store/Shop/shop.action";
+import { add_to_shop } from "../../redux/Shop/shop.action";
 
 // export default function AddProduct() {
 //   const { isOpen, onOpen, onClose } = useDisclosure();

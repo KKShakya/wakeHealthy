@@ -7,7 +7,7 @@ import { AUTH_SIGN_IN_ERROR, AUTH_SIGN_IN_LOADING, AUTH_SIGN_IN_SUCCESS, AUTH_SI
   export const signIn = (creds) => async (dispatch) => {
     dispatch({type:AUTH_SIGN_IN_LOADING});
     try {
-      let response = await axios.post("https://wake-healthy.onrender.com/user", creds);
+      let response = await axios.post("https://wakehealhty-update.onrender.com/user", creds);
       console.log(response);
       dispatch({ type: AUTH_SIGN_IN_SUCCESS, payload: response.data });
     } catch (error) {

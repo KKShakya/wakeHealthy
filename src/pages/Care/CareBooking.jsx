@@ -27,7 +27,6 @@ import {
 import { useParams } from "react-router-dom";
 import TestCarousel from "../../components/CarePageComponent/Carousel/TestCarousel";
 import Information from "../../components/CarePageComponent/Information/Information";
-import LargeWithAppLinksAndSocial from "../../components/Footer";
 import { useSelector } from "react-redux";
 import Footer from "../../components/Footer";
 
@@ -50,7 +49,7 @@ const CareBooking = () => {
         let {Booking_id}=param
 
         React.useEffect(()=>{
-            axios.get(`https://newwake.onrender.com/Lab_Test_Card/${Booking_id}`)
+            axios.get(`https://wake-healthy.vercel.app/Lab_Test_Card/${Booking_id}`)
             .then((data)=>{
                 
                             SetTestData(data.data)

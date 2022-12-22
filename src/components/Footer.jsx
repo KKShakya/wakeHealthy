@@ -11,7 +11,7 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 import { FaTwitter, FaYoutube, FaInstagram } from 'react-icons/fa';
-
+import logo from "../Images/Logo_Login1.png";
 
 
 const ListHeader = ({ children }) => {
@@ -50,25 +50,24 @@ export default function Footer() {
     <Box
       bg="#000000"
       color="#FFFFFF">
-      <Container as={Stack} maxW={'6xl'} py={10}>
+      <Container as={Stack} maxW={'8xl'} py={10}>
         <SimpleGrid columns={{ base: 1, sm: 2, md: 5 }} spacing={8}>
              <Stack align={'flex-start'}>
                 
-                <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_150,q_auto:eco,dpr_2,f_auto,fl_progressive//image/test/brand-logo/vman-and-white-cult-text.png" alt="logo"  width="130px"/>
-
-                <Text fontSize={{ base: '10px', md: '10px', lg: '12px' }} textAlign="left" pt="30px">At cult.fit, we make group workouts fun, daily food healthy & tasty, mental fitness easy with yoga & meditation, Medical & lifestyle care hassle-free.#BeBetterEveryDay</Text>
+                <img src={logo} />
+                <Text fontSize={{ base: '10px', md: '10px', lg: '12px' }} textAlign="left" pt="30px">At Wake Healthy, we make group workouts fun, daily food healthy & tasty, mental fitness easy with yoga & meditation, Medical & lifestyle care hassle-free.#BeBetterEveryDay</Text>
               </Stack>
               
-              <Stack align={'flex-start'} fontSize="12px" lineHeight="40px">
+              <Stack align={'flex-start'} fontSize="15px" lineHeight="40px">
                 
-                <Link href={'#'}>cult.fit for business</Link>
-                <Link href={'#'}>cult.fit franchise</Link>
+                <Link href={'#'}>Wake Healthy for business</Link>
+                <Link href={'#'}>Wake Healthy franchise</Link>
                 <Link href={'#'}>corporate partnerships</Link>
                 <Link href={'#'}>cult pass network</Link>
-                <Link href={'#'}>t&c for business</Link>
+                <Link href={'#'}>T&C for business</Link>
               </Stack>
 
-              <Stack align={'flex-start'} fontSize="12px" lineHeight="40px">
+              <Stack align={'flex-start'} fontSize="15px" lineHeight="40px">
                 
                 <Link href={'#'}>partner.fit</Link>
                 <Link href={'#'}>blogs</Link>
@@ -76,7 +75,7 @@ export default function Footer() {
                 <Link href={'#'}>careers</Link>
               </Stack>
 
-              <Stack align={'flex-start'} fontSize="12px" lineHeight="40px">
+              <Stack align={'flex-start'} fontSize="15px" lineHeight="40px">
               
                 <Link href={'#'}>contact us</Link>
                 <Link href={'#'}>privacy policy</Link>
@@ -89,7 +88,7 @@ export default function Footer() {
             <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_178,q_auto:eco,dpr_2,f_auto,fl_progressive//image/test/download-app/app-store-dark-card-2.png" alt="" width="150px"/>
             <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_178,q_auto:eco,dpr_2,f_auto,fl_progressive//image/test/download-app/play-store-dark-card-2.png" alt="" width="150px"/>
 
-            <Stack direction={'row'} spacing={6}>
+            <Stack direction={'row'} spacing={7}>
             <SocialButton label={'Twitter'} href={'#'}>
               <FaTwitter />
             </SocialButton>

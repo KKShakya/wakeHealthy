@@ -36,7 +36,7 @@ export const reducer = (state = initialState, { type, payload }) => {
     }
     case UPDATE_SHOP: {
       let updated = state.SHOP.map((el) => {
-        if (el.id == payload.id) {
+        if (el.id === payload.id) {
           return payload;
         }
         return el;

@@ -13,7 +13,7 @@ import {
 } from "@chakra-ui/react";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { update_shop } from "../../store/Shop/shop.action";
+import { update_shop } from "../../redux/Shop/shop.action";
 
 export default function UpdateProduct({ product }) {
   const { isOpen, onOpen, onClose } = useDisclosure();

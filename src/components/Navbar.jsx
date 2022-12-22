@@ -35,7 +35,7 @@ import {
 
 
 import { IoLocationOutline, IoCartOutline } from "react-icons/io5";
-import { AiOutlineUser } from "react-icons/ai";
+
 
 
 
@@ -52,8 +52,8 @@ import Login from "./Navbar/login";
 import { BaseMenu, LocationMenu } from "./Navbar/Menu";
 
 import { useDispatch, useSelector } from "react-redux";
-import { signout } from "../store/Auth/auth.action";
-import Logo from "../Images/Logo.png";
+import { signout } from "../redux/Auth/auth.action";
+import Logo from "../Images/Logo1.png";
 
 export const LogoutUser = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -70,7 +70,7 @@ export const LogoutUser = () => {
   return (
     <>
       <Button onClick={onOpen} borderRadius="50%">
-        {currentUser[0]}
+        {currentUser[0].toUpperCase()}
       </Button>
       <Modal
         blockScrollOnMount={false}
@@ -159,7 +159,7 @@ const Navbar = () => {
 
         {/* ?logo */}
         <Link href="/" color="#fff" textDecoration={"none"}>
-          <Box w="60px">
+          <Box w="100px">
             <Image src={Logo} />
           </Box>
         </Link>

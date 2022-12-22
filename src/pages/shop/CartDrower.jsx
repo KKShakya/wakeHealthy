@@ -28,7 +28,7 @@ import {
   get_cart,
   delete_from_cart,
   update_cart,
-} from "../../store/Cart/cart.action";
+} from "../../redux/Cart/cart.action";
 import CheckoutModal from "./ShopComponents/CheckoutModal";
 
 export default function CartDrower({ title }) {

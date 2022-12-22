@@ -8,7 +8,7 @@ import {
   Image,
   Center,
 } from "@chakra-ui/react";
-import logo from "../../Images/Logo_Login.png";
+import logo from "../../Images/Logo_Login1.png";
 import { MdKeyboardArrowDown, MdOutlineMailOutline } from "react-icons/md";
 import { BsGoogle, BsFacebook, BsArrowLeftShort } from "react-icons/bs";
 // import { Link, Navigate } from "react-router-dom";

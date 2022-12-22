@@ -22,7 +22,7 @@ import {
   delete_from_shop,
   get_shop,
   update_shop,
-} from "../../store/Shop/shop.action";
+} from "../../redux/Shop/shop.action";
 
 export default function Admin() {
   const { SHOP } = useSelector((store) => store.shop);
