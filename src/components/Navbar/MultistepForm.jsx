@@ -7,6 +7,7 @@ import {
   Input,
   Image,
   Center,
+  useToast,
 } from "@chakra-ui/react";
 import logo from "../../Images/Logo_Login1.png";
 import { MdKeyboardArrowDown, MdOutlineMailOutline } from "react-icons/md";
@@ -16,8 +17,31 @@ import OtpVerification from "./OtpVerification";
 
 const Form1 = ({ handleNext, handleLogin }) => {
   const [user, setUser] = useState({ name: "", number: "" });
+  const toast = useToast()
+  
   const handleClick = (e) => {
     e.preventDefault();
+    if(number.length>10 || number.length<10){
+      toast({
+        title: 'Please Enter a 10 digit Number',
+        status: 'error',
+        duration: 1500,
+        position:"top",
+        isClosable: true,
+      })
+      return;
+    }
+    else if(name==""){
+      toast({
+        title: 'Please Enter Your Name',
+        status: 'error',
+        duration: 1500,
+        position:"top",
+        isClosable: true,
+      })
+      return;
+    
+    }
     handleNext(2);
     handleLogin(user);
   };
@@ -61,7 +85,7 @@ const Form1 = ({ handleNext, handleLogin }) => {
           +91 <MdKeyboardArrowDown />
         </Flex>
         <Input
-          type="text"
+          type="number"
           variant="unstyled"
           placeholder="Enter your phone number"
           onChange={handleChange}
@@ -79,7 +103,7 @@ const Form1 = ({ handleNext, handleLogin }) => {
         p="8px"
         borderRadius={"5px"}
       >
-        <Box as="button" color="black" onClick={handleClick} disabled={name==="" || number.length<10 || number.length>10}>
+        <Box as="button" color="black" onClick={handleClick} >
           CONTINUE
         </Box>
       </Flex>
@@ -196,6 +220,7 @@ const Form2 = ({ handleNext }) => {
 // form for email and password signin
 const Form3 = ({ handleNext, handleLogin }) => {
   const [user2, setUser2] = useState({ name: "", email: ""});
+  const toast = useToast()
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -203,6 +228,27 @@ const Form3 = ({ handleNext, handleLogin }) => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
+    if(email==""){
+      toast({
+        title: 'Email cannot be empty',
+        status: 'error',
+        duration: 1500,
+        position:"top",
+        isClosable: true,
+      })
+      return;
+    }
+    else if(name==""){
+      toast({
+        title: 'Please Enter Your Name',
+        status: 'error',
+        duration: 1500,
+        position:"top",
+        isClosable: true,
+      })
+      return;
+    
+    }
     handleNext(2);
     handleLogin(user2);
   };
@@ -266,7 +312,6 @@ const Form3 = ({ handleNext, handleLogin }) => {
           color="black"
           _hover={{ color: "red" }}
           onClick={handleSubmit}
-          disabled={name==="" || email===""}
         >
           CONTINUE
         </Box>

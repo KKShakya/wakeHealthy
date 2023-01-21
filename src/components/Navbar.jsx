@@ -55,6 +55,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { signout } from "../redux/Auth/auth.action";
 import Logo from "../Images/Logo1.png";
 
+
+
+
+
+
+// logout component
 export const LogoutUser = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
@@ -107,6 +113,8 @@ export const LogoutUser = () => {
   );
 };
 
+
+// navbar component
 const Navbar = () => {
 
   const { currentUser } = useSelector((store) => store.auth);
@@ -137,7 +145,7 @@ const Navbar = () => {
 
 
   return (
-    <Box>
+    <Box position="fixed" top="0" w="100%" zIndex={10}>
       <Flex
         justify={"space-around"}
         h="60px"
