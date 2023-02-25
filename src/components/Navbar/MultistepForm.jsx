@@ -13,14 +13,25 @@ import logo from "../../Images/Logo_Login1.png";
 import { MdKeyboardArrowDown, MdOutlineMailOutline } from "react-icons/md";
 import { BsGoogle, BsFacebook, BsArrowLeftShort } from "react-icons/bs";
 // import { Link, Navigate } from "react-router-dom";
+import { useDispatch ,useSelector} from "react-redux";
+import { sign_in_with_Phone } from "../../redux/Auth/auth.action";
 import OtpVerification from "./OtpVerification";
 
-const Form1 = ({ handleNext, handleLogin }) => {
+const Form1 = ({ handleNext }) => {
   const [user, setUser] = useState({ name: "", number: "" });
   const toast = useToast()
   
+
+ const dispatch = useDispatch()
+const {phoneConfirmObj} =   useSelector(store=>store.auth)
+
+
   const handleClick = (e) => {
     e.preventDefault();
+    console.log(10000000)
+    let Phone = "+91"+number;
+    // console.log(Phone);
+    user.number = Phone;
     if(number.length>10 || number.length<10){
       toast({
         title: 'Please Enter a 10 digit Number',
@@ -30,6 +41,7 @@ const Form1 = ({ handleNext, handleLogin }) => {
         isClosable: true,
       })
       return;
+   
     }
     else if(name==""){
       toast({
@@ -42,9 +54,20 @@ const Form1 = ({ handleNext, handleLogin }) => {
       return;
     
     }
-    handleNext(2);
-    handleLogin(user);
+
+  dispatch(sign_in_with_Phone(user));
+  console.log("botto",phoneConfirmObj)
+  
+  // handleLogin(user);
+  setTimeout(()=>{
+    if(phoneConfirmObj.confirmObj!==''){
+      console.log(phoneConfirmObj.confirmObj)
+      handleNext(2);
+    }else console.log("krishna")
+  },5000)
   };
+
+
 
   const handleClick2 = (e) => {
     e.preventDefault();
@@ -54,9 +77,11 @@ const Form1 = ({ handleNext, handleLogin }) => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setUser({ ...user, [name]: value });
+    
   };
   
   const { name, number } = user;
+  // console.log(number)
 
   return (
     <Flex flexDirection={"column"} mt="10%" color="#fff">
@@ -93,6 +118,7 @@ const Form1 = ({ handleNext, handleLogin }) => {
           name="number"
         />
       </Flex>
+      <Box m="10px" id='recaptcha-container'></Box>
 
       {/* Clickable button */}
       <Flex
@@ -320,6 +346,12 @@ const Form3 = ({ handleNext, handleLogin }) => {
   );
 };
 
+
+// ****************************************************
+// ***********************************************
+// **************************************
+
+// tha main code strts from here
 export default function MultistepForm() {
 
   const [step, setStep] = useState(1);
@@ -338,9 +370,9 @@ export default function MultistepForm() {
         bg="black"
       >
         {step === 1 ? (
-          <Form1 handleNext={setStep} handleLogin={setLoginCreds} />
+          <Form1 handleNext={setStep} />
         ) : step === 2 ? (
-          <OtpVerification loginCreds={loginCreds} />
+          <OtpVerification />
         ) : step === 3 ? (
           <Form2 handleNext={setStep} />
         ) : (

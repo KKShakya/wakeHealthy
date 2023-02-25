@@ -9,35 +9,52 @@ import {
 } from "@chakra-ui/react";
 import { PinInput, PinInputField } from "@chakra-ui/react";
 import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useSelector,useDispatch } from "react-redux";
 import { signIn } from "../../redux/Auth/auth.action";
 
-export default function OtpVerification({ loginCreds }) {
-  const toast = useToast()
-  const dispatch = useDispatch();
 
+export default function OtpVerification() {
+  const toast = useToast()
+  const { phoneConfirmObj } = useSelector(store => store.auth)
+  const dispatch = useDispatch();
+ console.log(phoneConfirmObj)
   const [OTP, setOtp] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (OTP === "1234" && OTP !== "") {
+    // console.log(phoneConfirmObj)
+    if (OTP !== "" || OTP !== null) {
 
-      dispatch(signIn(loginCreds));
+      try {
 
-      toast({
-        title: 'Account created.',
-        description: "We've created your account for you.",
-        status: 'success',
-        duration: 1500,
-        position:"top",
-        isClosable: true,
-      })
+         await  phoneConfirmObj.confirmObj.confirm(OTP);
+
+        toast({
+          title: 'Account created.',
+          description: "We've created your account for you.",
+          status: 'success',
+          duration: 1500,
+          position:"top",
+          isClosable: true,
+        })
+        dispatch(signIn())
+      } catch (error) {
+           console.log(error.message)
+           toast({
+            title: `${error.message}`,
+            status: 'error',
+            duration: 1500,
+            position:"top",
+            isClosable: true,
+          })
+      }
+
     } else {
       toast({
         title: 'Please Enter the correct OTP.',
         status: 'error',
         duration: 1500,
-        position:"top",
+        position: "top",
         isClosable: true,
       })
     }
@@ -67,6 +84,8 @@ export default function OtpVerification({ loginCreds }) {
           <Center>
             <HStack>
               <PinInput onChange={(e) => setOtp(e)} otp>
+                <PinInputField />
+                <PinInputField />
                 <PinInputField />
                 <PinInputField />
                 <PinInputField />

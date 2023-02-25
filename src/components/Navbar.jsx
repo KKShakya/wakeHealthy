@@ -117,7 +117,7 @@ export const LogoutUser = () => {
 // navbar component
 const Navbar = () => {
 
-  const { currentUser } = useSelector((store) => store.auth);
+  const { isAuth,currentUser } = useSelector((store) => store.auth);
   // console.log(currentUser);
 
   const [CartItems, SetCartItems] = useState([]);
@@ -230,7 +230,7 @@ const Navbar = () => {
             </Button>
           </Flex>
           <Flex justify={"center"} alignItems="center">
-            {currentUser === "" ? <Login /> : <LogoutUser />}
+            {isAuth==false || currentUser === "" ? <Login /> : <LogoutUser />}
           </Flex>
           <Flex justify={"center"} alignItems="center">
 

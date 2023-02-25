@@ -3,6 +3,7 @@ import {
   AUTH_SIGN_IN_LOADING,
   AUTH_SIGN_IN_SUCCESS,
   AUTH_SIGN_OUT,
+  AUTH_SIGN_IN_CONFIRMATION,
 } from "./auth.actionTypes";
 
 const initialState = {
@@ -10,6 +11,7 @@ const initialState = {
   isError: false,
   currentUser: "",
   isAuth: false,
+  phoneConfirmObj:"",
 };
 
 export const reducer = (state = initialState, { type, payload }) => {
@@ -26,11 +28,19 @@ export const reducer = (state = initialState, { type, payload }) => {
         ...state,
         isLoading: false,
         isError: false,
-        currentUser: payload.name,
-
         isAuth: true,
       };
     }
+    case AUTH_SIGN_IN_CONFIRMATION: {
+      return {
+        ...state,
+        isLoading: false,
+        isError: false,
+        isAuth:false,
+        currentUser: payload.name,
+        phoneConfirmObj:payload,
+    };
+  }
     case AUTH_SIGN_IN_ERROR: {
       return {
         ...state,
