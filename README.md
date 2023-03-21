@@ -98,7 +98,7 @@ On this journey we faced many issues, but we keep motivated each other with pati
 
 - We also got a glimpse of using GitHub for the version control.
 
-Source Code(GitHub link):- https://github.com/sumitss085/wakeHealthy-clone
+Source Code(GitHub link):- https://github.com/KKShakya/wakeHealthy
 
 ## Show your support
 
