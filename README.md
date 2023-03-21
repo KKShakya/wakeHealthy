@@ -6,6 +6,8 @@
 
 
 ## Our Team Members
+- Krishna Kumar Shakya  (My Linkedin profile :- https://github.com/KKShakya)
+
 - Sumit Shastrakar (My Linkedin profile :- https://www.linkedin.com/in/sumit-shastrakar-ba6977246/)
 
 - Nikhil Angolkar (My Linkedin profile :- https://www.linkedin.com/in/akash-more24/)
